@@ -1,0 +1,1231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Hope Worldwide International</title>
+    <style>
+        /* --- CSS STYLES --- */
+        
+        /* General Reset and Typography */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fcfcfc; /* Subtle off-white paper texture feel */
+            color: #444;
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Main Container to mimic the mobile/brochure width */
+        .container {
+            width: 100%;
+            max-width: 500px; /* Limits width to match the screenshot aspect ratio */
+            background-color: #fff;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            padding-bottom: 50px;
+        }
+
+        /* --- HEADER SECTION --- */
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.5);
+        }
+
+        .hero-text {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            text-align: center;
+            color: white;
+            font-size: 32px;
+            font-weight: 900;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+            line-height: 1.2;
+        }
+
+        .intro-card {
+            background: white;
+            width: 85%;
+            margin: -60px auto 40px auto; /* Negative margin pulls it up over the image */
+            padding: 30px 25px;
+            position: relative;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            text-align: center;
+            border-radius: 2px;
+        }
+
+        .section-title-green {
+            color: #1b6c38; /* The deep forest green */
+            font-size: 24px;
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+
+        .intro-text {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        /* --- GENERAL CONTENT SECTIONS --- */
+        .content-section {
+            padding: 20px 30px;
+        }
+
+        h2 {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 10px;
+            font-weight: 800;
+            line-height: 1.3;
+        }
+
+        /* The specific green title color for the bottom section */
+        .title-green {
+            color: #1b6c38;
+        }
+
+        /* The small green dash separator */
+        .dash {
+            width: 25px;
+            height: 4px;
+            background-color: #aadd68; /* Lime green accent */
+            margin: 10px 0 20px 0;
+            border-radius: 2px;
+        }
+
+        p {
+            font-size: 14px;
+            margin-bottom: 15px;
+            color: #4a4a4a;
+        }
+
+        /* Middle Image */
+        .mid-image {
+            width: 100%;
+            height: auto;
+            margin: 20px 0;
+            border-radius: 2px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            display: block;
+        }
+
+        /* --- LIST STYLING --- */
+        ul:not(footer li) {
+            list-style: none;
+            padding-left: 15px;
+        }
+
+        li:not(footer li) {
+            font-size: 13.5px;
+            margin-bottom: 12px;
+            position: relative;
+            padding-left: 15px;
+            color: #4a4a4a;
+        }
+
+        li::before {
+            content: "•";
+            color: #1b6c38;
+            font-weight: bold;
+            position: absolute;
+            left: -5px;
+        }
+        
+        li strong {
+            color: #333;
+        }
+
+        /* Animation class for JS */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .contact-info {
+            font-size: 12px;
+            color: #777;
+            margin-top: 20px;
+            border-top: 1px solid #eee;
+            padding-top: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+<header class="site-header">
+        <div class="container header-content">
+            <div class="logo-container">
+                <img src="../res/logo.jpg" class="logo" onclick="window.location.href='../index.html'"></i>
+            </div>
+            <nav class="main-nav">
+    <style>
+    .header {
+    background: var(--white);
+    z-index: 776559969779;
+    position: fixed;
+    top: 0;
+    height: 55px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    left: 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+        /* CSS confined to this nav */
+        .nav-list .fa-chevron-down {
+            display: none;
+        }
+
+        /* Highlight style for the active button */
+        .nav-link.active {
+            color: #1b6c38;
+            border-bottom: 2px solid #1b6c38;
+        }
+
+        .nav-item .dropdown-menu {
+            display: none; /* Hidden by default */
+            position: fixed;
+            top: 60px;
+            right: 50%; /* Center horizontally */
+            transform: translateX(50%);
+            background: white;
+            border-radius: 15px;
+            width: 80vw;
+            padding: 20px;
+            color: #1b6c38;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            z-index: 1000;
+        }
+
+        /* The Arrow */
+        .nav-item .dropdown-menu::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 10px solid #fff;
+            bottom: 100%;
+            left: var(--lft); /* Dynamic position */
+            transform: translateX(-50%);
+        }
+
+        /* Close Button Style */
+        .close-drop {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 24px;
+            cursor: pointer;
+            color: #aaa;
+            line-height: 1;
+        }
+        .close-drop:hover {
+            color: #1b6c38;
+        }
+
+        .dropdown-menu h3 {
+            margin-top: 0;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+
+@media (min-width: 768px) {
+        .nav-item .dropdown-menu {
+          width: 50vw;
+        }
+                .nav-item .dropdown-menu::after{
+          display: none;
+        }
+
+}
+   .catcher{
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          background: #14522b;
+          color: white;
+          text-align: center;
+          font-size: 10px;
+          height: 16px;
+        }
+        .site-header {
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0px;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 5px;
+            height: 50px; /* Adjust as needed */
+        }
+        .logo-container img {
+          width: 70px;
+        }
+
+        .main-nav {
+            display: flex;
+            justify-content: center;
+        }
+
+        .nav-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 10px;
+        }
+
+        .nav-list li{
+          margin: 0;
+        }
+        .nav-list li:before{
+          display: none;
+        }
+        .nav-list li a, .dropdown-toggle {
+            text-decoration: none;
+            color: #555;
+            font-weight: 300;
+            font-size: 15px;
+            transition: color 0.3s;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 6px 0;
+            font-family: inherit;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-list li a:hover, .dropdown-toggle:hover, .dropdown-item.active .dropdown-toggle {
+            color: #1b6c38;
+        }
+        
+        .dropdown-toggle i {
+            margin-left: 5px;
+            font-size: 20px;
+            transition: transform 0.3s;
+        }
+
+        .dropdown-item.active .dropdown-toggle i {
+            transform: rotate(180deg);
+        }
+
+
+        .hamburger-menu {
+            font-size: 24px;
+            color: #555;
+            cursor: pointer;
+        }
+        
+     
+        /* Responsive adjustments for header */
+        @media (max-width: 768px) {
+            .hamburger-menu {
+                display: block; /* Show hamburger on mobile */
+            }
+            .header-content {
+                padding: 0 15px;
+            }
+            .dropdown-menu{
+              width: 100vw;
+            }
+        }
+
+    </style>
+
+    <ul class="nav-list">
+        
+        <li style="--lft:31%" class="nav-item">
+            <span onclick="toggleNav(this)" class="nav-link">Who<i class="fas fa-chevron-down"></i></span>
+            <ul class="dropdown-menu">
+                <span class="close-drop" onclick="closeAllNav()">&times;</span>
+                <h3>Who we are!</h3>
+                <li><a href="../about">Our History & Mission</a></li>
+                <li><a href="../board">Leadership Board</a></li>
+                <li><a href="../about#values">Core Values</a></li>
+                <li><a href="../about.html#governance">Legal & Registration</a></li>
+            </ul>
+        </li>
+
+        <li style="--lft:49%" class="nav-item">
+            <span onclick="toggleNav(this)" class="nav-link">What<i class="fas fa-chevron-down"></i></span>
+            <ul class="dropdown-menu">
+                <span class="close-drop" onclick="closeAllNav()">&times;</span>
+                <h3>What we do!</h3>
+                <li><a href="../objectives">Health & HIV/AIDS</a></li>
+                <li><a href="../objectives">Education & Schools</a></li>
+                <li><a href="../objectives">Water & Sanitation</a></li>
+                <li><a href="../objectives">Agriculture & Livelihoods</a></li>
+                <li><a href="../objectives">Human Rights & Legal</a></li>
+                <li><a href="../outreach">Outreach</a></li>
+            </ul>
+        </li>
+
+        <li style="--lft:69%" class="nav-item">
+            <span onclick="toggleNav(this)" class="nav-link">Where<i class="fas fa-chevron-down"></i></span>
+            <ul class="dropdown-menu">
+                <span class="close-drop" onclick="closeAllNav()">&times;</span>
+                <h3>Where we work!</h3>
+                <li><a href="../stories">Kampala & Slums</a></li>
+                <li><a href="../stories">Eastern Region</a></li>
+                <li><a href="../stories">Northern Region</a></li>
+                <li><a href="../stories">Landing Sites</a></li>
+                <li><a href="../contact#office">Our Offices</a></li>
+            </ul>
+        </li>
+
+        <li style="--lft:87%" class="nav-item">
+            <span onclick="toggleNav(this)" class="nav-link">How<i class="fas fa-chevron-down"></i></span>
+            <ul class="dropdown-menu">
+                <span class="close-drop" onclick="closeAllNav()">&times;</span>
+                <h3>How to help!</h3>
+                <li><a href="../forms?type=partner">Partner With Us</a></li>
+                <li><a href="../forms?type=volunteer">Volunteer</a></li>
+                <li><a href="../donate">Donate / Fundraise</a></li>
+                <li><a href="../forms?type=job">Careers</a></li>
+            </ul>
+        </li>
+
+    </ul>
+
+    <script>
+        function toggleNav(clickedBtn) {
+            // 1. Close all other dropdowns & remove highlights
+            const allMenus = document.querySelectorAll('.nav-item .dropdown-menu');
+            const allLinks = document.querySelectorAll('.nav-item .nav-link');
+            
+            // Check if the clicked one is already open
+            const targetMenu = clickedBtn.parentElement.querySelector('.dropdown-menu');
+            const isAlreadyOpen = targetMenu.style.display === 'block';
+
+            // Reset everything
+            allMenus.forEach(menu => menu.style.display = 'none');
+            allLinks.forEach(link => link.classList.remove('active'));
+
+            // 2. If it wasn't open, open it now and highlight the button
+            if (!isAlreadyOpen) {
+                targetMenu.style.display = 'block';
+                clickedBtn.classList.add('active');
+            }
+        }
+
+        function closeAllNav() {
+            document.querySelectorAll('.nav-item .dropdown-menu').forEach(menu => menu.style.display = 'none');
+            document.querySelectorAll('.nav-item .nav-link').forEach(link => link.classList.remove('active'));
+        }
+    </script>
+</nav>
+
+<div id="mobile-toggle" class="hamburger-menu nav-item" style="position: relative;">
+    
+    <span onclick="toggleNav(this)" class="nav-link" style="font-size: 24px; cursor: pointer;">
+        <i class="fas fa-bars"></i>
+    </span>
+
+    <div class="dropdown-menu mobile-dropdown">
+        <span class="close-drop" onclick="closeAllNav()" style="color: white;">&times;</span>
+        
+        <h3>Menu</h3>
+        
+        <ul class="mobile-links">
+            <li><a href="../about">Who We Are</a></li>
+            <li><a href="../objectives">What We Do</a></li>
+            <li><a href="../stories">Where We Work</a></li>
+            <li><a href="../partners">Partners</a></li>
+            <li><a href="../contact">Contact Us</a></li>
+        </ul>
+
+<div class="mobile-socials">
+    <a href="../https://www.facebook.com/Hopewwug"><i class="fab fa-facebook-f"></i></a>
+    <a href="../https://x.com/HOPEWORLDWIDEUG"><i class="fab fa-twitter"></i></a>
+    <a href="../https://wa.me/256782409528"><i class="fab fa-whatsapp"></i></a>
+    <a href="../https://www.tiktok.com/@hope.worldwide.ug?_r=1&_t=ZS-93iNWgrl6OH"><i class="fab fa-tiktok"></i></a>
+    <a href="mailto:info@hopewwug.org"><i class="fas fa-envelope"></i></a>
+</div>
+    </div>
+
+    <style>
+        /* Override default dropdown styles for this specific menu */
+        .mobile-dropdown {
+            background-color: #1b6c38 !important; /* Dark Green */
+            color: white !important;
+            right: 0 !important; /* Align to right edge */
+            left: auto !important;
+            transform: none !important;
+            width: 300px !important; /* Fixed width for mobile menu */
+            max-width: 90vw;
+        }
+
+        /* Triangle Arrow Color Override */
+        .mobile-dropdown::after {
+            border-bottom-color: #1b6c38 !important; /* Dark Green Arrow */
+            left: auto !important;
+            right: 10px !important; /* Position arrow under the hamburger */
+            transform: none !important;
+        }
+
+        /* Link Styles */
+        .mobile-links {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 20px;
+        }
+
+        .mobile-links li {
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .mobile-links li a {
+            display: block;
+            padding: 12px 0;
+            color: white;
+            font-size: 16px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: padding-left 0.3s;
+        }
+
+        .mobile-links li a:hover {
+            padding-left: 10px;
+            color: #f4c430; /* Yellow hover */
+        }
+
+        /* Social Icons Styling */
+        .mobile-socials {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .mobile-socials a {
+            color: #f4c430; /* Yellow Icons */
+            font-size: 20px;
+            transition: transform 0.3s;
+        }
+
+        .mobile-socials a:hover {
+            transform: scale(1.2);
+            color: white;
+        }
+    </style>
+</div>
+        </div>
+    </header>
+        
+        <div class="hero">
+            <img src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?q=80&w=800&auto=format&fit=crop" alt="People in village">
+            <div class="hero-text">
+                Hope Worldwide<br>International
+            </div>
+        </div>
+
+        <div class="intro-card fade-in">
+            <h3 class="section-title-green">Who Are We?</h3>
+            <p class="intro-text">
+                Founded in August 2016, Hope Worldwide International is a registered nonprofit public charity providing humanitarian support and development to women, youth, and children living in disaster and poverty-stricken areas.
+            </p>
+            <p class="intro-text">
+                We focus on the person as a whole by providing medical, physical, mental, emotional, food, clothing, and temporal accommodation.
+            </p>
+            <div class="contact-info">
+                 HQ: Plot 45 House NO.11 Lubaga Division, Kampala.<br>
+                 Reg No: INDR142981908NB
+            </div>
+        </div>
+
+        <section class="content-section fade-in">
+            <h2>Our Vision & Mission</h2>
+            <div class="dash"></div>
+            
+            <p>
+                <strong>Vision:</strong> To create an environment that enables children and youth to attain their full life potential.
+            </p>
+            
+            <p>
+                <strong>Mission:</strong> We create, provide, and advocate for health and economic empowerment services for marginalized communities in Uganda. We focus on HIV-affected people, general sanitation, sensitization, and improving access to human rights through influence on government and health practitioners.
+            </p>
+            
+            <p>
+                We believe that every person has the right to access resources and opportunities in order to live and develop with dignity and to become an active and contributing member of our society.
+            </p>
+
+            <img src="../res/IMG-20260123-WA0023.jpg" alt="Community support" class="mid-image">
+        </section>
+
+        <section class="content-section fade-in">
+            <h2 class="title-green">Our Interventions</h2>
+            <div class="dash"></div>
+
+            <p>
+                Hope Worldwide International bases its interventions on the communities' felt needs. We engage in specific projects across Uganda:
+            </p>
+
+            <ul>
+                <li><strong>Kawempe Slums:</strong> Empowering youths with vocational skills through our tailoring centre.</li>
+                <li><strong>Dokolo District:</strong> Staging medical camps in this poor northern district.</li>
+                <li><strong>Kamuli & Eastern Districts:</strong> Focusing on the sanitation of the girl child in schools (Church of Uganda Primary School) by providing pads.</li>
+                <li><strong>Kibuku & Pallisa:</strong> Renovation of schools (Nalubembe Primary, Kalaki Primary) to better the learning environment, along with water installation and hygiene education.</li>
+                <li><strong>Kampala (Kosovo & Makindye):</strong> Fighting malnutrition in slum areas by providing Maganjo soya and posho.</li>
+                <li><strong>Mukono & Buikwe:</strong> Women's mission on HIV/AIDS at landing sites (Katosi, Kiyindi). We empower affected women with income-generating activities like modern charcoal making and agro-business.</li>
+                <li><strong>Youth & Universities:</strong> Focusing on mental health, drama, and sports at institutions like Makerere University, Islamic University Kibuli, and UCU Mukono.</li>
+            </ul>
+        </section>
+
+        <section class="content-section fade-in">
+            <h2 class="title-green">Our Core Values</h2>
+            <div class="dash"></div>
+            <ul>
+                <li><strong>Gender Equality & Equity:</strong> Espousing fairness through the involvement of diversity of people in a gender-sensitive manner.</li>
+                <li><strong>Diversity & Inclusion:</strong> Identifying barriers and implementing solutions which lead to a more inclusive society.</li>
+                <li><strong>Professionalism:</strong> Aiming for quality services and positive feedback from beneficiaries.</li>
+                <li><strong>Transparency:</strong> Maintaining openness and ensuring stakeholders access information to promote human rights.</li>
+                <li><strong>Love and Respect:</strong> Services inspired by love for humanity, respecting the liberties of vulnerable members.</li>
+                <li><strong>Accountability:</strong> Taking full responsibility for actions and remaining answerable to civil society and partners.</li>
+                <li><strong>Integrity:</strong> Acting as good stewards of resources in an honest and truthful manner.</li>
+            </ul>
+        </section>
+<footer class="site-footer">
+    <style>
+    :root {
+    --deep-green: hsl(143, 64.2%, 24.1%);
+    --medium-green: hsl(143, 64.2%, 35%); /* Slightly lighter for gradients/cards */
+    --light-green: hsl(142, 76.6%, 73.1%);
+    --accent-yellow: #ffce00;
+    --text-dark: #333;
+    --text-light: #666;
+    --white: #fff;
+    --max-width: 1200px;
+}
+    .btn {
+    display: inline-block;
+    padding: 9px 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border-radius: 3px;
+    border: none;
+}
+
+.btn-yellow {
+    background-color: var(--accent-yellow);
+    color: var(--deep-green);
+}
+.btn-yellow:hover {
+    background-color: #e6b800;
+}
+
+.btn-green {
+    background-color: var(--deep-green);
+    color: var(--white);
+}
+
+.btn-outline {
+    border: 2px solid var(--deep-green);
+    color: var(--deep-green);
+    padding: 10px 20px;
+    border-radius: 30px;
+}
+
+.btn-white-outline {
+    border: 2px solid var(--white);
+    color: var(--white);
+    border-radius: 30px;
+    padding: 8px 20px;
+    font-size: 0.8rem;
+    margin-top: 15px;
+}
+
+.btn-yellow-center {
+    background-color: var(--accent-yellow);
+    color: var(--deep-green);
+    border-radius: 30px;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.btn-outline-green {
+    border: 2px solid var(--deep-green);
+    color: var(--deep-green);
+    border-radius: 30px;
+}
+
+        .site-footer {
+            background-color:white; /* Subtle matching background */
+            padding: 40px 20px;
+            border-top: 3px solid #aadd68; /* Lime accent top border */
+            width: 100%;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        /* --- TOP SECTION (Brand + Links) --- */
+        .footer-top {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        /* Brand Area */
+        .footer-brand {
+            margin-bottom: 20px;
+        }
+
+        .brand-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #1b6c38; /* Deep Green */
+        }
+
+        .brand-logo {
+            height: 62px;
+            margin-right: 12px;
+        }
+
+        .brand-name {
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        /* Links Grid */
+        .footer-links-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Mobile: 2 cols */
+            gap: 30px;
+            width: 100%;
+        }
+
+        .link-column h2 {
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #1b6c38; /* Deep Green Headings */
+            margin-bottom: 20px;
+            letter-spacing: 0.5px;
+        }
+
+        .link-column ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .link-column li:before{
+          display: none;
+        }
+        .link-column li {
+            margin-bottom: 12px;
+        }
+
+        .link-column a {
+            color: #555;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .link-column a:hover {
+            color: #1b6c38;
+            text-decoration: underline;
+        }
+
+        /* --- DIVIDER --- */
+        .footer-divider {
+            border: 0;
+            height: 1px;
+            background-color: #dbe4de;
+            margin: 30px 0;
+        }
+
+        /* --- BOTTOM SECTION (Copyright + Socials) --- */
+        .footer-bottom {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .copyright {
+            font-size: 14px;
+            color: #666;
+            text-align: center;
+        }
+
+        .copyright a {
+            color: #666;
+            text-decoration: none;
+        }
+
+        .copyright a:hover {
+            text-decoration: underline;
+        }
+
+        /* Social Icons */
+        .social-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .social-item {
+            color: #555;
+            transition: color 0.3s, transform 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .social-item:hover {
+            color: #1b6c38; /* Green on hover */
+            transform: translateY(-2px);
+        }
+
+        .social-item svg {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+
+        /* --- MEDIA QUERIES --- */
+        
+        /* Tablet & Desktop */
+        @media (min-width: 768px) {
+            .footer-top {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            .footer-links-grid {
+                grid-template-columns: repeat(3, 1fr); /* 3 cols on desktop */
+                width: auto;
+                gap: 60px;
+            }
+
+            .footer-bottom {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            .copyright {
+                text-align: left;
+            }
+        }
+        footer {
+    background: #f9f9f9;
+    padding-top: 60px;
+    border-top: 5px solid var(--accent-yellow);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    padding-bottom: 50px;
+}
+
+.footer-left h3 {
+    color: var(--deep-green);
+    margin-bottom: 15px;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 0;
+    max-width: 400px;
+}
+
+.newsletter-form input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.footer-links-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 30px;
+}
+
+.footer-links-columns h4 {
+    color: var(--deep-green);
+    margin-bottom: 15px;
+}
+
+.footer-links-columns li {
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.yellow-box {
+    background: var(--accent-yellow);
+    padding: 40px;
+    text-align: center;
+}
+.yellow-box h3 {
+    color: var(--deep-green);
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+.small-text {
+    font-size: 0.8rem;
+    margin-top: 15px;
+}
+
+.partners h4 {
+    font-size: 0.8rem;
+    color: var(--deep-green);
+    margin-bottom: 15px;
+}
+
+.partner-logos {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.partner-logos span {
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    font-size: 0.7rem;
+    color: #999;
+}
+
+.social-icons a {
+    color: var(--deep-green);
+    font-size: 1.2rem;
+    margin-right: 15px;
+}
+
+.copyright {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.8rem;
+    border-top: 1px solid #eee;
+}
+
+        /* --- MARQUEE CSS (Embedded for functionality) --- */
+        .partners-section {
+            border-top: 1px solid #e1e8e3; /* Subtle separator */
+            border-bottom: 1px solid #e1e8e3;
+            padding: 20px 0;
+            margin-top: 30px;
+            background-color: #f9fdfa; /* Very faint green tint */
+            overflow: hidden;
+        }
+
+        .partners-title {
+            text-align: center;
+            color: #1b6c38;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+
+        .marquee-track {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            /* Simple scrolling animation */
+            animation: scroll 25s linear infinite;
+            width: max-content; 
+        }
+
+        .marquee-track:hover {
+            animation-play-state: paused;
+        }
+
+        .partner-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        .partner-item:hover {
+            opacity: 1;
+        }
+
+        .partner-img {
+            height: 45px; /* Fixed height for consistency */
+            width: auto;
+            object-fit: contain;
+            mix-blend-mode: multiply; /* Helps logos blend with background */
+        }
+
+        .partner-name {
+            font-size: 14px;
+            font-weight: 600;
+            color: #555;
+        }
+
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); } /* Scrolls half way if content is duplicated */
+        }
+        
+        /* Developer Credit Style */
+        .dev-credit {
+            font-size: 13px;
+            color: #888;
+            margin-top: 5px;
+        }
+        .dev-credit a {
+            color: #1b6c38;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .dev-credit a:hover {
+            text-decoration: underline;
+        }
+    </style>
+
+    <div class="footer-content">
+        
+        <div class="footer-top">
+            <div class="footer-brand">
+                <a href="../index.html" class="brand-link">
+                    <img src="../res/logo.jpg" class="brand-logo" alt="Hope Worldwide Logo" />
+                </a>
+                <div>
+                    <br>
+                    <h3>Subscribe to our newsletter</h3>
+                    <form class="newsletter-form">
+                        <input type="text" placeholder="Name">
+                        <input type="email" placeholder="Email Address">
+                        <button type="button" class="btn btn-green">SUBSCRIBE</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-links-grid">
+                <div class="link-column">
+                    <h2>Our Work</h2>
+                    <ul>
+                        <li><a href="../outreach">Our outreach</a></li>
+                        <li><a href="../gallery">Gallery</a></li>
+                        <li><a href="../objectives">Objectives</a></li>
+                        <li><a href="../stories">Success Stories</a></li>
+                    </ul>
+                </div>
+                <div class="link-column">
+                    <h2>Get Involved</h2>
+                    <ul>
+                        <li><a href="../donate">Donate</a></li>
+                        <li><a href="../forms?type=volunteer">Volunteer</a></li>
+                        <li><a href="../forms?type=partner">Partner With Us</a></li>
+                        <li><a href="../forms?type=job">Careers</a></li>
+                        <li><a href="../partners">Partners</a></li>
+                    </ul>
+                </div>
+                <div class="link-column">
+                    <h2>Legal & Contact</h2>
+                    <ul>
+                        <li><a href="../faq">Frequently Asked Questions</a></li>
+                        <li><a href="../board">Our team</a></li>
+                        <li><a href="../cookies.html">Cookie Policy</a></li>
+                        <li><a href="../contact">Contact Support</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="partners-section">
+            <div class="partners-title">Our Partners</div>
+            <div class="marquee-track">
+                <div class="partner-item">
+                    <img src="../res/makerere.jpeg" alt="Makerere" class="partner-img">
+                    <span class="partner-name">Makerere University</span>
+                </div>
+                <div class="partner-item">
+                    <img src="../res/mengo.png" alt="Mengo" class="partner-img">
+                    <span class="partner-name">Mengo SS</span>
+                </div>
+                <div class="partner-item">
+                    <img src="../res/ucu.jpg" alt="UCU" class="partner-img">
+                    <span class="partner-name">UCU</span>
+                </div>
+                <div class="partner-item">
+                    <img src="../res/makerere.png" alt="Makerere College" class="partner-img">
+                    <span class="partner-name">Makerere College</span>
+                </div>
+                <div class="partner-item">
+                    <img src="../res/dana.jpg" alt="Dana" class="partner-img">
+                    <span class="partner-name">Dana Foundation</span>
+                </div>
+                <div class="partner-item">
+                    <img src="../res/uvri.jpg" alt="Uganda Virus" class="partner-img">
+                    <span class="partner-name">Uganda Virus Institute</span>
+                </div>
+                <div class="partner-item">
+                    <img src="../res/ministry.jpeg" alt="Ministry" class="partner-img">
+                    <span class="partner-name">Ministry of Health</span>
+                </div>
+
+            
+                <div class="partner-item">
+                    <img src="../res/makerere.jpeg" alt="Makerere" class="partner-img">
+                    <span class="partner-name">Makerere University</span>
+                </div>
+                <div class="partner-item">
+                    <img src="../res/mengo.png" alt="Mengo" class="partner-img">
+                    <span class="partner-name">Mengo SS</span>
+                </div>
+                <div class="partner-item">
+                    <img src="../res/ucu.jpg" alt="UCU" class="partner-img">
+                    <span class="partner-name">UCU</span>
+                </div>
+                <div class="partner-item">
+                    <img src="../res/makerere.png" alt="Makerere College" class="partner-img">
+                    <span class="partner-name">Makerere College</span>
+                </div>
+                <div class="partner-item">
+                    <img src="../res/dana.jpg" alt="Dana" class="partner-img">
+                    <span class="partner-name">Dana Foundation</span>
+                </div>
+                <div class="partner-item">
+                    <img src="../res/uvri.jpg" alt="Uganda Virus" class="partner-img">
+                    <span class="partner-name">Uganda Virus Institute</span>
+                </div>
+                <div class="partner-item">
+                    <img src="../res/ministry.jpeg" alt="Ministry" class="partner-img">
+                    <span class="partner-name">Ministry of Health</span>
+                </div>
+
+            </div><br>
+            <a href="../partners" style="text-align: center; display: block;" class="map-link">READ MORE &rarr;</a>
+        </div>
+
+        <hr class="footer-divider" style="margin-top: 0;" />
+
+        <div class="footer-bottom">
+            <div style="text-align: center; width: 100%;">
+                <span class="copyright">
+                    © 2026 Hope Worldwide. All Rights Reserved.
+                </span>
+                <div class="dev-credit">
+                    Developed by Amanda Technologies | <a href="mailto:amandatechnologies@gmail.com">Contact them</a>
+                </div>
+            </div>
+            
+<div class="social-links">
+    <a href="https://www.facebook.com/Hopewwug" class="social-item">
+        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M13.135 6H15V3h-1.865a4.147 4.147 0 0 0-4.142 4.142V9H7v3h2v9.938h3V12h2.021l.592-3H12V6.591A.6.6 0 0 1 12.592 6h.543Z" clip-rule="evenodd"/></svg>
+        <span class="sr-only">Facebook</span>
+    </a>
+    <a href="https://x.com/HOPEWORLDWIDEUG" class="social-item">
+        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.795 10.533 20.68 2h-3.073l-5.255 6.517L7.69 2H1l7.806 10.91L1.47 22h3.074l5.705-7.07L15.31 22H22l-8.205-11.467Zm-2.38 2.95L9.97 11.464 4.36 3.627h2.31l4.528 6.317 1.443 2.02 6.018 8.409h-2.31l-4.934-6.89Z"/></svg>
+        <span class="sr-only">Twitter</span>
+    </a>
+            <a href="https://www.tiktok.com/@hope.worldwide.ug?_r=1&_t=ZS-93iNWgrl6OH" class="social-item" aria-label="Titkok">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor">
+  <path d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"/>
+</svg>        </a>
+
+    <a href="https://wa.me/256782409528" class="social-item">
+        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        <span class="sr-only">WhatsApp</span>
+    </a>
+    <a href="mailto:info@hopewwug.org" class="social-item">
+        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        <span class="sr-only">Email</span>
+    </a>
+</div>
+
+        </div>
+    </div>
+</footer>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target); // Only animate once
+                    }
+                });
+            }, observerOptions);
+
+            const fadeElements = document.querySelectorAll('.fade-in');
+            fadeElements.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>

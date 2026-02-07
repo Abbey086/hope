@@ -1,0 +1,180 @@
+body { container-type: inline-size }
+
+main {
+	--w: 100cqw; /* container content-box width */
+	--u: 6em; /* unit column width */
+	--s: max(.25rem, 1vmin); /* gap size */
+	--p: calc(var(--w) + var(--s)); /* numerator */
+	--q: calc(var(--u) + var(--s)); /* denominator */
+	--f: var(--p)/var(--q);
+	/* number of columns of width u that fit in w 
+	 * when having a gap space s between them */
+	--n: max(1, round(down, var(--f)));
+	display: grid;
+	/* compute row gap out of column one */
+	grid-gap: calc(.5*var(--s)*sqrt(3)) var(--s);
+	grid-template-columns: repeat(var(--n), 1fr);
+	justify-content: center;
+	margin: calc(.5*var(--u)) 0;
+	
+	a {
+		/* how many hex fit on odd (1st, 3rd...) rows
+		 * (a sort of mid index) */
+		--m: round(down, .5*var(--n));
+		/* index of hex among a pair of odd + even rows */
+		--j: mod(var(--i), var(--n) - 1);
+		/* 1 if on an even row (j > m) */
+		--e: clamp(0, var(--j) - var(--m) + 1, 1);
+		display: grid;
+		grid-column: 
+			/* mod() is index on every row, odd or even;
+			 * double it since ever hex spans 2 columns
+			 * add 1 since index is 0-based 
+			 * and column numbering is 1-based;
+			 * finally, add e to column start, 
+			 * which is 0 on odd rows, 1 on even ones */
+			calc(2*mod(var(--j), var(--m)) + 1 + var(--e))/
+			/* every hex stretches across two columns */
+			span 2;
+		overflow: hidden;
+		margin: calc(-25%/sqrt(3)) 0;
+		clip-path: 
+			polygon(50% 0, 150% 50%, 50% 100%, -50% 50%);
+		cursor: pointer; /* Added pointer for lightbox trigger */
+	}
+}
+
+img {
+	width: 100%;
+	aspect-ratio: sqrt(3)/ 2;
+	object-fit: cover
+}
+
+/* only needed if dividing lengths not supported */
+@supports not (scale: calc(100cqh/3lh)) {
+	@property --p { /* numerator */
+		syntax: '<length-percentage>';
+		initial-value: 0px;
+		inherits: true
+	}
+
+	@property --q { /* denominator */
+		syntax: '<length-percentage>';
+		initial-value: 0px;
+		inherits: true
+	}
+	
+	main {
+		--f: round(tan(atan2(var(--p), var(--q))), .00001)
+	}
+}
+
+/* JUST OVERALL PAGE LAYOUT & PRETTIFYING */
+* { margin: 0; box-sizing: border-box; }
+
+html, body { display: grid }
+
+html {
+	overflow-x: hidden;
+	padding: .5em;
+	background: #fcfcfc; /* Changed to Off-White */
+	color: #444; /* Changed to Dark Grey */
+}
+
+body {
+	justify-self: center;
+	width: clamp(200px, 100%, 1400px);
+	font: clamp(.625em, 3vmin, 1.25em)/ 1.25 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	text-align: center
+}
+
+h1 {
+	font-family: 'Segoe UI', sans-serif;
+	text-wrap: balance;
+	color: #1b6c38; /* Hope Worldwide Green */
+	font-weight: 800;
+	margin-bottom: 0.2em;
+	font-size: 3em;
+}
+header p{
+	font-size: 1.5em;
+  
+}
+header{
+	text-align: center;
+  
+}
+
+
+main { 
+    filter: drop-shadow(2px 2px 5px rgba(0,0,0,0.15)); /* Softer shadow */
+}
+
+a:is(:hover, :focus) { --hov: 1 }
+
+img {	
+	scale: calc(1 + var(--hov)*.15); /* Slightly reduced zoom */
+	/* filter: saturate(var(--hov, 0)); REMOVED B&W FILTER */
+	transition: .4s ease-out;
+}
+
+footer {
+	margin: 2em auto 0 auto;
+	width: min(100%, 50em);
+	color: #666;
+	
+	a { 
+	    color: #1b6c38; /* Hope Worldwide Green */
+	    text-decoration: none;
+	    font-weight: bold;
+	}
+}
+
+/* --- LIGHTBOX STYLES --- */
+.lightbox {
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0,0,0,0.9); 
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+}
+
+.lightbox-content {
+    margin: auto;
+    display: block;
+    width: auto;
+    max-height: 50vh;
+    border-radius: 4px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    animation: zoomIn 0.3s;
+}
+
+@keyframes zoomIn {
+    from {transform:scale(0.8); opacity:0} 
+    to {transform:scale(1); opacity:1}
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.close:hover,
+.close:focus {
+    color: #aadd68; /* Lime accent hover */
+    text-decoration: none;
+    cursor: pointer;
+}
