@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        
+          <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <title>Hope Worldwide - Stories of Change</title>
     <style>
         /* --- CSS STYLES (Inherited from Main Theme) --- */
@@ -14,7 +17,7 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Poppins', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #fcfcfc;
             color: #444;
             line-height: 1.6;
@@ -319,29 +322,14 @@
 <body>
 
     <div class="container">
-                <header class="site-header">
+    <header class="site-header">
         <div class="container header-content">
             <div class="logo-container">
-                <img src="../res/logo.jpg" class="logo" onclick="window.location.href='../index.html'"></i>
-                        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
+                <img src="../res/logo.jpg" class="logo" onclick="../index.html"></i>
             </div>
             <nav class="main-nav">
     <style>
-    .header {
-    background: var(--white);
-    z-index: 776559969779;
-    position: fixed;
-    top: 0;
-    height: 55px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100vw;
-    left: 0;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-}
-
+    
         /* CSS confined to this nav */
         .nav-list .fa-chevron-down {
             display: none;
@@ -412,104 +400,6 @@
         }
 
 }
-   .catcher{
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100%;
-          background: #14522b;
-          color: white;
-          text-align: center;
-          font-size: 10px;
-          height: 16px;
-        }
-        .site-header {
-            background-color: #fff;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0px;
-            z-index: 1000;
-        }
-
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 5px;
-            height: 50px; /* Adjust as needed */
-        }
-        .logo-container img {
-          width: 70px;
-        }
-
-        .main-nav {
-            display: flex;
-            justify-content: center;
-        }
-
-        .nav-list {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            gap: 10px;
-        }
-
-        .nav-list li{
-          margin: 0;
-        }
-        .nav-list li:before{
-          display: none;
-        }
-        .nav-list li a, .dropdown-toggle {
-            text-decoration: none;
-            color: #555;
-            font-weight: 300;
-            font-size: 15px;
-            transition: color 0.3s;
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 6px 0;
-            font-family: inherit;
-            display: flex;
-            align-items: center;
-        }
-
-        .nav-list li a:hover, .dropdown-toggle:hover, .dropdown-item.active .dropdown-toggle {
-            color: #1b6c38;
-        }
-        
-        .dropdown-toggle i {
-            margin-left: 5px;
-            font-size: 20px;
-            transition: transform 0.3s;
-        }
-
-        .dropdown-item.active .dropdown-toggle i {
-            transform: rotate(180deg);
-        }
-
-
-        .hamburger-menu {
-            font-size: 24px;
-            color: #555;
-            cursor: pointer;
-        }
-        
-     
-        /* Responsive adjustments for header */
-        @media (max-width: 768px) {
-            .hamburger-menu {
-                display: block; /* Show hamburger on mobile */
-            }
-            .header-content {
-                padding: 0 15px;
-            }
-            .dropdown-menu{
-              width: 100vw;
-            }
-        }
 
     </style>
 
@@ -520,10 +410,12 @@
             <ul class="dropdown-menu">
                 <span class="close-drop" onclick="closeAllNav()">&times;</span>
                 <h3>Who we are!</h3>
+                <li><a href="../about">About Us</a></li>
                 <li><a href="../about">Our History & Mission</a></li>
                 <li><a href="../board">Leadership Board</a></li>
                 <li><a href="../about#values">Core Values</a></li>
                 <li><a href="../about.html#governance">Legal & Registration</a></li>
+                <li><a href="../gallery">Gallery</a></li>
             </ul>
         </li>
 
@@ -546,10 +438,10 @@
             <ul class="dropdown-menu">
                 <span class="close-drop" onclick="closeAllNav()">&times;</span>
                 <h3>Where we work!</h3>
-                <li><a href="../stories">Kampala & Slums</a></li>
+                <li><a href="../stories">Central Region</a></li>
                 <li><a href="../stories">Eastern Region</a></li>
                 <li><a href="../stories">Northern Region</a></li>
-                <li><a href="../stories">Landing Sites</a></li>
+                <li><a href="../stories">Western Region</a></li>
                 <li><a href="../contact#office">Our Offices</a></li>
             </ul>
         </li>
@@ -561,8 +453,9 @@
                 <h3>How to help!</h3>
                 <li><a href="../forms?type=partner">Partner With Us</a></li>
                 <li><a href="../forms?type=volunteer">Volunteer</a></li>
-                <li><a href="../donate">Donate / Fundraise</a></li>
+                <li><a href="../donate">Donate</a></li>
                 <li><a href="../forms?type=job">Careers</a></li>
+                <li><a href="../contact">Contact Us</a></li>
             </ul>
         </li>
 
@@ -613,13 +506,16 @@
             <li><a href="../stories">Where We Work</a></li>
             <li><a href="../partners">Partners</a></li>
             <li><a href="../contact">Contact Us</a></li>
+            <li><a href="../faq">Frequently Asked Questions</a></li>
         </ul>
 
 <div class="mobile-socials">
-    <a href="../https://www.facebook.com/Hopewwug"><i class="fab fa-facebook-f"></i></a>
-    <a href="../https://x.com/HOPEWORLDWIDEUG"><i class="fab fa-twitter"></i></a>
-    <a href="../https://wa.me/256782409528"><i class="fab fa-whatsapp"></i></a>
-    <a href="../https://www.tiktok.com/@hope.worldwide.ug?_r=1&_t=ZS-93iNWgrl6OH"><i class="fab fa-tiktok"></i></a>
+    <a href="https://www.facebook.com/Hopewwug"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://x.com/HOPEWORLDWIDEUG"><i class="fab fa-twitter"></i></a>
+    <a href=""><i class="fab fa-linkedin"></i></a>
+    <a href="https://wa.me/256782409528"><i class="fab fa-whatsapp"></i></a>
+    <a href=""><i class="fab fa-linkedin"></i></a>
+    <a href="https://www.tiktok.com/@hope.worldwide.ug?_r=1&_t=ZS-93iNWgrl6OH"><i class="fab fa-tiktok"></i></a>
     <a href="mailto:info@hopewwug.org"><i class="fas fa-envelope"></i></a>
 </div>
     </div>
@@ -689,6 +585,101 @@
             transform: scale(1.2);
             color: white;
         }
+        
+        /* --- NEW HEADER CSS --- */
+        .catcher{
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          background: #14522b;
+          color: white;
+          text-align: center;
+          font-size: 10px;
+          height: 16px;
+        }
+        .site-header {
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0px;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 5px;
+            height: 50px; /* Adjust as needed */
+        }
+        .logo-container img {
+          width: 70px;
+        }
+
+        .main-nav {
+            display: flex;
+            justify-content: center;
+        }
+
+        .nav-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 10px;
+        }
+
+        .nav-list li a, .dropdown-toggle {
+            text-decoration: none;
+            color: #555;
+            font-weight: 300;
+            font-size: 15px;
+            transition: color 0.3s;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 6px 0;
+            font-family: inherit;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-list li a:hover, .dropdown-toggle:hover, .dropdown-item.active .dropdown-toggle {
+            color: #1b6c38;
+        }
+        
+        .dropdown-toggle i {
+            margin-left: 5px;
+            font-size: 20px;
+            transition: transform 0.3s;
+        }
+
+        .dropdown-item.active .dropdown-toggle i {
+            transform: rotate(180deg);
+        }
+
+
+        .hamburger-menu {
+            font-size: 24px;
+            color: #555;
+            cursor: pointer;
+        }
+        
+     
+        /* Responsive adjustments for header */
+        @media (max-width: 768px) {
+            .hamburger-menu {
+                display: block; /* Show hamburger on mobile */
+            }
+            .header-content {
+                padding: 0 15px;
+            }
+            .dropdown-menu{
+              width: 100vw;
+            }
+        }
+
     </style>
 </div>
         </div>
@@ -1325,7 +1316,7 @@
                     © 2026 Hope Worldwide. All Rights Reserved.
                 </span>
                 <div class="dev-credit">
-                    Developed by Amanda Technologies | <a href="mailto:amandatechnologies@gmail.com">Contact them</a>
+                    Developed by Amanda Technologies | <a href="https://amandatechnologies.com">Learn more</a>
                 </div>
             </div>
             
@@ -1333,6 +1324,9 @@
     <a href="https://www.facebook.com/Hopewwug" class="social-item">
         <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M13.135 6H15V3h-1.865a4.147 4.147 0 0 0-4.142 4.142V9H7v3h2v9.938h3V12h2.021l.592-3H12V6.591A.6.6 0 0 1 12.592 6h.543Z" clip-rule="evenodd"/></svg>
         <span class="sr-only">Facebook</span>
+    </a>
+    <a href="" class="social-item">
+<svg height="200px" width="200px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 382 382" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M347.445,0H34.555C15.471,0,0,15.471,0,34.555v312.889C0,366.529,15.471,382,34.555,382h312.889 C366.529,382,382,366.529,382,347.444V34.555C382,15.471,366.529,0,347.445,0z M118.207,329.844c0,5.554-4.502,10.056-10.056,10.056 H65.345c-5.554,0-10.056-4.502-10.056-10.056V150.403c0-5.554,4.502-10.056,10.056-10.056h42.806 c5.554,0,10.056,4.502,10.056,10.056V329.844z M86.748,123.432c-22.459,0-40.666-18.207-40.666-40.666S64.289,42.1,86.748,42.1 s40.666,18.207,40.666,40.666S109.208,123.432,86.748,123.432z M341.91,330.654c0,5.106-4.14,9.246-9.246,9.246H286.73 c-5.106,0-9.246-4.14-9.246-9.246v-84.168c0-12.556,3.683-55.021-32.813-55.021c-28.309,0-34.051,29.066-35.204,42.11v97.079 c0,5.106-4.139,9.246-9.246,9.246h-44.426c-5.106,0-9.246-4.14-9.246-9.246V149.593c0-5.106,4.14-9.246,9.246-9.246h44.426 c5.106,0,9.246,4.14,9.246,9.246v15.655c10.497-15.753,26.097-27.912,59.312-27.912c73.552,0,73.131,68.716,73.131,106.472 L341.91,330.654L341.91,330.654z"></path> </g></svg>        <span class="sr-only">linkedin</span>
     </a>
     <a href="https://x.com/HOPEWORLDWIDEUG" class="social-item">
         <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.795 10.533 20.68 2h-3.073l-5.255 6.517L7.69 2H1l7.806 10.91L1.47 22h3.074l5.705-7.07L15.31 22H22l-8.205-11.467Zm-2.38 2.95L9.97 11.464 4.36 3.627h2.31l4.528 6.317 1.443 2.02 6.018 8.409h-2.31l-4.934-6.89Z"/></svg>
@@ -1433,6 +1427,66 @@
                     
                     <p>We believe in skilling young people as a primary method of fighting poverty and preventing negative outcomes like child labor and crime. This centre represents a tangible step toward economic independence for the youth of Kampala.</p>
                 `
+            },
+            {
+                title: "A Future Leader in Nankodo",
+                date: "November 20, 2025",
+                category: "Education",
+                image: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=800&auto=format&fit=crop",
+                content: `
+                    <p>Kadondi Moreen, a 14-year-old P.5 student at Nankodo Islamic Primary School, has a bold dream: she intends to become a politician and Member of Parliament. However, retention in school for girls like Kadondi has historically been difficult due to stigma surrounding menstruation.</p>
+                    
+                    <h4>Breaking the Stigma</h4>
+                    <p>Through our School Water, Sanitation, and Hygiene (SWASH) project, the atmosphere at Nankodo has transformed. Kadondi reports that boys no longer laugh at girls; instead, they support them during their periods through pad-making activities taught by our volunteers. This shift in culture has directly increased the enrollment and retention of girls in school.</p>
+                `
+            },
+            {
+                title: "Pineapple Success in Kaliro",
+                date: "October 05, 2025",
+                category: "Livelihoods",
+                image: "https://images.unsplash.com/photo-1605000797499-95a51c5269ae?q=80&w=800&auto=format&fit=crop",
+                content: `
+                    <p>Our household resilience program aims to empower vulnerable families to adopt "farming as a business." In Kaliro and Kamuli, this vision has become a reality through the formation of farmer cooperatives.</p>
+                    
+                    <h4>Record-Breaking Harvests</h4>
+                    <p>The Kaliro farmers group successfully bulked and marketed <strong>10 metric tons</strong> of pineapple fruits, earning a collective <strong>UGX 19,800,000</strong>. Meanwhile, in Kamuli, producer cooperatives produced a staggering 5,280 tonnes of pineapples worth over <strong>UGX 41 Million</strong>. By organizing into Village Savings and Loan Associations (VSLA), these 62 farmer groups have mobilized over UGX 465 Million in savings, proving that organized agriculture is a pathway out of poverty.</p>
+                `
+            },
+            {
+                title: "Second Chances at Nakasongola Prison",
+                date: "September 12, 2025",
+                category: "Humanitarian",
+                image: "https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?q=80&w=800&auto=format&fit=crop",
+                content: `
+                    <p>Hope Worldwide International partners with the Uganda Prisons Service to offer rehabilitation and hope to inmates. At Nakasongola Men's Prison, we recently celebrated a graduation that marked a new beginning for 110 inmates.</p>
+                    
+                    <h4>Rehabilitation & Skills</h4>
+                    <p>The graduating class, comprising 60 men and 50 women, completed intensive training in theology, counseling, marriage and family matters, and leadership. This program is designed to reduce recidivism by providing inmates with the psychological and spiritual tools they need to reintegrate into society. Additionally, we provided tents and chairs to establish a permanent training shelter, ensuring this vital work continues.</p>
+                `
+            },
+            {
+                title: "Clean Water for St. John Boliso II",
+                date: "August 30, 2025",
+                category: "WASH",
+                image: "https://images.unsplash.com/photo-1538300342682-cf57afb97285?q=80&w=800&auto=format&fit=crop",
+                content: `
+                    <p>For years, the community surrounding St. John Boliso II had to walk 1.5km to fetch water from an unprotected well, leading to frequent outbreaks of typhoid and diarrhea. HWI-Uganda intervened by rehabilitating the local borehole.</p>
+                    
+                    <h4>Health and Food Security</h4>
+                    <p>Mr. Wojjo Wilberforce, the borehole caretaker, testifies that his household no longer falls sick. But the impact goes further: he has utilized the water runoff from the borehole to irrigate a banana plantation near his garden. This innovative use of resources has improved his family's food security even during the dry season, demonstrating how WASH projects can have ripple effects on livelihoods.</p>
+                `
+            },
+            {
+                title: "Brain Awareness Week at Makerere",
+                date: "March 15, 2025",
+                category: "Health",
+                image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=800&auto=format&fit=crop",
+                content: `
+                    <p>Mental health remains a neglected aspect of well-being in many schools. In partnership with the <strong>Dana Foundation</strong>, Hope Worldwide International conducted a landmark study and training session at Makerere College School.</p>
+                    
+                    <h4>Science & Stigma</h4>
+                    <p>Over 200 students and 5 teachers participated in sessions led by Dr. Joy Katabazi and psychiatric specialist Dr. Mutaka Joel. The training covered brain science and practical ways to manage mental health in everyday life. By addressing topics like depression, anxiety, and drug misuse openly, we are breaking the stigma that prevents young people from seeking help.</p>
+                `
             }
         ];
 
@@ -1475,23 +1529,64 @@
 
         // Animation Observer (Existing Code)
         document.addEventListener("DOMContentLoaded", function() {
-            const observerOptions = {
-                root: null,
-                rootMargin: '0px',
-                threshold: 0.1
-            };
+          // --- NEW FUNCTION: Render the grid dynamically ---
+function renderStories() {
+    const gridContainer = document.querySelector('.stories-grid');
+    if (!gridContainer) return;
 
-            const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, observerOptions);
+    // Clear any hardcoded HTML inside the grid
+    gridContainer.innerHTML = '';
 
-            const fadeElements = document.querySelectorAll('.fade-in');
-            fadeElements.forEach(el => observer.observe(el));
+    storiesData.forEach((story, index) => {
+        // Create a plain text excerpt by stripping HTML tags from content
+        const tempDiv = document.createElement("div");
+        tempDiv.innerHTML = story.content;
+        const plainText = tempDiv.textContent || tempDiv.innerText || "";
+        const excerpt = plainText.substring(0, 100) + "...";
+
+        // Build the HTML card
+        const cardHTML = `
+            <article class="story-card fade-in">
+                <div class="story-img-wrapper">
+                    <span class="category-tag">${story.category}</span>
+                    <img src="${story.image}" alt="${story.title}">
+                </div>
+                <div class="story-content">
+                    <span class="story-date">${story.date}</span>
+                    <h3 class="story-title">${story.title}</h3>
+                    <p class="story-excerpt">${excerpt}</p>
+                    <button class="read-more" onclick="openStory(${index})">Read Full Story</button>
+                </div>
+            </article>
+        `;
+        
+        gridContainer.insertAdjacentHTML('beforeend', cardHTML);
+    });
+}
+
+// --- UPDATED INITIALIZATION ---
+    // 1. First, render the stories from the array
+    renderStories();
+
+    // 2. Then, set up the animation observer on the NEW elements
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    // Select the newly created .fade-in elements
+    const fadeElements = document.querySelectorAll('.fade-in');
+    fadeElements.forEach(el => observer.observe(el));
         });
     </script>
 </body>
