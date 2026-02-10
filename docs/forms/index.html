@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hope Worldwide - Get Involved</title>
-    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        
+          <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script type="text/javascript">
        (function(){
@@ -12,6 +14,7 @@
           // REPLACE 'YOUR_PUBLIC_KEY' WITH YOUR ACTUAL EMAILJS PUBLIC KEY
           emailjs.init("TZOnqs4UaNbO2EbpX"); 
        })();
+
     </script>
 
     <style>
@@ -25,7 +28,7 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Poppins', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #fcfcfc;
             color: #444;
             line-height: 1.6;
@@ -161,7 +164,7 @@
             flex: 1;
         }
 
-        .form-group label {
+        .form-group label:not(p > label) {
             font-size: 12px;
             font-weight: 700;
             color: #1b6c38;
@@ -351,7 +354,13 @@
             border: 1px solid #aadd68;
             margin-top: 20px;
         }
-
+        .nao{
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          margin-block: 6px;
+          justify-content: flex-start;
+        }
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: translateY(0); }
@@ -377,29 +386,14 @@
 <body>
 
     <div class="container">
-                <header class="site-header">
+          <header class="site-header">
         <div class="container header-content">
             <div class="logo-container">
-                <img src="../res/logo.jpg" class="logo" onclick="window.location.href='../index.html'"></i>
-                        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
+                <img src="../res/logo.jpg" class="logo" onclick="../index.html"></i>
             </div>
             <nav class="main-nav">
     <style>
-    .header {
-    background: var(--white);
-    z-index: 776559969779;
-    position: fixed;
-    top: 0;
-    height: 55px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100vw;
-    left: 0;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-}
-
+    
         /* CSS confined to this nav */
         .nav-list .fa-chevron-down {
             display: none;
@@ -470,104 +464,6 @@
         }
 
 }
-   .catcher{
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100%;
-          background: #14522b;
-          color: white;
-          text-align: center;
-          font-size: 10px;
-          height: 16px;
-        }
-        .site-header {
-            background-color: #fff;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0px;
-            z-index: 1000;
-        }
-
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 5px;
-            height: 50px; /* Adjust as needed */
-        }
-        .logo-container img {
-          width: 70px;
-        }
-
-        .main-nav {
-            display: flex;
-            justify-content: center;
-        }
-
-        .nav-list {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            gap: 10px;
-        }
-
-        .nav-list li{
-          margin: 0;
-        }
-        .nav-list li:before{
-          display: none;
-        }
-        .nav-list li a, .dropdown-toggle {
-            text-decoration: none;
-            color: #555;
-            font-weight: 300;
-            font-size: 15px;
-            transition: color 0.3s;
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 6px 0;
-            font-family: inherit;
-            display: flex;
-            align-items: center;
-        }
-
-        .nav-list li a:hover, .dropdown-toggle:hover, .dropdown-item.active .dropdown-toggle {
-            color: #1b6c38;
-        }
-        
-        .dropdown-toggle i {
-            margin-left: 5px;
-            font-size: 20px;
-            transition: transform 0.3s;
-        }
-
-        .dropdown-item.active .dropdown-toggle i {
-            transform: rotate(180deg);
-        }
-
-
-        .hamburger-menu {
-            font-size: 24px;
-            color: #555;
-            cursor: pointer;
-        }
-        
-     
-        /* Responsive adjustments for header */
-        @media (max-width: 768px) {
-            .hamburger-menu {
-                display: block; /* Show hamburger on mobile */
-            }
-            .header-content {
-                padding: 0 15px;
-            }
-            .dropdown-menu{
-              width: 100vw;
-            }
-        }
 
     </style>
 
@@ -578,10 +474,12 @@
             <ul class="dropdown-menu">
                 <span class="close-drop" onclick="closeAllNav()">&times;</span>
                 <h3>Who we are!</h3>
+                <li><a href="../about">About Us</a></li>
                 <li><a href="../about">Our History & Mission</a></li>
                 <li><a href="../board">Leadership Board</a></li>
                 <li><a href="../about#values">Core Values</a></li>
                 <li><a href="../about.html#governance">Legal & Registration</a></li>
+                <li><a href="../gallery">Gallery</a></li>
             </ul>
         </li>
 
@@ -604,10 +502,10 @@
             <ul class="dropdown-menu">
                 <span class="close-drop" onclick="closeAllNav()">&times;</span>
                 <h3>Where we work!</h3>
-                <li><a href="../stories">Kampala & Slums</a></li>
+                <li><a href="../stories">Central Region</a></li>
                 <li><a href="../stories">Eastern Region</a></li>
                 <li><a href="../stories">Northern Region</a></li>
-                <li><a href="../stories">Landing Sites</a></li>
+                <li><a href="../stories">Western Region</a></li>
                 <li><a href="../contact#office">Our Offices</a></li>
             </ul>
         </li>
@@ -619,8 +517,9 @@
                 <h3>How to help!</h3>
                 <li><a href="../forms?type=partner">Partner With Us</a></li>
                 <li><a href="../forms?type=volunteer">Volunteer</a></li>
-                <li><a href="../donate">Donate / Fundraise</a></li>
+                <li><a href="../donate">Donate</a></li>
                 <li><a href="../forms?type=job">Careers</a></li>
+                <li><a href="../contact">Contact Us</a></li>
             </ul>
         </li>
 
@@ -671,13 +570,16 @@
             <li><a href="../stories">Where We Work</a></li>
             <li><a href="../partners">Partners</a></li>
             <li><a href="../contact">Contact Us</a></li>
+            <li><a href="../faq">Frequently Asked Questions</a></li>
         </ul>
 
 <div class="mobile-socials">
-    <a href="../https://www.facebook.com/Hopewwug"><i class="fab fa-facebook-f"></i></a>
-    <a href="../https://x.com/HOPEWORLDWIDEUG"><i class="fab fa-twitter"></i></a>
-    <a href="../https://wa.me/256782409528"><i class="fab fa-whatsapp"></i></a>
-    <a href="../https://www.tiktok.com/@hope.worldwide.ug?_r=1&_t=ZS-93iNWgrl6OH"><i class="fab fa-tiktok"></i></a>
+    <a href="https://www.facebook.com/Hopewwug"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://x.com/HOPEWORLDWIDEUG"><i class="fab fa-twitter"></i></a>
+    <a href=""><i class="fab fa-linkedin"></i></a>
+    <a href="https://wa.me/256782409528"><i class="fab fa-whatsapp"></i></a>
+    <a href=""><i class="fab fa-linkedin"></i></a>
+    <a href="https://www.tiktok.com/@hope.worldwide.ug?_r=1&_t=ZS-93iNWgrl6OH"><i class="fab fa-tiktok"></i></a>
     <a href="mailto:info@hopewwug.org"><i class="fas fa-envelope"></i></a>
 </div>
     </div>
@@ -747,6 +649,101 @@
             transform: scale(1.2);
             color: white;
         }
+        
+        /* --- NEW HEADER CSS --- */
+        .catcher{
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          background: #14522b;
+          color: white;
+          text-align: center;
+          font-size: 10px;
+          height: 16px;
+        }
+        .site-header {
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0px;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 5px;
+            height: 50px; /* Adjust as needed */
+        }
+        .logo-container img {
+          width: 70px;
+        }
+
+        .main-nav {
+            display: flex;
+            justify-content: center;
+        }
+
+        .nav-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 10px;
+        }
+
+        .nav-list li a, .dropdown-toggle {
+            text-decoration: none;
+            color: #555;
+            font-weight: 300;
+            font-size: 15px;
+            transition: color 0.3s;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 6px 0;
+            font-family: inherit;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-list li a:hover, .dropdown-toggle:hover, .dropdown-item.active .dropdown-toggle {
+            color: #1b6c38;
+        }
+        
+        .dropdown-toggle i {
+            margin-left: 5px;
+            font-size: 20px;
+            transition: transform 0.3s;
+        }
+
+        .dropdown-item.active .dropdown-toggle i {
+            transform: rotate(180deg);
+        }
+
+
+        .hamburger-menu {
+            font-size: 24px;
+            color: #555;
+            cursor: pointer;
+        }
+        
+     
+        /* Responsive adjustments for header */
+        @media (max-width: 768px) {
+            .hamburger-menu {
+                display: block; /* Show hamburger on mobile */
+            }
+            .header-content {
+                padding: 0 15px;
+            }
+            .dropdown-menu{
+              width: 100vw;
+            }
+        }
+
     </style>
 </div>
         </div>
@@ -795,6 +792,9 @@
                     <div class="form-group">
                         <label for="org-name">Organization Name</label>
                         <input type="text" id="org-name" class="form-control" placeholder="Company / NGO Name">
+                        <p class="nao">
+                          <input onchange="document.querySelector('#org-name').disabled = this.checked" type="checkbox" id="nao">
+                          <label for="nao">Not an Organization!</label></p>
                     </div>
                     
                     <div class="form-row" style="margin-top: 18px;">
@@ -843,26 +843,96 @@
                     </div>
                 </div>
 
-                <div id="section-job" class="dynamic-section">
-                    <div class="form-group">
-                        <label for="linkedin">LinkedIn Profile / Portfolio</label>
-                        <input type="url" id="linkedin" class="form-control" placeholder="https://linkedin.com/in/...">
-                    </div>
+<div id="section-job" class="dynamic-section">
+    <div class="form-group">
+        <label for="linkedin">LinkedIn Profile / Portfolio</label>
+        <input type="url" id="linkedin" class="form-control" placeholder="https://linkedin.com/in/...">
+    </div>
 
-                    <div class="form-group" style="margin-top: 18px;">
-                        <label>Upload CV / Resume</label>
-                        <div class="file-upload-wrapper">
-                            <div class="upload-icon">📄</div>
-                            <span class="upload-text" id="file-label">Click or Drag to Upload PDF/DOCX</span>
-                            <input type="file" id="resume" accept=".pdf,.doc,.docx" onchange="updateFileName(this)">
-                        </div>
-                    </div>
+    <div class="cv-section" style="margin-top: 25px; padding-top: 15px; border-top: 1px solid #eee;">
+        <h5 style="margin-bottom: 15px; color: #555;">Professional Summary</h5>
+        <div class="form-group">
+            <label for="cv-bio">Bio / Career Objective</label>
+            <textarea id="cv-bio" class="form-control" rows="3" placeholder="Briefly describe your professional background and goals..."></textarea>
+        </div>
+    </div>
 
-                    <div class="form-group" style="margin-top: 18px;">
-                        <label for="cover-letter">Cover Letter</label>
-                        <textarea id="cover-letter" class="form-control" placeholder="Why do you want to work with us?"></textarea>
-                    </div>
+    <div class="cv-section" style="margin-top: 25px;">
+        <h5 style="margin-bottom: 15px; color: #555;">Most Recent Work Experience</h5>
+        
+        <div class="form-row">
+            <div class="form-group">
+                <label for="job-title">Job Title</label>
+                <input type="text" id="job-title" class="form-control" placeholder="e.g. Senior Project Manager">
+            </div>
+            <div class="form-group">
+                <label for="company-name">Company Name</label>
+                <input type="text" id="company-name" class="form-control" placeholder="e.g. Acme Corp">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="job-start">Start Date</label>
+                <input type="month" id="job-start" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="job-end">End Date</label>
+                <input type="month" id="job-end" class="form-control">
+                <div style="margin-top: 5px; font-size: 0.85em;">
+                    <input type="checkbox" id="current-job" onchange="document.querySelector('#job-end').disabled = this.checked">
+                    <label for="current-job" style="display:inline; font-weight:normal;">I currently work here</label>
                 </div>
+            </div>
+        </div>
+
+        <div class="form-group" style="margin-top: 10px;">
+            <label for="job-desc">Key Responsibilities & Achievements</label>
+            <textarea id="job-desc" class="form-control" rows="4" placeholder="• Managed a team of 10...&#10;• Increased sales by 20%..."></textarea>
+        </div>
+    </div>
+
+    <div class="cv-section" style="margin-top: 25px;">
+        <h5 style="margin-bottom: 15px; color: #555;">Education</h5>
+        
+        <div class="form-row">
+            <div class="form-group">
+                <label for="edu-degree">Degree / Qualification</label>
+                <input type="text" id="edu-degree" class="form-control" placeholder="e.g. BSc Computer Science">
+            </div>
+            <div class="form-group">
+                <label for="edu-school">University / Institution</label>
+                <input type="text" id="edu-school" class="form-control" placeholder="University Name">
+            </div>
+        </div>
+        
+        <div class="form-row">
+             <div class="form-group">
+                <label for="edu-year">Graduation Year</label>
+                <input type="number" id="edu-year" class="form-control" placeholder="YYYY" min="1970" max="2030">
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group" style="margin-top: 25px;">
+        <label for="job-skills">Technical Skills & Tools</label>
+        <input type="text" id="job-skills" class="form-control" placeholder="e.g. Python, Project Management, Figma (Separate with commas)">
+    </div>
+
+    <div class="form-group" style="margin-top: 30px; border-top: 1px dashed #ccc; padding-top: 20px;">
+        <label>Have a formatted PDF instead? (Optional)</label>
+        <div class="file-upload-wrapper">
+            <div class="upload-icon">📄</div>
+            <span class="upload-text" id="file-label">Attach Resume PDF (Overrides above fields)</span>
+            <input type="file" id="resume" accept=".pdf,.doc,.docx" onchange="updateFileName(this)">
+        </div>
+    </div>
+
+    <div class="form-group" style="margin-top: 18px;">
+        <label for="cover-letter">Cover Letter</label>
+        <textarea id="cover-letter" class="form-control" placeholder="Why do you want to work with us?"></textarea>
+    </div>
+</div>
 
                 <button type="button" class="submit-btn" id="submit-btn" onclick="initiateOTP()">Send Proposal</button>
 
@@ -1470,7 +1540,6 @@
         const templateID = "template_r918gvs";
         
         let generatedOTP = null; // Stores the OTP for verification
-
         // Data configuration for the different forms
         const formConfig = {
             partner: {
