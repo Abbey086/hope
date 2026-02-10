@@ -7,6 +7,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <style>
+            body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-offwhite);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
         /* --- GLOBAL VARIABLES & RESET --- */
         :root {
             --primary-green: #006837;
@@ -20,12 +27,6 @@
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
         
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: var(--bg-offwhite);
-            color: var(--text-dark);
-            line-height: 1.6;
-        }
 
         a { text-decoration: none; color: inherit; }
         ul { list-style: none; }
@@ -228,29 +229,14 @@
     </style>
 </head>
 <body>
-        <header class="site-header">
+    <header class="site-header">
         <div class="container header-content">
             <div class="logo-container">
-                <img src="../res/logo.jpg" class="logo" onclick="window.location.href='../index.html'"></i>
-                        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
+                <img src="../res/logo.jpg" class="logo" onclick="../index.html"></i>
             </div>
             <nav class="main-nav">
     <style>
-    .header {
-    background: var(--white);
-    z-index: 776559969779;
-    position: fixed;
-    top: 0;
-    height: 55px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100vw;
-    left: 0;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-}
-
+    
         /* CSS confined to this nav */
         .nav-list .fa-chevron-down {
             display: none;
@@ -321,104 +307,6 @@
         }
 
 }
-   .catcher{
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100%;
-          background: #14522b;
-          color: white;
-          text-align: center;
-          font-size: 10px;
-          height: 16px;
-        }
-        .site-header {
-            background-color: #fff;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0px;
-            z-index: 1000;
-        }
-
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 5px;
-            height: 50px; /* Adjust as needed */
-        }
-        .logo-container img {
-          width: 70px;
-        }
-
-        .main-nav {
-            display: flex;
-            justify-content: center;
-        }
-
-        .nav-list {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            gap: 10px;
-        }
-
-        .nav-list li{
-          margin: 0;
-        }
-        .nav-list li:before{
-          display: none;
-        }
-        .nav-list li a, .dropdown-toggle {
-            text-decoration: none;
-            color: #555;
-            font-weight: 300;
-            font-size: 15px;
-            transition: color 0.3s;
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 6px 0;
-            font-family: inherit;
-            display: flex;
-            align-items: center;
-        }
-
-        .nav-list li a:hover, .dropdown-toggle:hover, .dropdown-item.active .dropdown-toggle {
-            color: #1b6c38;
-        }
-        
-        .dropdown-toggle i {
-            margin-left: 5px;
-            font-size: 20px;
-            transition: transform 0.3s;
-        }
-
-        .dropdown-item.active .dropdown-toggle i {
-            transform: rotate(180deg);
-        }
-
-
-        .hamburger-menu {
-            font-size: 24px;
-            color: #555;
-            cursor: pointer;
-        }
-        
-     
-        /* Responsive adjustments for header */
-        @media (max-width: 768px) {
-            .hamburger-menu {
-                display: block; /* Show hamburger on mobile */
-            }
-            .header-content {
-                padding: 0 15px;
-            }
-            .dropdown-menu{
-              width: 100vw;
-            }
-        }
 
     </style>
 
@@ -429,10 +317,12 @@
             <ul class="dropdown-menu">
                 <span class="close-drop" onclick="closeAllNav()">&times;</span>
                 <h3>Who we are!</h3>
+                <li><a href="../about">About Us</a></li>
                 <li><a href="../about">Our History & Mission</a></li>
                 <li><a href="../board">Leadership Board</a></li>
                 <li><a href="../about#values">Core Values</a></li>
                 <li><a href="../about.html#governance">Legal & Registration</a></li>
+                <li><a href="../gallery">Gallery</a></li>
             </ul>
         </li>
 
@@ -455,10 +345,10 @@
             <ul class="dropdown-menu">
                 <span class="close-drop" onclick="closeAllNav()">&times;</span>
                 <h3>Where we work!</h3>
-                <li><a href="../stories">Kampala & Slums</a></li>
+                <li><a href="../stories">Central Region</a></li>
                 <li><a href="../stories">Eastern Region</a></li>
                 <li><a href="../stories">Northern Region</a></li>
-                <li><a href="../stories">Landing Sites</a></li>
+                <li><a href="../stories">Western Region</a></li>
                 <li><a href="../contact#office">Our Offices</a></li>
             </ul>
         </li>
@@ -470,8 +360,9 @@
                 <h3>How to help!</h3>
                 <li><a href="../forms?type=partner">Partner With Us</a></li>
                 <li><a href="../forms?type=volunteer">Volunteer</a></li>
-                <li><a href="../donate">Donate / Fundraise</a></li>
+                <li><a href="../donate">Donate</a></li>
                 <li><a href="../forms?type=job">Careers</a></li>
+                <li><a href="../contact">Contact Us</a></li>
             </ul>
         </li>
 
@@ -522,13 +413,16 @@
             <li><a href="../stories">Where We Work</a></li>
             <li><a href="../partners">Partners</a></li>
             <li><a href="../contact">Contact Us</a></li>
+            <li><a href="../faq">Frequently Asked Questions</a></li>
         </ul>
 
 <div class="mobile-socials">
-    <a href="../https://www.facebook.com/Hopewwug"><i class="fab fa-facebook-f"></i></a>
-    <a href="../https://x.com/HOPEWORLDWIDEUG"><i class="fab fa-twitter"></i></a>
-    <a href="../https://wa.me/256782409528"><i class="fab fa-whatsapp"></i></a>
-    <a href="../https://www.tiktok.com/@hope.worldwide.ug?_r=1&_t=ZS-93iNWgrl6OH"><i class="fab fa-tiktok"></i></a>
+    <a href="https://www.facebook.com/Hopewwug"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://x.com/HOPEWORLDWIDEUG"><i class="fab fa-twitter"></i></a>
+    <a href=""><i class="fab fa-linkedin"></i></a>
+    <a href="https://wa.me/256782409528"><i class="fab fa-whatsapp"></i></a>
+    <a href=""><i class="fab fa-linkedin"></i></a>
+    <a href="https://www.tiktok.com/@hope.worldwide.ug?_r=1&_t=ZS-93iNWgrl6OH"><i class="fab fa-tiktok"></i></a>
     <a href="mailto:info@hopewwug.org"><i class="fas fa-envelope"></i></a>
 </div>
     </div>
@@ -598,6 +492,101 @@
             transform: scale(1.2);
             color: white;
         }
+        
+        /* --- NEW HEADER CSS --- */
+        .catcher{
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          background: #14522b;
+          color: white;
+          text-align: center;
+          font-size: 10px;
+          height: 16px;
+        }
+        .site-header {
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0px;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 5px;
+            height: 50px; /* Adjust as needed */
+        }
+        .logo-container img {
+          width: 70px;
+        }
+
+        .main-nav {
+            display: flex;
+            justify-content: center;
+        }
+
+        .nav-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 10px;
+        }
+
+        .nav-list li a, .dropdown-toggle {
+            text-decoration: none;
+            color: #555;
+            font-weight: 300;
+            font-size: 15px;
+            transition: color 0.3s;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 6px 0;
+            font-family: inherit;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-list li a:hover, .dropdown-toggle:hover, .dropdown-item.active .dropdown-toggle {
+            color: #1b6c38;
+        }
+        
+        .dropdown-toggle i {
+            margin-left: 5px;
+            font-size: 20px;
+            transition: transform 0.3s;
+        }
+
+        .dropdown-item.active .dropdown-toggle i {
+            transform: rotate(180deg);
+        }
+
+
+        .hamburger-menu {
+            font-size: 24px;
+            color: #555;
+            cursor: pointer;
+        }
+        
+     
+        /* Responsive adjustments for header */
+        @media (max-width: 768px) {
+            .hamburger-menu {
+                display: block; /* Show hamburger on mobile */
+            }
+            .header-content {
+                padding: 0 15px;
+            }
+            .dropdown-menu{
+              width: 100vw;
+            }
+        }
+
     </style>
 </div>
         </div>
@@ -629,34 +618,30 @@
                         Direct deposit to our official bank account. Please use your name as the reference.
                     </p>
                     
-                    <div class="bank-details">
-                        <div class="detail-row">
-                            <span class="detail-label">Bank Name:</span>
-                            <span class="detail-value">Absa Bank</span>
-                        </div>
-                        <div class="detail-row">
-                            <span class="detail-label">Account Name:</span>
-                            <span class="detail-value">Hope Worldwide Uganda</span>
-                        </div>
-                        <div class="detail-row">
-                            <span class="detail-label">Account No:</span>
-                            <span class="detail-value" style="color:#006837; font-size:16px;">6006194336</span>
-                        </div>
-                        <div class="detail-row">
-                            <span class="detail-label">Currency:</span>
-                            <span class="detail-value">UGX / USD</span>
-                        </div>
-                    </div>
+<div class="bank-details">
+    <div class="detail-row">
+        <span class="detail-label">Bank Name:</span>
+        <span class="detail-value">Guaranty Trust Bank Uganda Limited</span>
+    </div>
+    <div class="detail-row">
+        <span class="detail-label">Account Name:</span>
+        <span class="detail-value">Hope World Wide International</span>
+    </div>
+    <div class="detail-row">
+        <span class="detail-label">Account No:</span>
+        <span class="detail-value" style="color:#006837; font-size:16px;">211/154834/2/5101/0</span>
+    </div>
+    <div class="detail-row">
+        <span class="detail-label">SWIFT Code:</span>
+        <span class="detail-value">GTBIUGKA</span>
+    </div>
+    <div class="detail-row">
+        <span class="detail-label">Currency:</span>
+        <span class="detail-value">USD</span>
+    </div>
+</div>
                 </div>
 
-                <div class="method-card disabled">
-                    <span class="coming-soon-badge">Coming Soon</span>
-                    <i class="fas fa-mobile-alt method-icon"></i>
-                    <div class="method-title">Mobile Money</div>
-                    <p style="font-size:13px; color:#666;">
-                        MTN Mobile Money & Airtel Money integration is currently being set up.
-                    </p>
-                </div>
 
                 <div class="method-card disabled">
                     <span class="coming-soon-badge">Coming Soon</span>
@@ -1236,7 +1221,7 @@
                     © 2026 Hope Worldwide. All Rights Reserved.
                 </span>
                 <div class="dev-credit">
-                    Developed by Amanda Technologies | <a href="mailto:amandatechnologies@gmail.com">Contact them</a>
+                    Developed by Amanda Technologies | <a href="https://amandatechnologies.com">Learn more</a>
                 </div>
             </div>
             
@@ -1244,6 +1229,9 @@
     <a href="https://www.facebook.com/Hopewwug" class="social-item">
         <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M13.135 6H15V3h-1.865a4.147 4.147 0 0 0-4.142 4.142V9H7v3h2v9.938h3V12h2.021l.592-3H12V6.591A.6.6 0 0 1 12.592 6h.543Z" clip-rule="evenodd"/></svg>
         <span class="sr-only">Facebook</span>
+    </a>
+    <a href="" class="social-item">
+<svg height="200px" width="200px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 382 382" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M347.445,0H34.555C15.471,0,0,15.471,0,34.555v312.889C0,366.529,15.471,382,34.555,382h312.889 C366.529,382,382,366.529,382,347.444V34.555C382,15.471,366.529,0,347.445,0z M118.207,329.844c0,5.554-4.502,10.056-10.056,10.056 H65.345c-5.554,0-10.056-4.502-10.056-10.056V150.403c0-5.554,4.502-10.056,10.056-10.056h42.806 c5.554,0,10.056,4.502,10.056,10.056V329.844z M86.748,123.432c-22.459,0-40.666-18.207-40.666-40.666S64.289,42.1,86.748,42.1 s40.666,18.207,40.666,40.666S109.208,123.432,86.748,123.432z M341.91,330.654c0,5.106-4.14,9.246-9.246,9.246H286.73 c-5.106,0-9.246-4.14-9.246-9.246v-84.168c0-12.556,3.683-55.021-32.813-55.021c-28.309,0-34.051,29.066-35.204,42.11v97.079 c0,5.106-4.139,9.246-9.246,9.246h-44.426c-5.106,0-9.246-4.14-9.246-9.246V149.593c0-5.106,4.14-9.246,9.246-9.246h44.426 c5.106,0,9.246,4.14,9.246,9.246v15.655c10.497-15.753,26.097-27.912,59.312-27.912c73.552,0,73.131,68.716,73.131,106.472 L341.91,330.654L341.91,330.654z"></path> </g></svg>        <span class="sr-only">linkedin</span>
     </a>
     <a href="https://x.com/HOPEWORLDWIDEUG" class="social-item">
         <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.795 10.533 20.68 2h-3.073l-5.255 6.517L7.69 2H1l7.806 10.91L1.47 22h3.074l5.705-7.07L15.31 22H22l-8.205-11.467Zm-2.38 2.95L9.97 11.464 4.36 3.627h2.31l4.528 6.317 1.443 2.02 6.018 8.409h-2.31l-4.934-6.89Z"/></svg>
