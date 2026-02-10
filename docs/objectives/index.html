@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        
+          <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <title>Hope Worldwide - Our Objectives</title>
     <style>
         /* --- CSS STYLES (Inherited from Main Theme) --- */
@@ -14,7 +17,7 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Poppins', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #fcfcfc;
             color: #444;
             line-height: 1.6;
@@ -133,9 +136,13 @@
         ul.objective-list {
             list-style: none;
             padding-left: 47px; /* Indented to align with header text */
-            margin-bottom: 30px;
         }
 
+      .content-section .fade-in a{
+          margin-bottom: 18px;
+          text-align: center;
+          display: block;
+        }
         ul.objective-list li {
             font-size: 14px;
             margin-bottom: 8px;
@@ -173,6 +180,368 @@
 <body>
 
     <div class="container">
+    <header class="site-header">
+        <div class="container header-content">
+            <div class="logo-container">
+                <img src="../res/logo.jpg" class="logo" onclick="../index.html"></i>
+            </div>
+            <nav class="main-nav">
+    <style>
+    
+        /* CSS confined to this nav */
+        .nav-list .fa-chevron-down {
+            display: none;
+        }
+
+        /* Highlight style for the active button */
+        .nav-link.active {
+            color: #1b6c38;
+            border-bottom: 2px solid #1b6c38;
+        }
+
+        .nav-item .dropdown-menu {
+            display: none; /* Hidden by default */
+            position: fixed;
+            top: 60px;
+            right: 50%; /* Center horizontally */
+            transform: translateX(50%);
+            background: white;
+            border-radius: 15px;
+            width: 80vw;
+            padding: 20px;
+            color: #1b6c38;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            z-index: 1000;
+        }
+
+        /* The Arrow */
+        .nav-item .dropdown-menu::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 10px solid #fff;
+            bottom: 100%;
+            left: var(--lft); /* Dynamic position */
+            transform: translateX(-50%);
+        }
+
+        /* Close Button Style */
+        .close-drop {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 24px;
+            cursor: pointer;
+            color: #aaa;
+            line-height: 1;
+        }
+        .close-drop:hover {
+            color: #1b6c38;
+        }
+
+        .dropdown-menu h3 {
+            margin-top: 0;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+
+@media (min-width: 768px) {
+        .nav-item .dropdown-menu {
+          width: 50vw;
+        }
+                .nav-item .dropdown-menu::after{
+          display: none;
+        }
+
+}
+
+    </style>
+
+    <ul class="nav-list">
+        
+        <li style="--lft:31%" class="nav-item">
+            <span onclick="toggleNav(this)" class="nav-link">Who<i class="fas fa-chevron-down"></i></span>
+            <ul class="dropdown-menu">
+                <span class="close-drop" onclick="closeAllNav()">&times;</span>
+                <h3>Who we are!</h3>
+                <li><a href="../about">About Us</a></li>
+                <li><a href="../about">Our History & Mission</a></li>
+                <li><a href="../board">Leadership Board</a></li>
+                <li><a href="../about#values">Core Values</a></li>
+                <li><a href="../about.html#governance">Legal & Registration</a></li>
+                <li><a href="../gallery">Gallery</a></li>
+            </ul>
+        </li>
+
+        <li style="--lft:49%" class="nav-item">
+            <span onclick="toggleNav(this)" class="nav-link">What<i class="fas fa-chevron-down"></i></span>
+            <ul class="dropdown-menu">
+                <span class="close-drop" onclick="closeAllNav()">&times;</span>
+                <h3>What we do!</h3>
+                <li><a href="../objectives">Health & HIV/AIDS</a></li>
+                <li><a href="../objectives">Education & Schools</a></li>
+                <li><a href="../objectives">Water & Sanitation</a></li>
+                <li><a href="../objectives">Agriculture & Livelihoods</a></li>
+                <li><a href="../objectives">Human Rights & Legal</a></li>
+                <li><a href="../outreach">Outreach</a></li>
+            </ul>
+        </li>
+
+        <li style="--lft:69%" class="nav-item">
+            <span onclick="toggleNav(this)" class="nav-link">Where<i class="fas fa-chevron-down"></i></span>
+            <ul class="dropdown-menu">
+                <span class="close-drop" onclick="closeAllNav()">&times;</span>
+                <h3>Where we work!</h3>
+                <li><a href="../stories">Central Region</a></li>
+                <li><a href="../stories">Eastern Region</a></li>
+                <li><a href="../stories">Northern Region</a></li>
+                <li><a href="../stories">Western Region</a></li>
+                <li><a href="../contact#office">Our Offices</a></li>
+            </ul>
+        </li>
+
+        <li style="--lft:87%" class="nav-item">
+            <span onclick="toggleNav(this)" class="nav-link">How<i class="fas fa-chevron-down"></i></span>
+            <ul class="dropdown-menu">
+                <span class="close-drop" onclick="closeAllNav()">&times;</span>
+                <h3>How to help!</h3>
+                <li><a href="../forms?type=partner">Partner With Us</a></li>
+                <li><a href="../forms?type=volunteer">Volunteer</a></li>
+                <li><a href="../donate">Donate</a></li>
+                <li><a href="../forms?type=job">Careers</a></li>
+                <li><a href="../contact">Contact Us</a></li>
+            </ul>
+        </li>
+
+    </ul>
+
+    <script>
+        function toggleNav(clickedBtn) {
+            // 1. Close all other dropdowns & remove highlights
+            const allMenus = document.querySelectorAll('.nav-item .dropdown-menu');
+            const allLinks = document.querySelectorAll('.nav-item .nav-link');
+            
+            // Check if the clicked one is already open
+            const targetMenu = clickedBtn.parentElement.querySelector('.dropdown-menu');
+            const isAlreadyOpen = targetMenu.style.display === 'block';
+
+            // Reset everything
+            allMenus.forEach(menu => menu.style.display = 'none');
+            allLinks.forEach(link => link.classList.remove('active'));
+
+            // 2. If it wasn't open, open it now and highlight the button
+            if (!isAlreadyOpen) {
+                targetMenu.style.display = 'block';
+                clickedBtn.classList.add('active');
+            }
+        }
+
+        function closeAllNav() {
+            document.querySelectorAll('.nav-item .dropdown-menu').forEach(menu => menu.style.display = 'none');
+            document.querySelectorAll('.nav-item .nav-link').forEach(link => link.classList.remove('active'));
+        }
+    </script>
+</nav>
+
+<div id="mobile-toggle" class="hamburger-menu nav-item" style="position: relative;">
+    
+    <span onclick="toggleNav(this)" class="nav-link" style="font-size: 24px; cursor: pointer;">
+        <i class="fas fa-bars"></i>
+    </span>
+
+    <div class="dropdown-menu mobile-dropdown">
+        <span class="close-drop" onclick="closeAllNav()" style="color: white;">&times;</span>
+        
+        <h3>Menu</h3>
+        
+        <ul class="mobile-links">
+            <li><a href="../about">Who We Are</a></li>
+            <li><a href="../objectives">What We Do</a></li>
+            <li><a href="../stories">Where We Work</a></li>
+            <li><a href="../partners">Partners</a></li>
+            <li><a href="../contact">Contact Us</a></li>
+            <li><a href="../faq">Frequently Asked Questions</a></li>
+        </ul>
+
+<div class="mobile-socials">
+    <a href="https://www.facebook.com/Hopewwug"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://x.com/HOPEWORLDWIDEUG"><i class="fab fa-twitter"></i></a>
+    <a href=""><i class="fab fa-linkedin"></i></a>
+    <a href="https://wa.me/256782409528"><i class="fab fa-whatsapp"></i></a>
+    <a href=""><i class="fab fa-linkedin"></i></a>
+    <a href="https://www.tiktok.com/@hope.worldwide.ug?_r=1&_t=ZS-93iNWgrl6OH"><i class="fab fa-tiktok"></i></a>
+    <a href="mailto:info@hopewwug.org"><i class="fas fa-envelope"></i></a>
+</div>
+    </div>
+
+    <style>
+        /* Override default dropdown styles for this specific menu */
+        .mobile-dropdown {
+            background-color: #1b6c38 !important; /* Dark Green */
+            color: white !important;
+            right: 0 !important; /* Align to right edge */
+            left: auto !important;
+            transform: none !important;
+            width: 300px !important; /* Fixed width for mobile menu */
+            max-width: 90vw;
+        }
+
+        /* Triangle Arrow Color Override */
+        .mobile-dropdown::after {
+            border-bottom-color: #1b6c38 !important; /* Dark Green Arrow */
+            left: auto !important;
+            right: 10px !important; /* Position arrow under the hamburger */
+            transform: none !important;
+        }
+
+        /* Link Styles */
+        .mobile-links {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 20px;
+        }
+
+        .mobile-links li {
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .mobile-links li a {
+            display: block;
+            padding: 12px 0;
+            color: white;
+            font-size: 16px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: padding-left 0.3s;
+        }
+
+        .mobile-links li a:hover {
+            padding-left: 10px;
+            color: #f4c430; /* Yellow hover */
+        }
+
+        /* Social Icons Styling */
+        .mobile-socials {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .mobile-socials a {
+            color: #f4c430; /* Yellow Icons */
+            font-size: 20px;
+            transition: transform 0.3s;
+        }
+
+        .mobile-socials a:hover {
+            transform: scale(1.2);
+            color: white;
+        }
+        
+        /* --- NEW HEADER CSS --- */
+        .catcher{
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          background: #14522b;
+          color: white;
+          text-align: center;
+          font-size: 10px;
+          height: 16px;
+        }
+        .site-header {
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0px;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 5px;
+            height: 50px; /* Adjust as needed */
+        }
+        .logo-container img {
+          width: 70px;
+        }
+
+        .main-nav {
+            display: flex;
+            justify-content: center;
+        }
+
+        .nav-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 10px;
+        }
+
+        .nav-list li a, .dropdown-toggle {
+            text-decoration: none;
+            color: #555;
+            font-weight: 300;
+            font-size: 15px;
+            transition: color 0.3s;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 6px 0;
+            font-family: inherit;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-list li a:hover, .dropdown-toggle:hover, .dropdown-item.active .dropdown-toggle {
+            color: #1b6c38;
+        }
+        
+        .dropdown-toggle i {
+            margin-left: 5px;
+            font-size: 20px;
+            transition: transform 0.3s;
+        }
+
+        .dropdown-item.active .dropdown-toggle i {
+            transform: rotate(180deg);
+        }
+
+
+        .hamburger-menu {
+            font-size: 24px;
+            color: #555;
+            cursor: pointer;
+        }
+        
+     
+        /* Responsive adjustments for header */
+        @media (max-width: 768px) {
+            .hamburger-menu {
+                display: block; /* Show hamburger on mobile */
+            }
+            .header-content {
+                padding: 0 15px;
+            }
+            .dropdown-menu{
+              width: 100vw;
+            }
+        }
+
+    </style>
+</div>
+        </div>
+    </header>
                 <header class="site-header">
         <div class="container header-content">
             <div class="logo-container">
@@ -330,7 +699,7 @@
             align-items: center;
         }
 
-        .nav-list li a:hover, .dropdown-toggle:hover, .dropdown-item.active .dropdown-toggle {
+        .nav-list li a:hover, .dropdown-toggle:hover, .dropdown-item.active .dropdown-toggle, .fade-in a  {
             color: #1b6c38;
         }
         
@@ -575,6 +944,7 @@
                     <li>Agricultural research</li>
                     <li>Community development</li>
                 </ul>
+                <a href="../outreach#livelihood">See the agricultural outreach</a>
             </div>
 
             <div class="fade-in">
@@ -588,6 +958,7 @@
                     <li>Building and construction of schools</li>
                     <li>Providing children scholarships in Uganda</li>
                 </ul>
+                <a href="../stories">Read success Stories</a>
             </div>
 
             <div class="fade-in">
@@ -608,6 +979,7 @@
                     <li>Fighting against cancer in Uganda</li>
                     <li>Public research on needs of health services</li>
                 </ul>
+                <a href="../outreach#health">See the health outreach</a>
             </div>
 
             <div class="fade-in">
@@ -626,6 +998,8 @@
                     <li>Constructing houses for the elderly</li>
                     <li>Fighting sexual violence against women</li>
                 </ul>
+                      <a href="../stories">Read success Stories</a>
+          
             </div>
 
             <div class="fade-in">
@@ -642,6 +1016,8 @@
                     <li>Fighting discrimination and stigma in Uganda</li>
                     <li>Fighting corruption</li>
                 </ul>
+            <a href="../outreach#humanitarian">See the rights outreach</a>
+
             </div>
 
             <div class="fade-in">
@@ -655,6 +1031,8 @@
                     <li>Providing water and food</li>
                     <li>Providing health facilities to war-affected areas</li>
                 </ul>
+             <a href="../outreach#humanitarian">See the rights outreach</a>
+
             </div>
 
             <div class="fade-in">
@@ -670,6 +1048,8 @@
                     <li>Offering strategic guidance for effective provision of water and sewerage services</li>
                     <li>Promoting personal hygiene</li>
                 </ul>
+            <a href="../outreach#wash">See the wash outreach</a>
+                
             </div>
 
         </section>
@@ -1221,7 +1601,7 @@
                     © 2026 Hope Worldwide. All Rights Reserved.
                 </span>
                 <div class="dev-credit">
-                    Developed by Amanda Technologies | <a href="mailto:amandatechnologies@gmail.com">Contact them</a>
+                    Developed by Amanda Technologies | <a href="https://amandatechnologies.com">Learn more</a>
                 </div>
             </div>
             
@@ -1229,6 +1609,9 @@
     <a href="https://www.facebook.com/Hopewwug" class="social-item">
         <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M13.135 6H15V3h-1.865a4.147 4.147 0 0 0-4.142 4.142V9H7v3h2v9.938h3V12h2.021l.592-3H12V6.591A.6.6 0 0 1 12.592 6h.543Z" clip-rule="evenodd"/></svg>
         <span class="sr-only">Facebook</span>
+    </a>
+    <a href="" class="social-item">
+<svg height="200px" width="200px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 382 382" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M347.445,0H34.555C15.471,0,0,15.471,0,34.555v312.889C0,366.529,15.471,382,34.555,382h312.889 C366.529,382,382,366.529,382,347.444V34.555C382,15.471,366.529,0,347.445,0z M118.207,329.844c0,5.554-4.502,10.056-10.056,10.056 H65.345c-5.554,0-10.056-4.502-10.056-10.056V150.403c0-5.554,4.502-10.056,10.056-10.056h42.806 c5.554,0,10.056,4.502,10.056,10.056V329.844z M86.748,123.432c-22.459,0-40.666-18.207-40.666-40.666S64.289,42.1,86.748,42.1 s40.666,18.207,40.666,40.666S109.208,123.432,86.748,123.432z M341.91,330.654c0,5.106-4.14,9.246-9.246,9.246H286.73 c-5.106,0-9.246-4.14-9.246-9.246v-84.168c0-12.556,3.683-55.021-32.813-55.021c-28.309,0-34.051,29.066-35.204,42.11v97.079 c0,5.106-4.139,9.246-9.246,9.246h-44.426c-5.106,0-9.246-4.14-9.246-9.246V149.593c0-5.106,4.14-9.246,9.246-9.246h44.426 c5.106,0,9.246,4.14,9.246,9.246v15.655c10.497-15.753,26.097-27.912,59.312-27.912c73.552,0,73.131,68.716,73.131,106.472 L341.91,330.654L341.91,330.654z"></path> </g></svg>        <span class="sr-only">linkedin</span>
     </a>
     <a href="https://x.com/HOPEWORLDWIDEUG" class="social-item">
         <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.795 10.533 20.68 2h-3.073l-5.255 6.517L7.69 2H1l7.806 10.91L1.47 22h3.074l5.705-7.07L15.31 22H22l-8.205-11.467Zm-2.38 2.95L9.97 11.464 4.36 3.627h2.31l4.528 6.317 1.443 2.02 6.018 8.409h-2.31l-4.934-6.89Z"/></svg>
