@@ -235,7 +235,6 @@ $font-family-secondary: 'Roboto Slab', serif;
       transform: translateY(-50%);
       color: white;
       text-align: center;
-      
 }
 .inner:before{
   content: ' ';
@@ -257,7 +256,7 @@ $font-family-secondary: 'Roboto Slab', serif;
     height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 50% 50%;
+    background-position:center;
 
     .inner {
       position: relative;
