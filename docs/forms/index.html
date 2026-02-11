@@ -743,7 +743,21 @@
               width: 100vw;
             }
         }
-
+        .email{
+          background: var(--light-green);
+          padding: 5px;
+          border-radius: 9px;
+          border: var(--medium-green) 3px dotted;
+        }
+        .email a{
+          font-size: 1.7rem;
+          color: var(--deep-green);
+          display: block;
+        }
+        .email span{
+          color: #666;
+          font-size: .8rem;
+        }
     </style>
 </div>
         </div>
@@ -764,6 +778,10 @@
             
             <h2 class="title-green" id="form-title">Partnership Proposal</h2>
             <div class="dash"></div>
+            <p class="email" >
+              <a id="form-email-a" href="mailto: partnership@hopewwug.org">Use Email</a>
+              <span id="form-email">partnership@hopewwug.org</span>
+            </p>
             <p class="intro" id="form-desc">
                 We believe in the power of collaboration. Fill out the details below to propose a partnership with Hope Worldwide.
             </p>
@@ -774,8 +792,12 @@
 
                 <div class="form-row">
                     <div class="form-group">
-                        <label for="fullname">Full Name</label>
-                        <input type="text" id="fullname" class="form-control" placeholder="Your Name" required>
+                        <label for="firstname">First Name</label>
+                        <input type="text" id="firstname" class="form-control" placeholder="First Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastname">Last Name</label>
+                        <input type="text" id="lastname" class="form-control" placeholder="Last Name" required>
                     </div>
                     <div class="form-group">
                         <label for="email">Email Address</label>
@@ -819,13 +841,7 @@
                     <div class="form-row">
                         <div class="form-group">
                             <label for="location">Preferred Location</label>
-                            <select id="location" class="form-control">
-                                <option>Kampala (Slums)</option>
-                                <option>Dokolo (North)</option>
-                                <option>Kamuli (East)</option>
-                                <option>Mukono (Landing Sites)</option>
-                                <option>Remote</option>
-                            </select>
+                            <select id="location" class="form-control"></select>
                         </div>
                         <div class="form-group">
                             <label for="availability">Availability</label>
@@ -1546,19 +1562,22 @@
                 title: "Partnership Proposal",
                 desc: "We believe in the power of collaboration. Fill out the details below to propose a partnership with Hope Worldwide.",
                 btnText: "Send Proposal",
-                hero: "Partner With Us"
+                hero: "Partner With Us",
+                email: "partpartnership@hopewwug.org"
             },
             volunteer: {
                 title: "Volunteer Application",
                 desc: "Your time and skills can save lives. Tell us how you would like to contribute to our mission in Uganda.",
                 btnText: "Apply to Volunteer",
-                hero: "Become a Volunteer"
+                hero: "Become a Volunteer",
+                email:"volunteer@hopewwug.org"
             },
             job: {
                 title: "Job Application",
                 desc: "Join our professional team. We are always looking for dedicated individuals to help drive our impact forward.",
                 btnText: "Submit Application",
-                hero: "Join the Team"
+                hero: "Join the Team",
+                email: "hr@hopewwug.org"
             }
         };
 
@@ -1576,6 +1595,8 @@
             document.getElementById('submit-btn').innerText = config.btnText;
             document.getElementById('hero-title').innerText = config.hero;
             document.getElementById('form-type').value = type;
+            document.getElementById('form-email').innerText = config.email;
+            document.getElementById('form-email-a').setAttribute("href", `mailto: ${config.email}`);
         }
 
         function updateFileName(input) {
@@ -1686,6 +1707,63 @@
                 switchForm('partner');
             }
         });
+// Function to fetch data and populate the select element
+async function loadAndPopulateDistricts(jsonUrl, selectId) {
+  try {
+    // 1. Fetch the JSON file
+    const response = await fetch(jsonUrl);
+    if (!response.ok) throw new Error("Failed to load JSON file");
+    
+    const districtsData = await response.json();
+    const selectElement = document.getElementById(selectId);
+
+    // Clear current options
+    selectElement.innerHTML = '<option value="">Select a District</option>';
+
+    // 2. Group districts by region_name
+    const groupedByRegion = districtsData.reduce((acc, district) => {
+      const region = district.region_name;
+      if (!acc[region]) {
+        acc[region] = [];
+      }
+      acc[region].push(district);
+      return acc;
+    }, {});
+
+    // 3. Get region names and sort them alphabetically
+    const sortedRegions = Object.keys(groupedByRegion).sort();
+
+    // 4. Build the Select Options
+    sortedRegions.forEach(region => {
+      // Create <optgroup> for the region
+      const optGroup = document.createElement('optgroup');
+      optGroup.label = region;
+
+      // Sort districts within this region alphabetically
+      const sortedDistricts = groupedByRegion[region].sort((a, b) => 
+        a.district_name.localeCompare(b.district_name)
+      );
+
+      // Create <option> for each district
+      sortedDistricts.forEach(district => {
+        const option = document.createElement('option');
+        option.value = district.district_code;
+        option.textContent = district.district_name;
+        optGroup.appendChild(option);
+      });
+
+      // Append the group to the select element
+      selectElement.appendChild(optGroup);
+    });
+
+  } catch (error) {
+    console.error("Error populating districts:", error);
+  }
+}
+
+// Usage: Replace 'districts.json' with your actual file path
+// Ensure you have <select id="districtSelect"></select> in your HTML
+loadAndPopulateDistricts('ug.json', 'location');
 
     </script>
 
