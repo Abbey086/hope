@@ -713,9 +713,9 @@
                         </div>
                         <div class="story-content">
                             <span class="story-date">February 12, 2026</span>
-                            <h3 class="story-title">Empowering Women at Mukono Landing Sites</h3>
+                            <h3 class="story-title">Empowering Women</h3>
                             <p class="story-excerpt">
-                                In Katosi and Kiyindi, women affected by HIV/AIDS are turning the tide through agro-business and modern skills.
+                                Women affected by HIV/AIDS are turning the tide through agro-business and modern skills.
                             </p>
                             <button class="read-more" onclick="openStory(0)">Read Full Story</button>
                         </div>
@@ -728,9 +728,9 @@
                         </div>
                         <div class="story-content">
                             <span class="story-date">January 28, 2026</span>
-                            <h3 class="story-title">Fighting Malnutrition in Kosovo Slums</h3>
+                            <h3 class="story-title">Fighting Malnutrition</h3>
                             <p class="story-excerpt">
-                                In the heart of Makindye, our nutrition intervention is saving lives by providing essential food supplies to children.
+                                Our nutrition intervention is saving lives by providing essential food supplies to children.
                             </p>
                             <button class="read-more" onclick="openStory(1)">Read Full Story</button>
                         </div>
@@ -758,7 +758,7 @@
                         </div>
                         <div class="story-content">
                             <span class="story-date">December 15, 2025</span>
-                            <h3 class="story-title">Sewing a Future in Kawempe</h3>
+                            <h3 class="story-title">Sewing a Future</h3>
                             <p class="story-excerpt">
                                 Our tailoring centre is more than a classroom; it's a launchpad for youths in the slums.
                             </p>
@@ -1371,10 +1371,10 @@
         // Data for the stories based on source documents
         const storiesData = [
             {
-                title: "Empowering Women at Mukono Landing Sites",
+                title: "Empowering Women",
                 date: "February 12, 2026",
                 category: "Livelihoods",
-                image: "../res/logo.jpg",
+                image: "../res/ag.jpg",
                 content: `
                     <p>In the bustling landing site areas of Mukono district—specifically Katosi and the Buikwe landing sites of Kiyindi—Hope Worldwide International has launched a targeted women's mission focused on HIV/AIDS. But this mission goes beyond medical care; it is about holistic empowerment.</p>
                     
@@ -1383,18 +1383,21 @@
 
                     <h4>Agro-Business & Innovation</h4>
                     <p>Beyond charcoal, we are engaging women in agro-business. Our teams are teaching vital agricultural skills, including proper irrigation techniques and spacing while planting. These skills ensure better crop yields and food security for their families, proving that with the right support, resilience can bloom in any environment.</p>
+                                        <img src="../res/ag.jpg" style="width:100%;max-width:800px">
+
                 `
             },
             {
-                title: "Fighting Malnutrition in Kosovo Slums",
+                title: "Fighting Malnutrition",
                 date: "January 28, 2026",
                 category: "Health",
-                image: "https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?q=80&w=800&auto=format&fit=crop",
+                image: "../res/ws.jpg",
                 content: `
                     <p>In the central district of Kampala, specifically the slum areas of Kosovo and Makindye, child malnutrition remains a critical challenge. Hope Worldwide International has stepped in to fight this silent crisis directly.</p>
                     
                     <h4>Direct Nutritional Support</h4>
                     <p>Our intervention focuses on the most vulnerable. We are currently fighting malnutrition by distributing Maganjo soya and posho to families in need. These high-protein and energy-giving foods are essential for the development of young children living in these poverty-stricken areas.</p>
+                    <img src="../res/ws.jpg" style="width:100%;max-width:800px">
 
                     <h4>A holistic Approach</h4>
                     <p>This feeding program is part of our broader strategy to address health from a "whole person" perspective, ensuring that economic hardship does not permanently stunt the growth and potential of the next generation.</p>
@@ -1404,7 +1407,7 @@
                 title: "Restoring Dignity for the Girl Child",
                 date: "January 10, 2026",
                 category: "Education",
-                image: "https://images.unsplash.com/photo-1509099836639-18ba1795216d?q=80&w=800&auto=format&fit=crop",
+                image: "../res/ss4.jpg",
                 content: `
                     <p>In the eastern districts, specifically at Kamuli Church of Uganda Primary School, Hope Worldwide International is tackling a barrier to education that is often overlooked: sanitation for the girl child.</p>
                     
@@ -1412,10 +1415,12 @@
                     <p>We have found that many girls in upper classes miss school due to a lack of sanitary supplies. To combat this, we are providing pads to girls in these upper classes. This simple intervention restores dignity and ensures that menstruation does not interrupt their education.</p>
                     
                     <p>Furthermore, in neighboring Kibuku district (Nalubembe Primary) and Pallisa district (Kalaki Primary and Kawucho Boys School), we are conducting renovations of classes and water installation to ensure a generally better learning environment.</p>
+                                        <img src="../res/ss8.jpg" style="width:100%;max-width:800px">
+
                 `
             },
             {
-                title: "Sewing a Future in Kawempe",
+                title: "Sewing a Future",
                 date: "December 15, 2025",
                 category: "Skills",
                 image: "../res/logo.jpg",
@@ -1429,25 +1434,42 @@
                 `
             },
             {
-                title: "A Future Leader in Nankodo",
+    title: "A Home for Hope in Busika",
+    date: "February 12, 2026",
+    category: "Child Protection",
+    image: "../res/ss6.jpg",
+    content: `
+        <p>In Busika, Luwero District, Hope Worldwide International Uganda operates an orphanage that serves as a sanctuary for vulnerable children. This facility is more than just a shelter; it is a home where children find safety, care, and the opportunity for a brighter future.</p>
+        
+        <h4>Caring for the Vulnerable</h4>
+        <p>The orphanage currently supports 100 children, including 70 children under the age of 10 and 30 teenagers. By providing a stable environment, we ensure these young lives are protected from neglect and have access to the basic necessities of life.</p>
+                                        <img src="../res/ss6.jpg" style="width:100%;max-width:800px">
+        <p>Our commitment extends beyond basic care to holistic development, ensuring that every child, regardless of their start in life, has the support system they need to grow into a healthy and productive adult.</p>
+    `
+}
+,
+            {
+                title: "A Future Leader",
                 date: "November 20, 2025",
                 category: "Education",
-                image: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=800&auto=format&fit=crop",
+                image: "../res/ss4.jpg",
                 content: `
                     <p>Kadondi Moreen, a 14-year-old P.5 student at Nankodo Islamic Primary School, has a bold dream: she intends to become a politician and Member of Parliament. However, retention in school for girls like Kadondi has historically been difficult due to stigma surrounding menstruation.</p>
-                    
+                                        <img src="../res/ss4.jpg" style="width:100%;max-width:800px">
+
                     <h4>Breaking the Stigma</h4>
                     <p>Through our School Water, Sanitation, and Hygiene (SWASH) project, the atmosphere at Nankodo has transformed. Kadondi reports that boys no longer laugh at girls; instead, they support them during their periods through pad-making activities taught by our volunteers. This shift in culture has directly increased the enrollment and retention of girls in school.</p>
                 `
             },
             {
-                title: "Pineapple Success in Kaliro",
+                title: "Pineapple Success",
                 date: "October 05, 2025",
                 category: "Livelihoods",
-                image: "https://images.unsplash.com/photo-1605000797499-95a51c5269ae?q=80&w=800&auto=format&fit=crop",
+                image: "../res/ss5.jpg",
                 content: `
                     <p>Our household resilience program aims to empower vulnerable families to adopt "farming as a business." In Kaliro and Kamuli, this vision has become a reality through the formation of farmer cooperatives.</p>
-                    
+                                        <img src="../res/ss5.jpg" style="width:100%;max-width:800px">
+
                     <h4>Record-Breaking Harvests</h4>
                     <p>The Kaliro farmers group successfully bulked and marketed <strong>10 metric tons</strong> of pineapple fruits, earning a collective <strong>UGX 19,800,000</strong>. Meanwhile, in Kamuli, producer cooperatives produced a staggering 5,280 tonnes of pineapples worth over <strong>UGX 41 Million</strong>. By organizing into Village Savings and Loan Associations (VSLA), these 62 farmer groups have mobilized over UGX 465 Million in savings, proving that organized agriculture is a pathway out of poverty.</p>
                 `
@@ -1456,21 +1478,23 @@
                 title: "Second Chances at Nakasongola Prison",
                 date: "September 12, 2025",
                 category: "Humanitarian",
-                image: "https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?q=80&w=800&auto=format&fit=crop",
+                image: "/res/ss13.jpg",
                 content: `
                     <p>Hope Worldwide International partners with the Uganda Prisons Service to offer rehabilitation and hope to inmates. At Nakasongola Men's Prison, we recently celebrated a graduation that marked a new beginning for 110 inmates.</p>
-                    
+                                        <img src="../res/ss13.jpg" style="width:100%;max-width:800px">
+
                     <h4>Rehabilitation & Skills</h4>
                     <p>The graduating class, comprising 60 men and 50 women, completed intensive training in theology, counseling, marriage and family matters, and leadership. This program is designed to reduce recidivism by providing inmates with the psychological and spiritual tools they need to reintegrate into society. Additionally, we provided tents and chairs to establish a permanent training shelter, ensuring this vital work continues.</p>
                 `
             },
             {
-                title: "Clean Water for St. John Boliso II",
+                title: "Clean Water for all",
                 date: "August 30, 2025",
                 category: "WASH",
-                image: "https://images.unsplash.com/photo-1538300342682-cf57afb97285?q=80&w=800&auto=format&fit=crop",
+                image: "../res/IMG-20260123-WA0020.jpg",
                 content: `
                     <p>For years, the community surrounding St. John Boliso II had to walk 1.5km to fetch water from an unprotected well, leading to frequent outbreaks of typhoid and diarrhea. HWI-Uganda intervened by rehabilitating the local borehole.</p>
+                    <img src="../res/IMG-20260123-WA0020.jpg" style="width:100%;max-width:800px">
                     
                     <h4>Health and Food Security</h4>
                     <p>Mr. Wojjo Wilberforce, the borehole caretaker, testifies that his household no longer falls sick. But the impact goes further: he has utilized the water runoff from the borehole to irrigate a banana plantation near his garden. This innovative use of resources has improved his family's food security even during the dry season, demonstrating how WASH projects can have ripple effects on livelihoods.</p>
@@ -1480,10 +1504,10 @@
                 title: "Brain Awareness Week at Makerere",
                 date: "March 15, 2025",
                 category: "Health",
-                image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=800&auto=format&fit=crop",
+                image: "../res/ss1.jpg",
                 content: `
                     <p>Mental health remains a neglected aspect of well-being in many schools. In partnership with the <strong>Dana Foundation</strong>, Hope Worldwide International conducted a landmark study and training session at Makerere College School.</p>
-                    
+                    <img src="../res/ss1.jpg" style="width:100%;max-width:800px">
                     <h4>Science & Stigma</h4>
                     <p>Over 200 students and 5 teachers participated in sessions led by Dr. Joy Katabazi and psychiatric specialist Dr. Mutaka Joel. The training covered brain science and practical ways to manage mental health in everyday life. By addressing topics like depression, anxiety, and drug misuse openly, we are breaking the stigma that prevents young people from seeking help.</p>
                 `
