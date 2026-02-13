@@ -1,0 +1,1502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        
+          <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <title>Hope Worldwide Uganda - Frequently Asked Questions</title>
+    <style>
+        /* --- CSS STYLES --- */
+        
+        /* General Reset and Typography */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fcfcfc;
+            color: #444;
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        /* Container */
+        .container {
+            width: 100%;
+            max-width: 500px;
+            background-color: #fff;
+            box-shadow: 0 0 20px rgba(0,0,0,0.05);
+            padding-bottom: 50px;
+        }
+
+        /* --- HEADER SECTION --- */
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            background-color: #1b6c38;
+        }
+
+        .hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.6;
+            filter: grayscale(30%);
+        }
+
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            text-align: center;
+            color: white;
+            font-size: 32px;
+            font-weight: 800;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            letter-spacing: 1px;
+        }
+
+        /* --- FAQ SECTION LAYOUT --- */
+        .content-section {
+            padding: 40px 25px;
+        }
+
+        .title-green {
+            color: #1b6c38;
+            font-size: 26px;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .dash {
+            width: 30px;
+            height: 5px;
+            background-color: #aadd68; /* Lime green accent */
+            margin: 0 0 30px 0;
+            border-radius: 2px;
+        }
+
+        /* --- ACCORDION STYLES --- */
+        .faq-item {
+            background-color: #fff;
+            border-bottom: 1px solid #eee;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            background-color: #f9fdfa;
+        }
+
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            outline: none;
+            text-align: left;
+            padding: 20px 10px 20px 0;
+            font-size: 16px;
+            font-weight: 600;
+            color: #333;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+
+        .faq-question span {
+            padding-left: 10px;
+        }
+
+        /* The Plus/Minus Icon */
+        .icon {
+            width: 24px;
+            height: 24px;
+            position: relative;
+            flex-shrink: 0;
+            margin-right: 10px;
+        }
+
+        .icon::before, .icon::after {
+            content: '';
+            position: absolute;
+            background-color: #1b6c38;
+            transition: transform 0.3s ease;
+            border-radius: 2px;
+        }
+
+        .icon::before {
+            width: 100%;
+            height: 3px;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+        }
+
+        .icon::after {
+            width: 3px;
+            height: 100%;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* --- ANSWER ANIMATION --- */
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), padding 0.4s ease;
+            padding: 0 10px;
+        }
+
+        .faq-answer p, .faq-answer ul {
+            font-size: 14px;
+            color: #555;
+            padding-bottom: 20px;
+            margin: 0;
+            line-height: 1.7;
+        }
+        
+        .faq-answer ul {
+            padding-left: 20px;
+            padding-bottom: 20px;
+        }
+
+        /* --- ACTIVE STATE --- */
+        .faq-item.active {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            border-bottom: 1px solid transparent;
+        }
+
+        .faq-item.active .icon::after {
+            transform: translateX(-50%) rotate(90deg);
+            background-color: #aadd68;
+        }
+        
+        .faq-item.active .icon::before {
+            background-color: #aadd68;
+        }
+
+        .faq-item.active .faq-question {
+            color: #1b6c38;
+        }
+
+        /* --- CONTACT CTA --- */
+        .cta-box {
+            margin-top: 40px;
+            background-color: #f2f8f4;
+            padding: 25px;
+            border-radius: 4px;
+            text-align: center;
+            border-left: 4px solid #1b6c38;
+        }
+        
+        .cta-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 25px;
+            background-color: #1b6c38;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 30px;
+            font-size: 14px;
+            transition: background-color 0.3s;
+            box-shadow: 0 4px 10px rgba(27, 108, 56, 0.3);
+        }
+
+        .cta-btn:hover {
+            background-color: #14522b;
+            transform: translateY(-1px);
+        }
+
+        /* Animation class */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+    <header class="site-header">
+        <div class="container header-content">
+            <div class="logo-container">
+                <img src="../res/logo.jpg" class="logo" onclick="../index.html"></i>
+            </div>
+            <nav class="main-nav">
+    <style>
+    
+        /* CSS confined to this nav */
+        .nav-list .fa-chevron-down {
+            display: none;
+        }
+
+        /* Highlight style for the active button */
+        .nav-link.active {
+            color: #1b6c38;
+            border-bottom: 2px solid #1b6c38;
+        }
+
+        .nav-item .dropdown-menu {
+            display: none; /* Hidden by default */
+            position: fixed;
+            top: 60px;
+            right: 50%; /* Center horizontally */
+            transform: translateX(50%);
+            background: white;
+            border-radius: 15px;
+            width: 80vw;
+            padding: 20px;
+            color: #1b6c38;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            z-index: 1000;
+        }
+
+        /* The Arrow */
+        .nav-item .dropdown-menu::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 10px solid #fff;
+            bottom: 100%;
+            left: var(--lft); /* Dynamic position */
+            transform: translateX(-50%);
+        }
+
+        /* Close Button Style */
+        .close-drop {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 24px;
+            cursor: pointer;
+            color: #aaa;
+            line-height: 1;
+        }
+        .close-drop:hover {
+            color: #1b6c38;
+        }
+
+        .dropdown-menu h3 {
+            margin-top: 0;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+
+@media (min-width: 768px) {
+        .nav-item .dropdown-menu {
+          width: 50vw;
+        }
+                .nav-item .dropdown-menu::after{
+          display: none;
+        }
+
+}
+
+    </style>
+
+    <ul class="nav-list">
+        
+        <li style="--lft:31%" class="nav-item">
+            <span onclick="toggleNav(this)" class="nav-link">Who<i class="fas fa-chevron-down"></i></span>
+            <ul class="dropdown-menu">
+                <span class="close-drop" onclick="closeAllNav()">&times;</span>
+                <h3>Who we are!</h3>
+                <li><a href="../about">About Us</a></li>
+                <li><a href="../about">Our History & Mission</a></li>
+                <li><a href="../board">Leadership Board</a></li>
+                <li><a href="../about#values">Core Values</a></li>
+                <li><a href="../about.html#governance">Legal & Registration</a></li>
+                <li><a href="../gallery">Gallery</a></li>
+            </ul>
+        </li>
+
+        <li style="--lft:49%" class="nav-item">
+            <span onclick="toggleNav(this)" class="nav-link">What<i class="fas fa-chevron-down"></i></span>
+            <ul class="dropdown-menu">
+                <span class="close-drop" onclick="closeAllNav()">&times;</span>
+                <h3>What we do!</h3>
+                <li><a href="../objectives">Health & HIV/AIDS</a></li>
+                <li><a href="../objectives">Education & Schools</a></li>
+                <li><a href="../objectives">Water & Sanitation</a></li>
+                <li><a href="../objectives">Agriculture & Livelihoods</a></li>
+                <li><a href="../objectives">Human Rights & Legal</a></li>
+                <li><a href="../outreach">Outreach</a></li>
+            </ul>
+        </li>
+
+        <li style="--lft:69%" class="nav-item">
+            <span onclick="toggleNav(this)" class="nav-link">Where<i class="fas fa-chevron-down"></i></span>
+            <ul class="dropdown-menu">
+                <span class="close-drop" onclick="closeAllNav()">&times;</span>
+                <h3>Where we work!</h3>
+                <li><a href="../stories">Central Region</a></li>
+                <li><a href="../stories">Eastern Region</a></li>
+                <li><a href="../stories">Northern Region</a></li>
+                <li><a href="../stories">Western Region</a></li>
+                <li><a href="../contact#office">Our Offices</a></li>
+            </ul>
+        </li>
+
+        <li style="--lft:87%" class="nav-item">
+            <span onclick="toggleNav(this)" class="nav-link">How<i class="fas fa-chevron-down"></i></span>
+            <ul class="dropdown-menu">
+                <span class="close-drop" onclick="closeAllNav()">&times;</span>
+                <h3>How to help!</h3>
+                <li><a href="../forms?type=partner">Partner With Us</a></li>
+                <li><a href="../forms?type=volunteer">Volunteer</a></li>
+                <li><a href="../donate">Donate</a></li>
+                        <li><a href="../fundraising">Fundraising</a></li>
+                
+                <li><a href="../forms?type=job">Careers</a></li>
+                <li><a href="../contact">Contact Us</a></li>
+            </ul>
+        </li>
+
+    </ul>
+
+    <script>
+        function toggleNav(clickedBtn) {
+            // 1. Close all other dropdowns & remove highlights
+            const allMenus = document.querySelectorAll('.nav-item .dropdown-menu');
+            const allLinks = document.querySelectorAll('.nav-item .nav-link');
+            
+            // Check if the clicked one is already open
+            const targetMenu = clickedBtn.parentElement.querySelector('.dropdown-menu');
+            const isAlreadyOpen = targetMenu.style.display === 'block';
+
+            // Reset everything
+            allMenus.forEach(menu => menu.style.display = 'none');
+            allLinks.forEach(link => link.classList.remove('active'));
+
+            // 2. If it wasn't open, open it now and highlight the button
+            if (!isAlreadyOpen) {
+                targetMenu.style.display = 'block';
+                clickedBtn.classList.add('active');
+            }
+        }
+
+        function closeAllNav() {
+            document.querySelectorAll('.nav-item .dropdown-menu').forEach(menu => menu.style.display = 'none');
+            document.querySelectorAll('.nav-item .nav-link').forEach(link => link.classList.remove('active'));
+        }
+    </script>
+</nav>
+
+<div id="mobile-toggle" class="hamburger-menu nav-item" style="position: relative;">
+    
+    <span onclick="toggleNav(this)" class="nav-link" style="font-size: 24px; cursor: pointer;">
+        <i class="fas fa-bars"></i>
+    </span>
+
+    <div class="dropdown-menu mobile-dropdown">
+        <span class="close-drop" onclick="closeAllNav()" style="color: white;">&times;</span>
+        
+        <h3>Menu</h3>
+        
+        <ul class="mobile-links">
+            <li><a href="../about">Who We Are</a></li>
+            <li><a href="../objectives">What We Do</a></li>
+            <li><a href="../stories">Where We Work</a></li>
+            <li><a href="../partners">Partners</a></li>
+            <li><a href="../events">Events</a></li>
+            <li><a href="../contact">Contact Us</a></li>
+            <li><a href="../faq">Frequently Asked Questions</a></li>
+        </ul>
+
+<div class="mobile-socials">
+    <a href="https://www.facebook.com/Hopewwug"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://x.com/HOPEWORLDWIDEUG"><i class="fab fa-twitter"></i></a>
+    <a href=""><i class="fab fa-linkedin"></i></a>
+    <a href="https://wa.me/256782409528"><i class="fab fa-whatsapp"></i></a>
+    <a href=""><i class="fab fa-linkedin"></i></a>
+    <a href="https://www.tiktok.com/@hope.worldwide.ug?_r=1&_t=ZS-93iNWgrl6OH"><i class="fab fa-tiktok"></i></a>
+    <a href="mailto:info@hopewwug.org"><i class="fas fa-envelope"></i></a>
+</div>
+    </div>
+
+    <style>
+        /* Override default dropdown styles for this specific menu */
+        .mobile-dropdown {
+            background-color: #1b6c38 !important; /* Dark Green */
+            color: white !important;
+            right: 0 !important; /* Align to right edge */
+            left: auto !important;
+            transform: none !important;
+            width: 300px !important; /* Fixed width for mobile menu */
+            max-width: 90vw;
+        }
+
+        /* Triangle Arrow Color Override */
+        .mobile-dropdown::after {
+            border-bottom-color: #1b6c38 !important; /* Dark Green Arrow */
+            left: auto !important;
+            right: 10px !important; /* Position arrow under the hamburger */
+            transform: none !important;
+        }
+
+        /* Link Styles */
+        .mobile-links {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 20px;
+        }
+
+        .mobile-links li {
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .mobile-links li a {
+            display: block;
+            padding: 12px 0;
+            color: white;
+            font-size: 16px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: padding-left 0.3s;
+        }
+
+        .mobile-links li a:hover {
+            padding-left: 10px;
+            color: #f4c430; /* Yellow hover */
+        }
+
+        /* Social Icons Styling */
+        .mobile-socials {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .mobile-socials a {
+            color: #f4c430; /* Yellow Icons */
+            font-size: 20px;
+            transition: transform 0.3s;
+        }
+
+        .mobile-socials a:hover {
+            transform: scale(1.2);
+            color: white;
+        }
+        
+        /* --- NEW HEADER CSS --- */
+        .catcher{
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          background: #14522b;
+          color: white;
+          text-align: center;
+          font-size: 10px;
+          height: 16px;
+        }
+        .site-header {
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0px;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 5px;
+            height: 50px; /* Adjust as needed */
+        }
+        .logo-container img {
+          width: 70px;
+        }
+
+        .main-nav {
+            display: flex;
+            justify-content: center;
+        }
+
+        .nav-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 10px;
+        }
+
+        .nav-list li a, .dropdown-toggle {
+            text-decoration: none;
+            color: #555;
+            font-weight: 300;
+            font-size: 15px;
+            transition: color 0.3s;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 6px 0;
+            font-family: inherit;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-list li a:hover, .dropdown-toggle:hover, .dropdown-item.active .dropdown-toggle {
+            color: #1b6c38;
+        }
+        
+        .dropdown-toggle i {
+            margin-left: 5px;
+            font-size: 20px;
+            transition: transform 0.3s;
+        }
+
+        .dropdown-item.active .dropdown-toggle i {
+            transform: rotate(180deg);
+        }
+
+
+        .hamburger-menu {
+            font-size: 24px;
+            color: #555;
+            cursor: pointer;
+        }
+        
+     
+        /* Responsive adjustments for header */
+        @media (max-width: 768px) {
+            .hamburger-menu {
+                display: block; /* Show hamburger on mobile */
+            }
+            .header-content {
+                padding: 0 15px;
+            }
+            .dropdown-menu{
+              width: 100vw;
+            }
+        }
+
+    </style>
+</div>
+        </div>
+    </header>
+<main class="container fundraise-page">
+    <section class="fundraise-hero">
+        <h1>Turn Your Influence into Impact</h1>
+        <p>Use your social platform to bring hope. Whether it's a birthday fundraiser or a viral challenge, you can help us reach more communities with health, water, and education.</p>
+    </section>
+
+    <div class="fundraise-grid">
+
+        <div class="fundraise-card">
+            <div class="card-icon-wrapper">
+                <i class="fab fa-facebook-f icon-fb"></i>
+            </div>
+            <h3>Host a Facebook Fundraiser</h3>
+            <p>Dedicate your birthday or a special event to raise funds directly on Facebook. It's easy for friends to donate without leaving the app.</p>
+            <div class="steps-container">
+                <h4>How to start:</h4>
+                <ol>
+                    <li>Go to your Facebook homepage and find "Fundraisers".</li>
+                    <li>Click "Raise Money" and search for "Hope Worldwide International Uganda".</li>
+                    <li>Set your goal, write a personal story, and pick a cover photo.</li>
+                    <li>Click "Create" and invite your friends to support.</li>
+                </ol>
+            </div>
+            <div class="impact-story">
+                <small><strong>Your Impact:</strong> Help fund agricultural training that enabled the Kaliro farmers to earn over UGX 19.8 Million.</small>
+            </div>
+        </div>
+
+        <div class="fundraise-card">
+            <div class="card-icon-wrapper">
+                <i class="fab fa-tiktok icon-tiktok"></i>
+            </div>
+            <h3>TikTok for Good</h3>
+            <p>Use short videos to raise awareness and funds. TikTok's Donation Stickers make giving simple and interactive.</p>
+            <div class="steps-container">
+                <h4>How to start:</h4>
+                <ol>
+                    <li>Create a new video or upload one.</li>
+                    <li>In the editing screen, tap the "Stickers" icon.</li>
+                    <li>Select the "Donation" sticker.</li>
+                    <li>Search for and select our charity.</li>
+                    <li>Post your video and encourage followers to donate!</li>
+                </ol>
+            </div>
+            <div class="impact-story">
+                <small><strong>Your Impact:</strong> Raise awareness for our WASH projects, like the rehabilitation of 19 boreholes providing clean water.</small>
+            </div>
+        </div>
+
+        <div class="fundraise-card">
+            <div class="card-icon-wrapper">
+                <i class="fab fa-instagram icon-insta"></i>
+            </div>
+            <h3>Instagram Stories & Reels</h3>
+            <p>Add a donation sticker to your Stories or add our donation link to your bio for Reels and posts.</p>
+            <div class="steps-container">
+                <h4>How to start (Stories):</h4>
+                <ol>
+                    <li>Capture a photo or video for your Story.</li>
+                    <li>Tap the sticker icon at the top.</li>
+                    <li>Choose the "Donation" sticker.</li>
+                    <li>Find "Hope Worldwide International Uganda".</li>
+                    <li>Share your story with the sticker.</li>
+                </ol>
+            </div>
+            <div class="impact-story">
+                <small><strong>Your Impact:</strong> Help keep girls like Kadondi Moreen in school by funding sanitary pad programs.</small>
+            </div>
+        </div>
+
+        <div class="fundraise-card">
+            <div class="card-icon-wrapper">
+                <i class="fas fa-users icon-p2p"></i>
+            </div>
+            <h3>Run a Peer-to-Peer Campaign</h3>
+            <p>Running a marathon, climbing a mountain, or hosting a challenge? Create a personal fundraising page and ask your network to sponsor you.</p>
+            <div class="steps-container">
+                <h4>How to start:</h4>
+                <ol>
+                    <li>Sign up on our dedicated fundraising platform (link below).</li>
+                    <li>Customize your page with your story and photo.</li>
+                    <li>Set a personal fundraising goal.</li>
+                    <li>Share your unique page link via email and social media.</li>
+                </ol>
+            </div>
+            <div class="impact-story">
+                <small><strong>Your Impact:</strong> Support large initiatives like our health outreach that has reached 7,200 peers with HIV prevention messages.</small>
+            </div>
+        </div>
+
+        <div class="fundraise-card">
+            <div class="card-icon-wrapper">
+                <i class="fab fa-youtube icon-yt"></i>
+            </div>
+            <h3>YouTube Live Stream Giving</h3>
+            <p>If you are a creator, enable YouTube Giving during your live streams to allow viewers to donate directly.</p>
+            <div class="steps-container">
+                <h4>How to start:</h4>
+                <ol>
+                    <li>Go to YouTube Studio and start a live stream.</li>
+                    <li>In the live control room, find the "Giving" tab.</li>
+                    <li>Select our organization to support.</li>
+                    <li>A "Donate" button will appear next to your live chat.</li>
+                </ol>
+            </div>
+            <div class="impact-story">
+                <small><strong>Your Impact:</strong> Provide vital supplies like soap and clothing for our prison outreach program supporting over 250 inmates.</small>
+            </div>
+        </div>
+
+        <div class="fundraise-card">
+            <div class="card-icon-wrapper">
+                <i class="fas fa-handshake icon-corp"></i>
+            </div>
+            <h3>Corporate Matching Gifts</h3>
+            <p>Many employers sponsor matching gift programs and will match charitable contributions made by their employees.</p>
+            <div class="steps-container">
+                <h4>How to start:</h4>
+                <ol>
+                    <li>Check with your company's HR department to see if they match gifts.</li>
+                    <li>Make your donation to Hope Worldwide Uganda.</li>
+                    <li>Fill out your company's matching gift form and send it to us.</li>
+                    <li>We verify the gift, and your company sends the match!</li>
+                </ol>
+            </div>
+            <div class="impact-story">
+                <small><strong>Your Impact:</strong> Double your contribution's power, helping us mobilize even more than the UGX 465M already saved by our farmer groups.</small>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+<style>
+    /* --- CSS for the Fundraising Page Component --- */
+    
+    :root {
+        /* Using your theme colors */
+        --primary-green: #1b6c38;
+        --accent-lime: #aadd68;
+        --text-dark: #333;
+        --text-light: #666;
+        --bg-offwhite: #f9f9f9;
+        --white: #ffffff;
+    }
+
+    /* Hero Section specific to this page component */
+    .fundraise-hero {
+        text-align: center;
+        padding: 60px 20px;
+        margin-bottom: 40px;
+        background: var(--bg-offwhite);
+        border-bottom: 3px solid var(--accent-lime);
+    }
+    .fundraise-hero h1 {
+        color: var(--primary-green);
+        font-size: 36px;
+        font-weight: 800;
+        margin-bottom: 15px;
+    }
+    .fundraise-hero p {
+        max-width: 700px;
+        margin: 0 auto;
+        font-size: 18px;
+        color: var(--text-light);
+    }
+
+    /* Main Grid Container */
+    .fundraise-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 30px;
+        padding-bottom: 80px;
+    }
+
+    /* Individual Card Style */
+    .fundraise-card {
+        background: var(--white);
+        border-radius: 12px;
+        padding: 30px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+        border: 1px solid #eee;
+        transition: transform 0.3s, box-shadow 0.3s;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .fundraise-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        border-color: var(--accent-lime);
+    }
+
+    /* Icon styling */
+    .card-icon-wrapper {
+        width: 70px;
+        height: 70px;
+        background: #f0f7f2;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    .card-icon-wrapper i {
+        font-size: 32px;
+        color: var(--primary-green);
+    }
+    /* Platform-specific icon colors on hover (optional nice touch) */
+    .fundraise-card:hover .icon-fb { color: #1877F2; }
+    .fundraise-card:hover .icon-tiktok { color: #000000; }
+    .fundraise-card:hover .icon-insta { color: #E1306C; }
+    .fundraise-card:hover .icon-yt { color: #FF0000; }
+
+    /* Card Content */
+    .fundraise-card h3 {
+        font-size: 22px;
+        font-weight: 700;
+        color: var(--text-dark);
+        margin-bottom: 15px;
+    }
+    .fundraise-card p {
+        color: var(--text-light);
+        margin-bottom: 20px;
+        font-size: 15px;
+        flex-grow: 1;
+    }
+
+    /* Steps List */
+    .steps-container {
+        background: var(--bg-offwhite);
+        padding: 20px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        border-left: 3px solid var(--accent-lime);
+    }
+    .steps-container h4 {
+        font-size: 14px;
+        color: var(--primary-green);
+        margin-bottom: 10px;
+        text-transform: uppercase;
+    }
+    .steps-container ol {
+        padding-left: 20px;
+        margin: 0;
+    }
+    .steps-container li {
+        margin-bottom: 8px;
+        font-size: 14px;
+        color: var(--text-light);
+    }
+
+    /* Impact Story Section */
+    .impact-story {
+        margin-top: auto;
+        padding-top: 15px;
+        border-top: 1px solid #eee;
+        color: var(--text-light);
+        font-style: italic;
+    }
+    .impact-story strong {
+        color: var(--primary-green);
+        font-style: normal;
+    }
+
+    /* Responsive Adjustments */
+    @media(max-width: 768px) {
+        .fundraise-hero h1 { font-size: 28px; }
+        .fundraise-hero p { font-size: 16px; }
+        .fundraise-card { padding: 25px; }
+    }
+</style>
+
+<footer class="site-footer">
+    <style>
+    :root {
+    --deep-green: hsl(143, 64.2%, 24.1%);
+    --medium-green: hsl(143, 64.2%, 35%); /* Slightly lighter for gradients/cards */
+    --light-green: hsl(142, 76.6%, 73.1%);
+    --accent-yellow: #ffce00;
+    --text-dark: #333;
+    --text-light: #666;
+    --white: #fff;
+    --max-width: 1200px;
+}
+    .btn {
+    display: inline-block;
+    padding: 9px 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border-radius: 3px;
+    border: none;
+}
+
+.btn-yellow {
+    background-color: var(--accent-yellow);
+    color: var(--deep-green);
+}
+.btn-yellow:hover {
+    background-color: #e6b800;
+}
+
+.btn-green {
+    background-color: var(--deep-green);
+    color: var(--white);
+}
+
+.btn-outline {
+    border: 2px solid var(--deep-green);
+    color: var(--deep-green);
+    padding: 10px 20px;
+    border-radius: 30px;
+}
+
+.btn-white-outline {
+    border: 2px solid var(--white);
+    color: var(--white);
+    border-radius: 30px;
+    padding: 8px 20px;
+    font-size: 0.8rem;
+    margin-top: 15px;
+}
+
+.btn-yellow-center {
+    background-color: var(--accent-yellow);
+    color: var(--deep-green);
+    border-radius: 30px;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.btn-outline-green {
+    border: 2px solid var(--deep-green);
+    color: var(--deep-green);
+    border-radius: 30px;
+}
+
+        .site-footer {
+            background-color:white; /* Subtle matching background */
+            padding: 40px 20px;
+            border-top: 3px solid #aadd68; /* Lime accent top border */
+            width: 100%;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        /* --- TOP SECTION (Brand + Links) --- */
+        .footer-top {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        /* Brand Area */
+        .footer-brand {
+            margin-bottom: 20px;
+        }
+
+        .brand-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #1b6c38; /* Deep Green */
+        }
+
+        .brand-logo {
+            height: 62px;
+            margin-right: 12px;
+        }
+
+        .brand-name {
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        /* Links Grid */
+        .footer-links-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Mobile: 2 cols */
+            gap: 30px;
+            width: 100%;
+        }
+
+        .link-column h2 {
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #1b6c38; /* Deep Green Headings */
+            margin-bottom: 20px;
+            letter-spacing: 0.5px;
+        }
+
+        .link-column ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .link-column li:before{
+          display: none;
+        }
+        .link-column li {
+            margin-bottom: 12px;
+        }
+
+        .link-column a {
+            color: #555;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .link-column a:hover {
+            color: #1b6c38;
+            text-decoration: underline;
+        }
+
+        /* --- DIVIDER --- */
+        .footer-divider {
+            border: 0;
+            height: 1px;
+            background-color: #dbe4de;
+            margin: 30px 0;
+        }
+
+        /* --- BOTTOM SECTION (Copyright + Socials) --- */
+        .footer-bottom {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .copyright {
+            font-size: 14px;
+            color: #666;
+            text-align: center;
+        }
+
+        .copyright a {
+            color: #666;
+            text-decoration: none;
+        }
+
+        .copyright a:hover {
+            text-decoration: underline;
+        }
+
+        /* Social Icons */
+        .social-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .social-item {
+            color: #555;
+            transition: color 0.3s, transform 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .social-item:hover {
+            color: #1b6c38; /* Green on hover */
+            transform: translateY(-2px);
+        }
+
+        .social-item svg {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+
+        /* --- MEDIA QUERIES --- */
+        
+        /* Tablet & Desktop */
+        @media (min-width: 768px) {
+            .footer-top {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            .footer-links-grid {
+                grid-template-columns: repeat(3, 1fr); /* 3 cols on desktop */
+                width: auto;
+                gap: 60px;
+            }
+
+            .footer-bottom {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            .copyright {
+                text-align: left;
+            }
+        }
+        footer {
+    background: #f9f9f9;
+    padding-top: 60px;
+    border-top: 5px solid var(--accent-yellow);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    padding-bottom: 50px;
+}
+
+.footer-left h3 {
+    color: var(--deep-green);
+    margin-bottom: 15px;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 0;
+    max-width: 400px;
+}
+
+.newsletter-form input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.footer-links-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 30px;
+}
+
+.footer-links-columns h4 {
+    color: var(--deep-green);
+    margin-bottom: 15px;
+}
+
+.footer-links-columns li {
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.yellow-box {
+    background: var(--accent-yellow);
+    padding: 40px;
+    text-align: center;
+}
+.yellow-box h3 {
+    color: var(--deep-green);
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+.small-text {
+    font-size: 0.8rem;
+    margin-top: 15px;
+}
+
+.partners h4 {
+    font-size: 0.8rem;
+    color: var(--deep-green);
+    margin-bottom: 15px;
+}
+
+.partner-logos {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.partner-logos span {
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    font-size: 0.7rem;
+    color: #999;
+}
+
+.social-icons a {
+    color: var(--deep-green);
+    font-size: 1.2rem;
+    margin-right: 15px;
+}
+
+.copyright {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.8rem;
+    border-top: 1px solid #eee;
+}
+
+        /* --- MARQUEE CSS (Embedded for functionality) --- */
+        .partners-section {
+            border-top: 1px solid #e1e8e3; /* Subtle separator */
+            border-bottom: 1px solid #e1e8e3;
+            padding: 20px 0;
+            margin-top: 30px;
+            background-color: #f9fdfa; /* Very faint green tint */
+            overflow: hidden;
+        }
+
+        .partners-title {
+            text-align: center;
+            color: #1b6c38;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+
+        .marquee-track {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            /* Simple scrolling animation */
+            animation: scroll 25s linear infinite;
+            width: max-content; 
+        }
+
+        .marquee-track:hover {
+            animation-play-state: paused;
+        }
+
+        .partner-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        .partner-item:hover {
+            opacity: 1;
+        }
+
+        .partner-img {
+            height: 45px; /* Fixed height for consistency */
+            width: auto;
+            object-fit: contain;
+            mix-blend-mode: multiply; /* Helps logos blend with background */
+        }
+
+        .partner-name {
+            font-size: 14px;
+            font-weight: 600;
+            color: #555;
+        }
+
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); } /* Scrolls half way if content is duplicated */
+        }
+        
+        /* Developer Credit Style */
+        .dev-credit {
+            font-size: 13px;
+            color: #888;
+            margin-top: 5px;
+        }
+        .dev-credit a {
+            color: #1b6c38;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .dev-credit a:hover {
+            text-decoration: underline;
+        }
+    </style>
+
+    <div class="footer-content">
+        
+        <div class="footer-top">
+            <div class="footer-brand">
+                <a href="../index.html" class="brand-link">
+                    <img src="../res/logo.jpg" class="brand-logo" alt="Hope Worldwide Logo" />
+                </a>
+                <div>
+                    <br>
+                    <h3>Subscribe to our newsletter</h3>
+                    <form class="newsletter-form">
+                        <input type="text" placeholder="Name">
+                        <input type="email" placeholder="Email Address">
+                        <button type="button" class="btn btn-green">SUBSCRIBE</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-links-grid">
+                <div class="link-column">
+                    <h2>Our Work</h2>
+                    <ul>
+                        <li><a href="../outreach">Our outreach</a></li>
+                        <li><a href="../gallery">Gallery</a></li>
+                        <li><a href="../objectives">Objectives</a></li>
+                        <li><a href="../stories">Success Stories</a></li>
+                    </ul>
+                </div>
+                <div class="link-column">
+                    <h2>Get Involved</h2>
+                    <ul>
+                        <li><a href="../donate">Donate</a></li>
+                        <li><a href="../forms?type=volunteer">Volunteer</a></li>
+                        <li><a href="../forms?type=partner">Partner With Us</a></li>
+                        <li><a href="../forms?type=job">Careers</a></li>
+                        <li><a href="../partners">Partners</a></li>
+                    </ul>
+                </div>
+                <div class="link-column">
+                    <h2>Legal & Contact</h2>
+                    <ul>
+                        <li><a href="../faq">Frequently Asked Questions</a></li>
+                        <li><a href="../board">Our team</a></li>
+                        <li><a href="../cookies.html">Cookie Policy</a></li>
+                        <li><a href="../contact">Contact Support</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="partners-section">
+            <div class="partners-title">Our Partners</div>
+            <div class="marquee-track">
+                <div class="partner-item">
+                    <img src="../res/makerere.jpeg" alt="Makerere" class="partner-img">
+                    <span class="partner-name">Makerere University</span>
+                </div>
+                <div class="partner-item">
+                    <img src="../res/mengo.png" alt="Mengo" class="partner-img">
+                    <span class="partner-name">Mengo SS</span>
+                </div>
+                <div class="partner-item">
+                    <img src="../res/ucu.jpg" alt="UCU" class="partner-img">
+                    <span class="partner-name">UCU</span>
+                </div>
+                <div class="partner-item">
+                    <img src="../res/makerere.png" alt="Makerere College" class="partner-img">
+                    <span class="partner-name">Makerere College</span>
+                </div>
+                <div class="partner-item">
+                    <img src="../res/dana.jpg" alt="Dana" class="partner-img">
+                    <span class="partner-name">Dana Foundation</span>
+                </div>
+                <div class="partner-item">
+                    <img src="../res/uvri.jpg" alt="Uganda Virus" class="partner-img">
+                    <span class="partner-name">Uganda Virus Institute</span>
+                </div>
+                <div class="partner-item">
+                    <img src="../res/ministry.jpeg" alt="Ministry" class="partner-img">
+                    <span class="partner-name">Ministry of Health</span>
+                </div>
+
+            
+                <div class="partner-item">
+                    <img src="../res/makerere.jpeg" alt="Makerere" class="partner-img">
+                    <span class="partner-name">Makerere University</span>
+                </div>
+                <div class="partner-item">
+                    <img src="../res/mengo.png" alt="Mengo" class="partner-img">
+                    <span class="partner-name">Mengo SS</span>
+                </div>
+                <div class="partner-item">
+                    <img src="../res/ucu.jpg" alt="UCU" class="partner-img">
+                    <span class="partner-name">UCU</span>
+                </div>
+                <div class="partner-item">
+                    <img src="../res/makerere.png" alt="Makerere College" class="partner-img">
+                    <span class="partner-name">Makerere College</span>
+                </div>
+                <div class="partner-item">
+                    <img src="../res/dana.jpg" alt="Dana" class="partner-img">
+                    <span class="partner-name">Dana Foundation</span>
+                </div>
+                <div class="partner-item">
+                    <img src="../res/uvri.jpg" alt="Uganda Virus" class="partner-img">
+                    <span class="partner-name">Uganda Virus Institute</span>
+                </div>
+                <div class="partner-item">
+                    <img src="../res/ministry.jpeg" alt="Ministry" class="partner-img">
+                    <span class="partner-name">Ministry of Health</span>
+                </div>
+
+            </div><br>
+            <a href="../partners" style="text-align: center; display: block;" class="map-link">READ MORE &rarr;</a>
+        </div>
+
+        <hr class="footer-divider" style="margin-top: 0;" />
+
+        <div class="footer-bottom">
+            <div style="text-align: center; width: 100%;">
+                <span class="copyright">
+                    © 2026 Hope Worldwide. All Rights Reserved.
+                </span>
+                <div class="dev-credit">
+                    Developed by Amanda Technologies | <a href="https://amandatechnologies.com">Learn more</a>
+                </div>
+            </div>
+            
+<div class="social-links">
+    <a href="https://www.facebook.com/Hopewwug" class="social-item">
+        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M13.135 6H15V3h-1.865a4.147 4.147 0 0 0-4.142 4.142V9H7v3h2v9.938h3V12h2.021l.592-3H12V6.591A.6.6 0 0 1 12.592 6h.543Z" clip-rule="evenodd"/></svg>
+        <span class="sr-only">Facebook</span>
+    </a>
+    <a href="" class="social-item">
+<svg height="200px" width="200px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 382 382" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M347.445,0H34.555C15.471,0,0,15.471,0,34.555v312.889C0,366.529,15.471,382,34.555,382h312.889 C366.529,382,382,366.529,382,347.444V34.555C382,15.471,366.529,0,347.445,0z M118.207,329.844c0,5.554-4.502,10.056-10.056,10.056 H65.345c-5.554,0-10.056-4.502-10.056-10.056V150.403c0-5.554,4.502-10.056,10.056-10.056h42.806 c5.554,0,10.056,4.502,10.056,10.056V329.844z M86.748,123.432c-22.459,0-40.666-18.207-40.666-40.666S64.289,42.1,86.748,42.1 s40.666,18.207,40.666,40.666S109.208,123.432,86.748,123.432z M341.91,330.654c0,5.106-4.14,9.246-9.246,9.246H286.73 c-5.106,0-9.246-4.14-9.246-9.246v-84.168c0-12.556,3.683-55.021-32.813-55.021c-28.309,0-34.051,29.066-35.204,42.11v97.079 c0,5.106-4.139,9.246-9.246,9.246h-44.426c-5.106,0-9.246-4.14-9.246-9.246V149.593c0-5.106,4.14-9.246,9.246-9.246h44.426 c5.106,0,9.246,4.14,9.246,9.246v15.655c10.497-15.753,26.097-27.912,59.312-27.912c73.552,0,73.131,68.716,73.131,106.472 L341.91,330.654L341.91,330.654z"></path> </g></svg>        <span class="sr-only">linkedin</span>
+    </a>
+    <a href="https://x.com/HOPEWORLDWIDEUG" class="social-item">
+        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.795 10.533 20.68 2h-3.073l-5.255 6.517L7.69 2H1l7.806 10.91L1.47 22h3.074l5.705-7.07L15.31 22H22l-8.205-11.467Zm-2.38 2.95L9.97 11.464 4.36 3.627h2.31l4.528 6.317 1.443 2.02 6.018 8.409h-2.31l-4.934-6.89Z"/></svg>
+        <span class="sr-only">Twitter</span>
+    </a>
+            <a href="https://www.tiktok.com/@hope.worldwide.ug?_r=1&_t=ZS-93iNWgrl6OH" class="social-item" aria-label="Titkok">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor">
+  <path d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"/>
+</svg>        </a>
+
+    <a href="https://wa.me/256782409528" class="social-item">
+        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        <span class="sr-only">WhatsApp</span>
+    </a>
+    <a href="mailto:info@hopewwug.org" class="social-item">
+        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        <span class="sr-only">Email</span>
+    </a>
+</div>
+
+        </div>
+    </div>
+</footer>
+
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                const answer = item.querySelector('.faq-answer');
+
+                question.addEventListener('click', () => {
+                    const isActive = item.classList.contains('active');
+
+                    // Close all other items for accordion effect
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                            otherItem.querySelector('.faq-answer').style.maxHeight = null;
+                        }
+                    });
+
+                    // Toggle current item
+                    if (isActive) {
+                        item.classList.remove('active');
+                        answer.style.maxHeight = null;
+                    } else {
+                        item.classList.add('active');
+                        // Set max-height to the scrollHeight so it expands exactly to fit content
+                        answer.style.maxHeight = answer.scrollHeight + "px";
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
