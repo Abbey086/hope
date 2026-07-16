@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+<link rel="manifest" href="../favicon/site.webmanifest"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Donate - Hope Worldwide Uganda</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
     <style>
-            body {
+        body {
             font-family: 'Poppins', sans-serif;
             background-color: var(--bg-offwhite);
             color: var(--text-dark);
@@ -25,33 +30,69 @@
             --gray-disabled: #e0e0e0;
         }
 
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-        a { text-decoration: none; color: inherit; }
-        ul { list-style: none; }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
 
         /* --- HEADER --- */
         .site-header {
             background-color: var(--white);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
             position: sticky;
             top: 0;
             z-index: 1000;
         }
+
         .header-content {
-            display: flex; justify-content: space-between; align-items: center;
-            height: 80px; max-width: 1200px; margin: 0 auto; padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+            
+            margin: 0 auto;
+            padding: 0 20px;
         }
+
         .logo-box {
             background-color: var(--primary-green);
-            height: 100%; width: 90px;
-            display: flex; align-items: center; justify-content: center;
+            height: 100%;
+            width: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-        .logo-box i { color: white; font-size: 36px; }
-        .nav-list { display: flex; gap: 30px; }
-        .nav-list a { font-weight: 500; color: #555; transition: 0.3s; }
-        .nav-list a:hover { color: var(--primary-green); }
+
+        .logo-box i {
+            color: white;
+            font-size: 36px;
+        }
+
+        .nav-list {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-list a {
+            font-weight: 500;
+            color: #555;
+            transition: 0.3s;
+        }
+
+        .nav-list a:hover {
+            color: var(--primary-green);
+        }
 
         /* --- HERO SECTION --- */
         .hero {
@@ -66,17 +107,33 @@
             color: white;
             padding: 0 20px;
         }
-        .hero h1 { font-size: 42px; font-weight: 800; margin-bottom: 10px; }
-        .hero p { font-size: 18px; max-width: 600px; font-weight: 300; }
+
+        .hero h1 {
+            font-size: 42px;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            
+            font-weight: 300;
+        }
 
         /* --- MAIN CONTAINER --- */
-        .container { max-width: 900px; margin: -50px auto 60px auto; padding: 0 20px; position: relative; z-index: 10; }
+        .container {
+            max-width: 900px;
+            margin: -50px auto 60px auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 10;
+        }
 
         /* --- DONATION CARD --- */
         .donation-wrapper {
             background: white;
             border-radius: 8px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
             overflow: hidden;
             border-top: 5px solid var(--accent-lime);
         }
@@ -118,7 +175,7 @@
         .method-card.active {
             border-color: var(--primary-green);
             background-color: #f9fdfa;
-            box-shadow: 0 5px 15px rgba(0,104,55,0.1);
+            box-shadow: 0 5px 15px rgba(0, 104, 55, 0.1);
         }
 
         .method-card.disabled {
@@ -157,9 +214,20 @@
             margin-bottom: 8px;
             font-size: 14px;
         }
-        .detail-row:last-child { margin-bottom: 0; }
-        .detail-label { color: #777; font-weight: 500; }
-        .detail-value { font-weight: 700; color: #333; }
+
+        .detail-row:last-child {
+            margin-bottom: 0;
+        }
+
+        .detail-label {
+            color: #777;
+            font-weight: 500;
+        }
+
+        .detail-value {
+            font-weight: 700;
+            color: #333;
+        }
 
         /* Coming Soon Badge */
         .coming-soon-badge {
@@ -182,7 +250,7 @@
             text-align: center;
             border-top: 1px solid #eee;
         }
-        
+
         .help-text {
             margin-bottom: 15px;
             color: #666;
@@ -200,7 +268,7 @@
             font-weight: 600;
             font-size: 14px;
             transition: background 0.3s;
-            box-shadow: 0 4px 10px rgba(0,104,55,0.2);
+            box-shadow: 0 4px 10px rgba(0, 104, 55, 0.2);
         }
 
         .btn-contact:hover {
@@ -210,389 +278,471 @@
 
         /* --- FOOTER (Same as previous) --- */
         .site-footer {
-            background-color: var(--white); border-top: 3px solid var(--accent-lime);
-            padding: 40px 0; margin-top: 60px;
+            background-color: var(--white);
+            border-top: 3px solid var(--accent-lime);
+            padding: 40px 0;
+            margin-top: 60px;
         }
-        .footer-content { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
-        .partners-section { border-top: 1px solid #eee; border-bottom: 1px solid #eee; padding: 20px 0; background-color: #f9fdfa; overflow: hidden; margin-bottom: 30px; }
-        .marquee-track { display: flex; gap: 50px; animation: scroll 30s linear infinite; width: max-content; }
-        .partner-item { display: flex; align-items: center; gap: 10px; opacity: 0.7; }
-        .partner-img { height: 45px; width: auto; mix-blend-mode: multiply; }
-        .partner-name { font-weight: 600; color: #555; font-size: 14px; }
-        @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-        .dev-credit { font-size: 12px; color: #aaa; margin-top: 10px; text-align: center; }
+
+        .footer-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .partners-section {
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+            padding: 20px 0;
+            background-color: #f9fdfa;
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+
+        .marquee-track {
+            display: flex;
+            gap: 50px;
+            animation: scroll 30s linear infinite;
+            width: max-content;
+        }
+
+        .partner-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            opacity: 0.7;
+        }
+
+        .partner-img {
+            height: 45px;
+            width: auto;
+            mix-blend-mode: multiply;
+        }
+
+        .partner-name {
+            font-weight: 600;
+            color: #555;
+            font-size: 14px;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .dev-credit {
+            font-size: 12px;
+            color: #aaa;
+            margin-top: 10px;
+            text-align: center;
+        }
 
         @media(max-width: 768px) {
-            .hero h1 { font-size: 32px; }
-            .methods-grid { grid-template-columns: 1fr; }
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .methods-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
+
 <body>
     <header class="site-header">
         <div class="container header-content">
-            <div class="logo-container">
-                <img src="../res/logo.jpg" class="logo" onclick="../index.html"></i>
+            <div class="logo-container" onclick='window.location.href="/index.html"'>
+                <img src="../res/logo.jpg" class="logo"></i>
             </div>
             <nav class="main-nav">
-    <style>
-    
-        /* CSS confined to this nav */
-        .nav-list .fa-chevron-down {
-            display: none;
-        }
-
-        /* Highlight style for the active button */
-        .nav-link.active {
-            color: #1b6c38;
-            border-bottom: 2px solid #1b6c38;
-        }
-
-        .nav-item .dropdown-menu {
-            display: none; /* Hidden by default */
-            position: fixed;
-            top: 60px;
-            right: 50%; /* Center horizontally */
-            transform: translateX(50%);
-            background: white;
-            border-radius: 15px;
-            width: 80vw;
-            padding: 20px;
-            color: #1b6c38;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
-            z-index: 1000;
-        }
-
-        /* The Arrow */
-        .nav-item .dropdown-menu::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 0;
-            border-left: 10px solid transparent;
-            border-right: 10px solid transparent;
-            border-bottom: 10px solid #fff;
-            bottom: 100%;
-            left: var(--lft); /* Dynamic position */
-            transform: translateX(-50%);
-        }
-
-        /* Close Button Style */
-        .close-drop {
-            position: absolute;
-            top: 10px;
-            right: 15px;
-            font-size: 24px;
-            cursor: pointer;
-            color: #aaa;
-            line-height: 1;
-        }
-        .close-drop:hover {
-            color: #1b6c38;
-        }
-
-        .dropdown-menu h3 {
-            margin-top: 0;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 10px;
-            margin-bottom: 10px;
-        }
-
-@media (min-width: 768px) {
-        .nav-item .dropdown-menu {
-          width: 50vw;
-        }
-                .nav-item .dropdown-menu::after{
-          display: none;
-        }
-
-}
-
-    </style>
-
-    <ul class="nav-list">
-        
-        <li style="--lft:31%" class="nav-item">
-            <span onclick="toggleNav(this)" class="nav-link">Who<i class="fas fa-chevron-down"></i></span>
-            <ul class="dropdown-menu">
-                <span class="close-drop" onclick="closeAllNav()">&times;</span>
-                <h3>Who we are!</h3>
-                <li><a href="../about">About Us</a></li>
-                <li><a href="../about">Our History & Mission</a></li>
-                <li><a href="../board">Leadership Board</a></li>
-                <li><a href="../about#values">Core Values</a></li>
-                <li><a href="../about.html#governance">Legal & Registration</a></li>
-                <li><a href="../gallery">Gallery</a></li>
-            </ul>
-        </li>
-
-        <li style="--lft:49%" class="nav-item">
-            <span onclick="toggleNav(this)" class="nav-link">What<i class="fas fa-chevron-down"></i></span>
-            <ul class="dropdown-menu">
-                <span class="close-drop" onclick="closeAllNav()">&times;</span>
-                <h3>What we do!</h3>
-                <li><a href="../objectives">Health & HIV/AIDS</a></li>
-                <li><a href="../objectives">Education & Schools</a></li>
-                <li><a href="../objectives">Water & Sanitation</a></li>
-                <li><a href="../objectives">Agriculture & Livelihoods</a></li>
-                <li><a href="../objectives">Human Rights & Legal</a></li>
-                <li><a href="../outreach">Outreach</a></li>
-            </ul>
-        </li>
-
-        <li style="--lft:69%" class="nav-item">
-            <span onclick="toggleNav(this)" class="nav-link">Where<i class="fas fa-chevron-down"></i></span>
-            <ul class="dropdown-menu">
-                <span class="close-drop" onclick="closeAllNav()">&times;</span>
-                <h3>Where we work!</h3>
-                <li><a href="../stories">Central Region</a></li>
-                <li><a href="../stories">Eastern Region</a></li>
-                <li><a href="../stories">Northern Region</a></li>
-                <li><a href="../stories">Western Region</a></li>
-                <li><a href="../contact#office">Our Offices</a></li>
-            </ul>
-        </li>
-
-        <li style="--lft:87%" class="nav-item">
-            <span onclick="toggleNav(this)" class="nav-link">How<i class="fas fa-chevron-down"></i></span>
-            <ul class="dropdown-menu">
-                <span class="close-drop" onclick="closeAllNav()">&times;</span>
-                <h3>How to help!</h3>
-                <li><a href="../forms?type=partner">Partner With Us</a></li>
-                <li><a href="../forms?type=volunteer">Volunteer</a></li>
-                <li><a href="../donate">Donate</a></li>
-                                        <li><a href="../fundraising">Fundraising</a></li>
-
-                <li><a href="../forms?type=job">Careers</a></li>
-                <li><a href="../contact">Contact Us</a></li>
-            </ul>
-        </li>
-
-    </ul>
-
-    <script>
-        function toggleNav(clickedBtn) {
-            // 1. Close all other dropdowns & remove highlights
-            const allMenus = document.querySelectorAll('.nav-item .dropdown-menu');
-            const allLinks = document.querySelectorAll('.nav-item .nav-link');
+                <style>
+                    /* CSS confined to this nav */
+                   .nav-list .fa-chevron-down {
+                            margin: 4px;
+                        }
+                        @media screen and (max-width: 700px) {
+                            .nav-list .fa-chevron-down {
             
-            // Check if the clicked one is already open
-            const targetMenu = clickedBtn.parentElement.querySelector('.dropdown-menu');
-            const isAlreadyOpen = targetMenu.style.display === 'block';
+                        display: none;
+                    }}
 
-            // Reset everything
-            allMenus.forEach(menu => menu.style.display = 'none');
-            allLinks.forEach(link => link.classList.remove('active'));
+                    /* Highlight style for the active button */
+                    .nav-link.active {
+                        color: #1b6c38;
+                        border-bottom: 2px solid #1b6c38;
+                    }
 
-            // 2. If it wasn't open, open it now and highlight the button
-            if (!isAlreadyOpen) {
-                targetMenu.style.display = 'block';
-                clickedBtn.classList.add('active');
-            }
-        }
+                    .nav-item .dropdown-menu {
+                        display: none;
+                        /* Hidden by default */
+                        position: fixed;
+                        top: 60px;
+                        right: 50%;
+                        /* Center horizontally */
+                        transform: translateX(50%);
+                        background: white;
+                        border-radius: 15px;
+                        width: 80vw;
+                        padding: 20px;
+                        color: #1b6c38;
+                        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+                        z-index: 1000;
+                    }
 
-        function closeAllNav() {
-            document.querySelectorAll('.nav-item .dropdown-menu').forEach(menu => menu.style.display = 'none');
-            document.querySelectorAll('.nav-item .nav-link').forEach(link => link.classList.remove('active'));
-        }
-    </script>
-</nav>
+                    /* The Arrow */
+                    .nav-item .dropdown-menu::after {
+                        content: '';
+                        position: absolute;
+                        width: 0;
+                        height: 0;
+                        border-left: 10px solid transparent;
+                        border-right: 10px solid transparent;
+                        border-bottom: 10px solid #fff;
+                        bottom: 100%;
+                        left: var(--lft);
+                        /* Dynamic position */
+                        transform: translateX(-50%);
+                    }
 
-<div id="mobile-toggle" class="hamburger-menu nav-item" style="position: relative;">
-    
-    <span onclick="toggleNav(this)" class="nav-link" style="font-size: 24px; cursor: pointer;">
-        <i class="fas fa-bars"></i>
-    </span>
+                    /* Close Button Style */
+                    .close-drop {
+                        position: absolute;
+                        top: 10px;
+                        right: 15px;
+                        font-size: 24px;
+                        cursor: pointer;
+                        color: #aaa;
+                        line-height: 1;
+                    }
 
-    <div class="dropdown-menu mobile-dropdown">
-        <span class="close-drop" onclick="closeAllNav()" style="color: white;">&times;</span>
-        
-        <h3>Menu</h3>
-        
-        <ul class="mobile-links">
-            <li><a href="../about">Who We Are</a></li>
-            <li><a href="../objectives">What We Do</a></li>
-            <li><a href="../stories">Where We Work</a></li>
-                                    <li><a href="../events">Events</a></li>
+                    .close-drop:hover {
+                        color: #1b6c38;
+                    }
 
-            <li><a href="../partners">Partners</a></li>
-            <li><a href="../contact">Contact Us</a></li>
-            <li><a href="../faq">Frequently Asked Questions</a></li>
-        </ul>
+                    .dropdown-menu h3 {
+                        margin-top: 0;
+                        border-bottom: 1px solid #eee;
+                        padding-bottom: 10px;
+                        margin-bottom: 10px;
+                    }
 
-<div class="mobile-socials">
-    <a href="https://www.facebook.com/Hopewwug"><i class="fab fa-facebook-f"></i></a>
-    <a href="https://x.com/HOPEWORLDWIDEUG"><i class="fab fa-twitter"></i></a>
-    <a href=""><i class="fab fa-linkedin"></i></a>
-    <a href="https://wa.me/256782409528"><i class="fab fa-whatsapp"></i></a>
-    <a href=""><i class="fab fa-linkedin"></i></a>
-    <a href="https://www.tiktok.com/@hope.worldwide.ug?_r=1&_t=ZS-93iNWgrl6OH"><i class="fab fa-tiktok"></i></a>
-    <a href="mailto:info@hopewwug.org"><i class="fas fa-envelope"></i></a>
-</div>
-    </div>
+                    @media (min-width: 768px) {
+                        .nav-item .dropdown-menu {
+                            width: 50vw;
+                        }
 
-    <style>
-        /* Override default dropdown styles for this specific menu */
-        .mobile-dropdown {
-            background-color: #1b6c38 !important; /* Dark Green */
-            color: white !important;
-            right: 0 !important; /* Align to right edge */
-            left: auto !important;
-            transform: none !important;
-            width: 300px !important; /* Fixed width for mobile menu */
-            max-width: 90vw;
-        }
+                        .nav-item .dropdown-menu::after {
+                            display: none;
+                        }
 
-        /* Triangle Arrow Color Override */
-        .mobile-dropdown::after {
-            border-bottom-color: #1b6c38 !important; /* Dark Green Arrow */
-            left: auto !important;
-            right: 10px !important; /* Position arrow under the hamburger */
-            transform: none !important;
-        }
+                    }
+                </style>
 
-        /* Link Styles */
-        .mobile-links {
-            list-style: none;
-            padding: 0;
-            margin-bottom: 20px;
-        }
+                <ul class="nav-list">
 
-        .mobile-links li {
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-        }
+                    <li style="--lft:31%" class="nav-item">
+                        <span  onclick="toggleNav(this)" onmouseenter="toggleNav(this)"  class="nav-link">Who<i class="fas fa-chevron-down"></i></span>
+                        <ul class="dropdown-menu">
+                            <span class="close-drop" onclick="closeAllNav()">&times;</span>
+                            <h3>Who we are!</h3>
+                            <li><a href="../about">About Us</a></li>
+                            <li><a href="../about">Our History & Mission</a></li>
+                            <li><a href="../board">Leadership Board</a></li>
+                            <li><a href="../about#values">Core Values</a></li>
+                            <li><a href="../about#governance">Legal & Registration</a></li>
+                            <li><a href="../gallery">Gallery</a></li>
+                        </ul>
+                    </li>
 
-        .mobile-links li a {
-            display: block;
-            padding: 12px 0;
-            color: white;
-            font-size: 16px;
-            font-weight: 500;
-            text-decoration: none;
-            transition: padding-left 0.3s;
-        }
+                    <li style="--lft:49%" class="nav-item">
+                        <span  onclick="toggleNav(this)" onmouseenter="toggleNav(this)"  class="nav-link">What<i class="fas fa-chevron-down"></i></span>
+                        <ul class="dropdown-menu">
+                            <span class="close-drop" onclick="closeAllNav()">&times;</span>
+                            <h3>What we do!</h3>
+                            <li><a href="../objectives">Health & HIV/AIDS</a></li>
+                            <li><a href="../objectives">Education & Schools</a></li>
+                            <li><a href="../objectives">Water & Sanitation</a></li>
+                            <li><a href="../objectives">Agriculture & Livelihoods</a></li>
+                            <li><a href="../objectives">Human Rights & Legal</a></li>
+                            <li><a href="../outreach">Outreach</a></li>
+                        </ul>
+                    </li>
 
-        .mobile-links li a:hover {
-            padding-left: 10px;
-            color: #f4c430; /* Yellow hover */
-        }
+                    <li style="--lft:69%" class="nav-item">
+                        <span  onclick="toggleNav(this)" onmouseenter="toggleNav(this)"  class="nav-link">Where<i class="fas fa-chevron-down"></i></span>
+                        <ul class="dropdown-menu">
+                            <span class="close-drop" onclick="closeAllNav()">&times;</span>
+                            <h3>Where we work!</h3>
+                            <li><a href="../stories">Central Region</a></li>
+                            <li><a href="../stories">Eastern Region</a></li>
+                            <li><a href="../stories">Northern Region</a></li>
+                            <li><a href="../stories">Western Region</a></li>
+                            <li><a href="../contact#office">Our Offices</a></li>
+                        </ul>
+                    </li>
 
-        /* Social Icons Styling */
-        .mobile-socials {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            padding-top: 15px;
-            border-top: 1px solid rgba(255,255,255,0.2);
-        }
+                    <li style="--lft:87%" class="nav-item">
+                        <span  onclick="toggleNav(this)" onmouseenter="toggleNav(this)"  class="nav-link">How<i class="fas fa-chevron-down"></i></span>
+                        <ul class="dropdown-menu">
+                            <span class="close-drop" onclick="closeAllNav()">&times;</span>
+                            <h3>How to help!</h3>
+                            <li><a href="../forms?type=partner">Partner With Us</a></li>
+                            <li><a href="../forms?type=volunteer">Volunteer</a></li>
+                            <li><a href="../donate">Donate</a></li>
+                            <li><a href="../fundraising">Fundraising</a></li>
 
-        .mobile-socials a {
-            color: #f4c430; /* Yellow Icons */
-            font-size: 20px;
-            transition: transform 0.3s;
-        }
+                            <li><a href="../forms?type=job">Careers</a></li>
+                            <li><a href="../contact">Contact Us</a></li>
+                        </ul>
+                    </li>
 
-        .mobile-socials a:hover {
-            transform: scale(1.2);
-            color: white;
-        }
-        
-        /* --- NEW HEADER CSS --- */
-        .catcher{
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100%;
-          background: #14522b;
-          color: white;
-          text-align: center;
-          font-size: 10px;
-          height: 16px;
-        }
-        .site-header {
-            background-color: #fff;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0px;
-            z-index: 1000;
-        }
+                </ul>
 
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 5px;
-            height: 50px; /* Adjust as needed */
-        }
-        .logo-container img {
-          width: 70px;
-        }
+                <script>
+                    function toggleNav(clickedBtn) {
+                        // 1. Close all other dropdowns & remove highlights
+                        const allMenus = document.querySelectorAll('.nav-item .dropdown-menu');
+                        const allLinks = document.querySelectorAll('.nav-item .nav-link');
 
-        .main-nav {
-            display: flex;
-            justify-content: center;
-        }
+                        // Check if the clicked one is already open
+                        const targetMenu = clickedBtn.parentElement.querySelector('.dropdown-menu');
+                        const isAlreadyOpen = targetMenu.style.display === 'block';
 
-        .nav-list {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            gap: 10px;
-        }
+                        // Reset everything
+                        allMenus.forEach(menu => menu.style.display = 'none');
+                        allLinks.forEach(link => link.classList.remove('active'));
 
-        .nav-list li a, .dropdown-toggle {
-            text-decoration: none;
-            color: #555;
-            font-weight: 300;
-            font-size: 15px;
-            transition: color 0.3s;
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 6px 0;
-            font-family: inherit;
-            display: flex;
-            align-items: center;
-        }
+                        // 2. If it wasn't open, open it now and highlight the button
+                        if (!isAlreadyOpen) {
+                            targetMenu.style.display = 'block';
+                            clickedBtn.classList.add('active');
+                        }
+                    }
 
-        .nav-list li a:hover, .dropdown-toggle:hover, .dropdown-item.active .dropdown-toggle {
-            color: #1b6c38;
-        }
-        
-        .dropdown-toggle i {
-            margin-left: 5px;
-            font-size: 20px;
-            transition: transform 0.3s;
-        }
+                    function closeAllNav() {
+                        document.querySelectorAll('.nav-item .dropdown-menu').forEach(menu => menu.style.display = 'none');
+                        document.querySelectorAll('.nav-item .nav-link').forEach(link => link.classList.remove('active'));
+                    }
+                </script>
+            </nav>
 
-        .dropdown-item.active .dropdown-toggle i {
-            transform: rotate(180deg);
-        }
+            <div id="mobile-toggle" class="hamburger-menu nav-item" style="position: relative;">
+
+                <span  onclick="toggleNav(this)" onmouseenter="toggleNav(this)"  class="nav-link" style="font-size: 24px; cursor: pointer;">
+                    <i class="fas fa-bars"></i>
+                </span>
+
+                <div class="dropdown-menu mobile-dropdown">
+                    <span class="close-drop" onclick="closeAllNav()" style="color: white;">&times;</span>
+
+                    <h3>Menu</h3>
+
+                    <ul class="mobile-links">
+                        <li><a href="../about">Who We Are</a></li>
+                        <li><a href="../objectives">What We Do</a></li>
+                        <li><a href="../stories">Where We Work</a></li>
+                        <li><a href="../events">Events</a></li>
+
+                        <li><a href="../partners">Partners</a></li>
+                        <li><a href="../contact">Contact Us</a></li>
+                        <li><a href="../faq">Frequently Asked Questions</a></li>
+                    </ul>
+
+                    <div class="mobile-socials">
+                        <a href="https://www.facebook.com/Hopewwug"><i class="fab fa-facebook-f"></i></a>
+                         <a href="https://x.com/HOPEWORLDWIDEUG"><i class="fab fa-twitter"></i></a><a href="https://www.instagram.com/hopeworldwideint.uganda"><i class="fab fa-instagram"></i></a>
+                         
+                        <a href="https://wa.me/256782409528"><i class="fab fa-whatsapp"></i></a><a href="https://www.youtube.com/@hopeworldwideintenationalu529"><i class="fab fa-youtube"></i></a>
+                         
+                        <a href="https://www.tiktok.com/@hope.worldwide.ug?_r=1&_t=ZS-93iNWgrl6OH"><i
+                                class="fab fa-tiktok"></i></a>
+                        <a href="mailto:info@hopeworldwideuganda.org"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+
+                <style>
+                    /* Override default dropdown styles for this specific menu */
+                    .mobile-dropdown {
+                        background-color: #1b6c38 !important;
+                        /* Dark Green */
+                        color: white !important;
+                        right: 0 !important;
+                        /* Align to right edge */
+                        left: auto !important;
+                        transform: none !important;
+                        width: 300px !important;
+                        /* Fixed width for mobile menu */
+                        max-width: 90vw;
+                    }
+
+                    /* Triangle Arrow Color Override */
+                    .mobile-dropdown::after {
+                        border-bottom-color: #1b6c38 !important;
+                        /* Dark Green Arrow */
+                        left: auto !important;
+                        right: 10px !important;
+                        /* Position arrow under the hamburger */
+                        transform: none !important;
+                    }
+
+                    /* Link Styles */
+                    .mobile-links {
+                        list-style: none;
+                        padding: 0;
+                        margin-bottom: 20px;
+                    }
+
+                    .mobile-links li {
+                        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                    }
+
+                    .mobile-links li a {
+                        display: block;
+                        padding: 12px 0;
+                        color: white;
+                        font-size: 16px;
+                        font-weight: 500;
+                        text-decoration: none;
+                        transition: padding-left 0.3s;
+                    }
+
+                    .mobile-links li a:hover {
+                        padding-left: 10px;
+                        color: #f4c430;
+                        /* Yellow hover */
+                    }
+
+                    /* Social Icons Styling */
+                    .mobile-socials {
+                        display: flex;
+                        justify-content: center;
+                        gap: 20px;
+                        padding-top: 15px;
+                        border-top: 1px solid rgba(255, 255, 255, 0.2);
+                    }
+
+                    .mobile-socials a {
+                        color: #f4c430;
+                        /* Yellow Icons */
+                        font-size: 20px;
+                        transition: transform 0.3s;
+                    }
+
+                    .mobile-socials a:hover {
+                        transform: scale(1.2);
+                        color: white;
+                    }
+
+                    /* --- NEW HEADER CSS --- */
+                    .catcher {
+                        position: fixed;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        background: #14522b;
+                        color: white;
+                        text-align: center;
+                        font-size: 10px;
+                        height: 16px;
+                    }
+
+                    .site-header {
+                        background-color: #fff;
+                        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                        position: sticky;
+                        top: 0px;
+                        z-index: 1000;
+                    }
+
+                    .header-content {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding: 0 5px;
+                        height: 50px;
+                        /* Adjust as needed */
+                    }
+
+                    .logo-container img {
+                        width: 70px;
+                    }
+
+                    .main-nav {
+                        display: flex;
+                        justify-content: center;
+                    }
+
+                    .nav-list {
+                        list-style: none;
+                        margin: 0;
+                        padding: 0;
+                        display: flex;
+                        gap: 10px;
+                    }
+
+                    .nav-list li a,
+                    .dropdown-toggle {
+                        text-decoration: none;
+                        color: #555;
+                        font-weight: 300;
+                        font-size: 15px;
+                        transition: color 0.3s;
+                        background: none;
+                        border: none;
+                        cursor: pointer;
+                        padding: 6px 0;
+                        font-family: inherit;
+                        display: flex;
+                        align-items: center;
+                    }
+
+                    .nav-list li a:hover,
+                    .dropdown-toggle:hover,
+                    .dropdown-item.active .dropdown-toggle {
+                        color: #1b6c38;
+                    }
+
+                    .dropdown-toggle i {
+                        margin-left: 5px;
+                        font-size: 20px;
+                        transition: transform 0.3s;
+                    }
+
+                    .dropdown-item.active .dropdown-toggle i {
+                        transform: rotate(180deg);
+                    }
 
 
-        .hamburger-menu {
-            font-size: 24px;
-            color: #555;
-            cursor: pointer;
-        }
-        
-     
-        /* Responsive adjustments for header */
-        @media (max-width: 768px) {
-            .hamburger-menu {
-                display: block; /* Show hamburger on mobile */
-            }
-            .header-content {
-                padding: 0 15px;
-            }
-            .dropdown-menu{
-              width: 100vw;
-            }
-        }
+                    .hamburger-menu {
+                        font-size: 24px;
+                        color: #555;
+                        cursor: pointer;
+                    }
 
-    </style>
-</div>
+
+                    /* Responsive adjustments for header */
+                    @media (max-width: 768px) {
+                        .hamburger-menu {
+                            display: block;
+                            /* Show hamburger on mobile */
+                        }
+
+                        .header-content {
+                            padding: 0 15px;
+                        }
+
+                        .dropdown-menu {
+                            width: 100vw;
+                        }
+                    }
+                </style>
+            </div>
         </div>
     </header>
 
@@ -605,45 +755,45 @@
     </div>
 
     <div class="container">
-        
+
         <div class="donation-wrapper">
-            
+
             <div class="donation-header">
                 <h2>Choose a Donation Method</h2>
                 <p>Securely transfer funds to support Hope Worldwide International Uganda.</p>
             </div>
 
             <div class="methods-grid">
-                
+
                 <div class="method-card active">
                     <i class="fas fa-university method-icon"></i>
                     <div class="method-title">Bank Transfer</div>
                     <p style="font-size:13px; color:#666; margin-bottom:15px;">
                         Direct deposit to our official bank account. Please use your name as the reference.
                     </p>
-                    
-<div class="bank-details">
-    <div class="detail-row">
-        <span class="detail-label">Bank Name:</span>
-        <span class="detail-value">Guaranty Trust Bank Uganda Limited</span>
-    </div>
-    <div class="detail-row">
-        <span class="detail-label">Account Name:</span>
-        <span class="detail-value">Hope World Wide International</span>
-    </div>
-    <div class="detail-row">
-        <span class="detail-label">Account No:</span>
-        <span class="detail-value" style="color:#006837; font-size:16px;">211/154834/2/5101/0</span>
-    </div>
-    <div class="detail-row">
-        <span class="detail-label">SWIFT Code:</span>
-        <span class="detail-value">GTBIUGKA</span>
-    </div>
-    <div class="detail-row">
-        <span class="detail-label">Currency:</span>
-        <span class="detail-value">USD</span>
-    </div>
-</div>
+
+                    <div class="bank-details">
+                        <div class="detail-row">
+                            <span class="detail-label">Bank Name:</span>
+                            <span class="detail-value">Guaranty Trust Bank Uganda Limited</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Account Name:</span>
+                            <span class="detail-value">Hope World Wide International</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Account No:</span>
+                            <span class="detail-value" style="color:#006837; font-size:16px;">211/154834/2/5101/0</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">SWIFT Code:</span>
+                            <span class="detail-value">GTBIUGKA</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Currency:</span>
+                            <span class="detail-value">USD</span>
+                        </div>
+                    </div>
                 </div>
 
 
@@ -677,591 +827,647 @@
             </div>
 
         </div>
-<footer class="site-footer">
-    <style>
-    :root {
-    --deep-green: hsl(143, 64.2%, 24.1%);
-    --medium-green: hsl(143, 64.2%, 35%); /* Slightly lighter for gradients/cards */
-    --light-green: hsl(142, 76.6%, 73.1%);
-    --accent-yellow: #ffce00;
-    --text-dark: #333;
-    --text-light: #666;
-    --white: #fff;
-    --max-width: 1200px;
-}
-    .btn {
-    display: inline-block;
-    padding: 9px 12px;
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    cursor: pointer;
-    border-radius: 3px;
-    border: none;
-}
+        <footer class="site-footer">
+            <style>
+                :root {
+                    --deep-green: hsl(143, 64.2%, 24.1%);
+                    --medium-green: hsl(143, 64.2%, 35%);
+                    /* Slightly lighter for gradients/cards */
+                    --light-green: hsl(142, 76.6%, 73.1%);
+                    --accent-yellow: #ffce00;
+                    --text-dark: #333;
+                    --text-light: #666;
+                    --white: #fff;
+                    --max-width: 1200px;
+                }
 
-.btn-yellow {
-    background-color: var(--accent-yellow);
-    color: var(--deep-green);
-}
-.btn-yellow:hover {
-    background-color: #e6b800;
-}
+                .btn {
+                    display: inline-block;
+                    padding: 9px 12px;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    font-size: 0.9rem;
+                    cursor: pointer;
+                    border-radius: 3px;
+                    border: none;
+                }
 
-.btn-green {
-    background-color: var(--deep-green);
-    color: var(--white);
-}
+                .btn-yellow {
+                    background-color: var(--accent-yellow);
+                    color: var(--deep-green);
+                }
 
-.btn-outline {
-    border: 2px solid var(--deep-green);
-    color: var(--deep-green);
-    padding: 10px 20px;
-    border-radius: 30px;
-}
+                .btn-yellow:hover {
+                    background-color: #e6b800;
+                }
 
-.btn-white-outline {
-    border: 2px solid var(--white);
-    color: var(--white);
-    border-radius: 30px;
-    padding: 8px 20px;
-    font-size: 0.8rem;
-    margin-top: 15px;
-}
+                .btn-green {
+                    background-color: var(--deep-green);
+                    color: var(--white);
+                }
 
-.btn-yellow-center {
-    background-color: var(--accent-yellow);
-    color: var(--deep-green);
-    border-radius: 30px;
-    margin-bottom: 20px;
-    position: relative;
-    z-index: 2;
-}
+                .btn-outline {
+                    border: 2px solid var(--deep-green);
+                    color: var(--deep-green);
+                    padding: 10px 20px;
+                    border-radius: 30px;
+                }
 
-.btn-outline-green {
-    border: 2px solid var(--deep-green);
-    color: var(--deep-green);
-    border-radius: 30px;
-}
+                .btn-white-outline {
+                    border: 2px solid var(--white);
+                    color: var(--white);
+                    border-radius: 30px;
+                    padding: 8px 20px;
+                    font-size: 0.8rem;
+                    margin-top: 15px;
+                }
 
-        .site-footer {
-            background-color:white; /* Subtle matching background */
-            padding: 40px 20px;
-            border-top: 3px solid #aadd68; /* Lime accent top border */
-            width: 100%;
-        }
+                .btn-yellow-center {
+                    background-color: var(--accent-yellow);
+                    color: var(--deep-green);
+                    border-radius: 30px;
+                    margin-bottom: 20px;
+                    position: relative;
+                    z-index: 2;
+                }
 
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            width: 100%;
-        }
+                .btn-outline-green {
+                    border: 2px solid var(--deep-green);
+                    color: var(--deep-green);
+                    border-radius: 30px;
+                }
 
-        /* --- TOP SECTION (Brand + Links) --- */
-        .footer-top {
-            display: flex;
-            flex-direction: column;
-            gap: 40px;
-        }
+                .site-footer {
+                    background-color: white;
+                    /* Subtle matching background */
+                    padding: 40px 20px;
+                    border-top: 3px solid #aadd68;
+                    /* Lime accent top border */
+                    width: 100%;
+                }
 
-        /* Brand Area */
-        .footer-brand {
-            margin-bottom: 20px;
-        }
+                .footer-content {
+                    
+                    margin: 0 auto;
+                    width: 100%;
+                }
 
-        .brand-link {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-            color: #1b6c38; /* Deep Green */
-        }
+                /* --- TOP SECTION (Brand + Links) --- */
+                .footer-top {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 40px;
+                }
 
-        .brand-logo {
-            height: 62px;
-            margin-right: 12px;
-        }
+                /* Brand Area */
+                .footer-brand {
+                    margin-bottom: 20px;
+                }
 
-        .brand-name {
-            font-size: 24px;
-            font-weight: 700;
-        }
+                .brand-link {
+                    display: flex;
+                    align-items: center;
+                    text-decoration: none;
+                    color: #1b6c38;
+                    /* Deep Green */
+                }
 
-        /* Links Grid */
-        .footer-links-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr); /* Mobile: 2 cols */
-            gap: 30px;
-            width: 100%;
-        }
+                .brand-logo {
+                    height: 62px;
+                    margin-right: 12px;
+                }
 
-        .link-column h2 {
-            font-size: 13px;
-            font-weight: 700;
-            text-transform: uppercase;
-            color: #1b6c38; /* Deep Green Headings */
-            margin-bottom: 20px;
-            letter-spacing: 0.5px;
-        }
+                .brand-name {
+                    font-size: 24px;
+                    font-weight: 700;
+                }
 
-        .link-column ul {
-            list-style: none;
-            padding: 0;
-        }
+                /* Links Grid */
+                .footer-links-grid {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    /* Mobile: 2 cols */
+                    gap: 30px;
+                    width: 100%;
+                }
 
-        .link-column li:before{
-          display: none;
-        }
-        .link-column li {
-            margin-bottom: 12px;
-        }
+                .link-column h2 {
+                    font-size: 13px;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    color: #1b6c38;
+                    /* Deep Green Headings */
+                    margin-bottom: 20px;
+                    letter-spacing: 0.5px;
+                }
 
-        .link-column a {
-            color: #555;
-            text-decoration: none;
-            font-size: 15px;
-            font-weight: 500;
-            transition: color 0.2s;
-        }
+                .link-column ul {
+                    list-style: none;
+                    padding: 0;
+                }
 
-        .link-column a:hover {
-            color: #1b6c38;
-            text-decoration: underline;
-        }
+                .link-column li:before {
+                    display: none;
+                }
 
-        /* --- DIVIDER --- */
-        .footer-divider {
-            border: 0;
-            height: 1px;
-            background-color: #dbe4de;
-            margin: 30px 0;
-        }
+                .link-column li {
+                    margin-bottom: 12px;
+                }
 
-        /* --- BOTTOM SECTION (Copyright + Socials) --- */
-        .footer-bottom {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-        }
+                .link-column a {
+                    color: #555;
+                    text-decoration: none;
+                    font-size: 15px;
+                    font-weight: 500;
+                    transition: color 0.2s;
+                }
 
-        .copyright {
-            font-size: 14px;
-            color: #666;
-            text-align: center;
-        }
+                .link-column a:hover {
+                    color: #1b6c38;
+                    text-decoration: underline;
+                }
 
-        .copyright a {
-            color: #666;
-            text-decoration: none;
-        }
+                /* --- DIVIDER --- */
+                .footer-divider {
+                    border: 0;
+                    height: 1px;
+                    background-color: #dbe4de;
+                    margin: 30px 0;
+                }
 
-        .copyright a:hover {
-            text-decoration: underline;
-        }
+                /* --- BOTTOM SECTION (Copyright + Socials) --- */
+                .footer-bottom {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 20px;
+                }
 
-        /* Social Icons */
-        .social-links {
-            display: flex;
-            gap: 20px;
-        }
+                .copyright {
+                    font-size: 14px;
+                    color: #666;
+                    text-align: center;
+                }
 
-        .social-item {
-            color: #555;
-            transition: color 0.3s, transform 0.2s;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+                .copyright a {
+                    color: #666;
+                    text-decoration: none;
+                }
 
-        .social-item:hover {
-            color: #1b6c38; /* Green on hover */
-            transform: translateY(-2px);
-        }
+                .copyright a:hover {
+                    text-decoration: underline;
+                }
 
-        .social-item svg {
-            width: 20px;
-            height: 20px;
-            fill: currentColor;
-        }
+                /* Social Icons */
+                .social-links {
+                    display: flex;
+                    gap: 20px;
+                }
 
-        .sr-only {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            white-space: nowrap;
-            border-width: 0;
-        }
+                .social-item {
+                    color: #555;
+                    transition: color 0.3s, transform 0.2s;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
 
-        /* --- MEDIA QUERIES --- */
-        
-        /* Tablet & Desktop */
-        @media (min-width: 768px) {
-            .footer-top {
-                flex-direction: row;
-                justify-content: space-between;
-            }
+                .social-item:hover {
+                    color: #1b6c38;
+                    /* Green on hover */
+                    transform: translateY(-2px);
+                }
 
-            .footer-links-grid {
-                grid-template-columns: repeat(3, 1fr); /* 3 cols on desktop */
-                width: auto;
-                gap: 60px;
-            }
+                .social-item svg {
+                    width: 20px;
+                    height: 20px;
+                    fill: currentColor;
+                }
 
-            .footer-bottom {
-                flex-direction: row;
-                justify-content: space-between;
-            }
+                .sr-only {
+                    position: absolute;
+                    width: 1px;
+                    height: 1px;
+                    padding: 0;
+                    margin: -1px;
+                    overflow: hidden;
+                    clip: rect(0, 0, 0, 0);
+                    white-space: nowrap;
+                    border-width: 0;
+                }
 
-            .copyright {
-                text-align: left;
-            }
-        }
-        footer {
-    background: #f9f9f9;
-    padding-top: 60px;
-    border-top: 5px solid var(--accent-yellow);
-}
+                /* --- MEDIA QUERIES --- */
 
-.footer-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
-    padding-bottom: 50px;
-}
+                /* Tablet & Desktop */
+                @media (min-width: 768px) {
+                    .footer-top {
+                        flex-direction: row;
+                        justify-content: space-between;
+                    }
 
-.footer-left h3 {
-    color: var(--deep-green);
-    margin-bottom: 15px;
-}
+                    .footer-links-grid {
+                        grid-template-columns: repeat(3, 1fr);
+                        /* 3 cols on desktop */
+                        width: auto;
+                        gap: 60px;
+                    }
 
-.newsletter-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin: 20px 0;
-    max-width: 400px;
-}
+                    .footer-bottom {
+                        flex-direction: row;
+                        justify-content: space-between;
+                    }
 
-.newsletter-form input {
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-}
+                    .copyright {
+                        text-align: left;
+                    }
+                }
 
-.footer-links-columns {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin-top: 30px;
-}
+                footer {
+                    background: #f9f9f9;
+                    padding-top: 60px;
+                    border-top: 5px solid var(--accent-yellow);
+                }
 
-.footer-links-columns h4 {
-    color: var(--deep-green);
-    margin-bottom: 15px;
-}
+                .footer-grid {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 50px;
+                    padding-bottom: 50px;
+                }
 
-.footer-links-columns li {
-    margin-bottom: 8px;
-    font-size: 0.9rem;
-}
+                .footer-left h3 {
+                    color: var(--deep-green);
+                    margin-bottom: 15px;
+                }
 
-.footer-right {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
+                .newsletter-form {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    margin: 20px 0;
+                    max-width: 400px;
+                }
 
-.yellow-box {
-    background: var(--accent-yellow);
-    padding: 40px;
-    text-align: center;
-}
-.yellow-box h3 {
-    color: var(--deep-green);
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-}
-.small-text {
-    font-size: 0.8rem;
-    margin-top: 15px;
-}
+                .newsletter-form input {
+                    padding: 10px;
+                    border: 1px solid #ddd;
+                    border-radius: 4px;
+                }
 
-.partners h4 {
-    font-size: 0.8rem;
-    color: var(--deep-green);
-    margin-bottom: 15px;
-}
+                .footer-links-columns {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    margin-top: 30px;
+                }
 
-.partner-logos {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
-}
+                .footer-links-columns h4 {
+                    color: var(--deep-green);
+                    margin-bottom: 15px;
+                }
 
-.partner-logos span {
-    border: 1px solid #ccc;
-    padding: 5px 10px;
-    font-size: 0.7rem;
-    color: #999;
-}
+                .footer-links-columns li {
+                    margin-bottom: 8px;
+                    font-size: 0.9rem;
+                }
 
-.social-icons a {
-    color: var(--deep-green);
-    font-size: 1.2rem;
-    margin-right: 15px;
-}
+                .footer-right {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 30px;
+                }
 
-.copyright {
-    text-align: center;
-    padding: 20px 0;
-    font-size: 0.8rem;
-    border-top: 1px solid #eee;
-}
+                .yellow-box {
+                    background: var(--accent-yellow);
+                    padding: 40px;
+                    text-align: center;
+                }
 
-        /* --- MARQUEE CSS (Embedded for functionality) --- */
-        .partners-section {
-            border-top: 1px solid #e1e8e3; /* Subtle separator */
-            border-bottom: 1px solid #e1e8e3;
-            padding: 20px 0;
-            margin-top: 30px;
-            background-color: #f9fdfa; /* Very faint green tint */
-            overflow: hidden;
-        }
+                .yellow-box h3 {
+                    color: var(--deep-green);
+                    font-size: 1.5rem;
+                    margin-bottom: 20px;
+                }
 
-        .partners-title {
-            text-align: center;
-            color: #1b6c38;
-            font-size: 13px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 15px;
-        }
+                .small-text {
+                    font-size: 0.8rem;
+                    margin-top: 15px;
+                }
 
-        .marquee-track {
-            display: flex;
-            align-items: center;
-            gap: 50px;
-            /* Simple scrolling animation */
-            animation: scroll 25s linear infinite;
-            width: max-content; 
-        }
+                .partners h4 {
+                    font-size: 0.8rem;
+                    color: var(--deep-green);
+                    margin-bottom: 15px;
+                }
 
-        .marquee-track:hover {
-            animation-play-state: paused;
-        }
+                .partner-logos {
+                    display: flex;
+                    gap: 10px;
+                    flex-wrap: wrap;
+                    margin-bottom: 20px;
+                }
 
-        .partner-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            opacity: 0.8;
-            transition: opacity 0.3s;
-        }
+                .partner-logos span {
+                    border: 1px solid #ccc;
+                    padding: 5px 10px;
+                    font-size: 0.7rem;
+                    color: #999;
+                }
 
-        .partner-item:hover {
-            opacity: 1;
-        }
+                .social-icons a {
+                    color: var(--deep-green);
+                    font-size: 1.2rem;
+                    margin-right: 15px;
+                }
 
-        .partner-img {
-            height: 45px; /* Fixed height for consistency */
-            width: auto;
-            object-fit: contain;
-            mix-blend-mode: multiply; /* Helps logos blend with background */
-        }
+                .copyright {
+                    text-align: center;
+                    padding: 20px 0;
+                    font-size: 0.8rem;
+                    border-top: 1px solid #eee;
+                }
 
-        .partner-name {
-            font-size: 14px;
-            font-weight: 600;
-            color: #555;
-        }
+                /* --- MARQUEE CSS (Embedded for functionality) --- */
+                .partners-section {
+                    border-top: 1px solid #e1e8e3;
+                    /* Subtle separator */
+                    border-bottom: 1px solid #e1e8e3;
+                    padding: 20px 0;
+                    margin-top: 30px;
+                    background-color: #f9fdfa;
+                    /* Very faint green tint */
+                    overflow: hidden;
+                }
 
-        @keyframes scroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); } /* Scrolls half way if content is duplicated */
-        }
-        
-        /* Developer Credit Style */
-        .dev-credit {
-            font-size: 13px;
-            color: #888;
-            margin-top: 5px;
-        }
-        .dev-credit a {
-            color: #1b6c38;
-            text-decoration: none;
-            font-weight: 600;
-        }
-        .dev-credit a:hover {
-            text-decoration: underline;
-        }
-    </style>
+                .partners-title {
+                    text-align: center;
+                    color: #1b6c38;
+                    font-size: 13px;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    margin-bottom: 15px;
+                }
 
-    <div class="footer-content">
-        
-        <div class="footer-top">
-            <div class="footer-brand">
-                <a href="../index.html" class="brand-link">
-                    <img src="../res/logo.jpg" class="brand-logo" alt="Hope Worldwide Logo" />
-                </a>
-                <div>
-                    <br>
-                    <h3>Subscribe to our newsletter</h3>
-                    <form class="newsletter-form">
-                        <input type="text" placeholder="Name">
-                        <input type="email" placeholder="Email Address">
-                        <button type="button" class="btn btn-green">SUBSCRIBE</button>
-                    </form>
+                .marquee-track {
+                    display: flex;
+                    align-items: center;
+                    gap: 50px;
+                    /* Simple scrolling animation */
+                    animation: scroll 25s linear infinite;
+                    width: max-content;
+                }
+
+                .marquee-track:hover {
+                    animation-play-state: paused;
+                }
+
+                .partner-item {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    opacity: 0.8;
+                    transition: opacity 0.3s;
+                }
+
+                .partner-item:hover {
+                    opacity: 1;
+                }
+
+                .partner-img {
+                    height: 45px;
+                    /* Fixed height for consistency */
+                    width: auto;
+                    object-fit: contain;
+                    mix-blend-mode: multiply;
+                    /* Helps logos blend with background */
+                }
+
+                .partner-name {
+                    font-size: 14px;
+                    font-weight: 600;
+                    color: #555;
+                }
+
+                @keyframes scroll {
+                    0% {
+                        transform: translateX(0);
+                    }
+
+                    100% {
+                        transform: translateX(-50%);
+                    }
+
+                    /* Scrolls half way if content is duplicated */
+                }
+
+                /* Developer Credit Style */
+                .dev-credit {
+                    font-size: 13px;
+                    color: #888;
+                    margin-top: 5px;
+                }
+
+                .dev-credit a {
+                    color: #1b6c38;
+                    text-decoration: none;
+                    font-weight: 600;
+                }
+
+                .dev-credit a:hover {
+                    text-decoration: underline;
+                }
+            </style>
+
+            <div class="footer-content">
+
+                <div class="footer-top">
+                    <div class="footer-brand">
+                        <a href="../index.html" class="brand-link">
+                            <img src="../res/logo.jpg" class="brand-logo" alt="Hope Worldwide Logo" />
+                        </a>
+                        <div>
+                            <br>
+                            <h3>Subscribe to our newsletter</h3>
+                            <form class="newsletter-form">
+                                <input type="text" placeholder="Name">
+                                <input type="email" placeholder="Email Address">
+                                <button type="button" class="btn btn-green">SUBSCRIBE</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="footer-links-grid">
+                        <div class="link-column">
+                            <h2>Our Work</h2>
+                            <ul>
+                                <li><a href="../outreach">Our outreach</a></li>
+                                <li><a href="../gallery">Gallery</a></li>
+                                <li><a href="../objectives">Objectives</a></li>
+                                <li><a href="../stories">Success Stories</a></li>
+                            </ul>
+                        </div>
+                        <div class="link-column">
+                            <h2>Get Involved</h2>
+                            <ul>
+                                <li><a href="../donate">Donate</a></li>
+                                <li><a href="../forms?type=volunteer">Volunteer</a></li>
+                                <li><a href="../forms?type=partner">Partner With Us</a></li>
+                                <li><a href="../forms?type=job">Careers</a></li>
+                                <li><a href="../partners">Partners</a></li>
+                            </ul>
+                        </div>
+                        <div class="link-column">
+                            <h2>Legal & Contact</h2>
+                            <ul>
+                                <li><a href="../faq">Frequently Asked Questions</a></li>
+                                <li><a href="../board">Our team</a></li>
+                                <li><a href="../cookies.html">Cookie Policy</a></li>
+                                <li><a href="../contact">Contact Support</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="partners-section">
+                    <div class="partners-title">Our Partners</div>
+                    <div class="marquee-track">
+                        <div class="partner-item">
+                            <img src="../res/makerere.jpeg" alt="Makerere" class="partner-img">
+                            <span class="partner-name">Makerere University</span>
+                        </div>
+                        <div class="partner-item">
+                            <img src="../res/mengo.png" alt="Mengo" class="partner-img">
+                            <span class="partner-name">Mengo SS</span>
+                        </div>
+             <div class="partner-item">
+                            <img src="../res/ucu.jpg" alt="UCU" class="partner-img">
+                            <span class="partner-name">UCU</span>
+                        </div>                    <div class="partner-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Born_This_Way_Foundation_logo_%282020%29.svg/250px-Born_This_Way_Foundation_logo_%282020%29.svg.png" alt="Born This Way Foundation" class="partner-img">
+                     </div>
+                        <div class="partner-item">
+                            <img src="../res/makerere.png" alt="Makerere College" class="partner-img">
+                            <span class="partner-name">Makerere College</span>
+                        </div>
+                        <div class="partner-item">
+                            <img src="../res/dana.jpg" alt="Dana" class="partner-img">
+                            <span class="partner-name">Dana Foundation</span>
+                        </div>
+                        <div class="partner-item">
+                            <img src="../res/uvri.jpg" alt="Uganda Virus" class="partner-img">
+                            <span class="partner-name">Uganda Virus Institute</span>
+                        </div>
+                        <div class="partner-item">
+                            <img src="../res/ministry.jpeg" alt="Ministry" class="partner-img">
+                            <span class="partner-name">Ministry of Health</span>
+                        </div>
+
+
+                        <div class="partner-item">
+                            <img src="../res/makerere.jpeg" alt="Makerere" class="partner-img">
+                            <span class="partner-name">Makerere University</span>
+                        </div>
+                        <div class="partner-item">
+                            <img src="../res/mengo.png" alt="Mengo" class="partner-img">
+                            <span class="partner-name">Mengo SS</span>
+                        </div>
+             <div class="partner-item">
+                            <img src="../res/ucu.jpg" alt="UCU" class="partner-img">
+                            <span class="partner-name">UCU</span>
+                        </div>                    <div class="partner-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Born_This_Way_Foundation_logo_%282020%29.svg/250px-Born_This_Way_Foundation_logo_%282020%29.svg.png" alt="Born This Way Foundation" class="partner-img">
+                     </div>
+                        <div class="partner-item">
+                            <img src="../res/makerere.png" alt="Makerere College" class="partner-img">
+                            <span class="partner-name">Makerere College</span>
+                        </div>
+                        <div class="partner-item">
+                            <img src="../res/dana.jpg" alt="Dana" class="partner-img">
+                            <span class="partner-name">Dana Foundation</span>
+                        </div>
+                        <div class="partner-item">
+                            <img src="../res/uvri.jpg" alt="Uganda Virus" class="partner-img">
+                            <span class="partner-name">Uganda Virus Institute</span>
+                        </div>
+                        <div class="partner-item">
+                            <img src="../res/ministry.jpeg" alt="Ministry" class="partner-img">
+                            <span class="partner-name">Ministry of Health</span>
+                        </div>
+
+                    </div><br>
+                    <a href="../partners" style="text-align: center; display: block;" class="map-link">READ MORE
+                        &rarr;</a>
+                </div>
+
+                <hr class="footer-divider" style="margin-top: 0;" />
+
+                <div class="footer-bottom">
+                    <div style="text-align: center; width: 100%;">
+                        <span class="copyright">
+                            © 2026 Hope Worldwide. All Rights Reserved.
+                        </span>
+                        <div class="dev-credit">
+                            Developed by Amanda Technologies | <a href="https://amandatechnologies.com">Learn more</a>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/Hopewwug" class="social-item">
+                            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path fill-rule="evenodd"
+                                    d="M13.135 6H15V3h-1.865a4.147 4.147 0 0 0-4.142 4.142V9H7v3h2v9.938h3V12h2.021l.592-3H12V6.591A.6.6 0 0 1 12.592 6h.543Z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span class="sr-only">Facebook</span>
+                        </a>
+                        <a href="https://www.youtube.com/@hopeworldwideintenationalu529" class="social-item" target="_blank" rel="noopener noreferrer">
+    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.377.55a3.016 3.016 0 0 0-2.122 2.136C0 8.07 0 12 0 12s0 3.93.498 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.55 9.377.55 9.377.55s7.505 0 9.377-.55a3.016 3.016 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+    </svg>
+    <span class="sr-only">YouTube</span>
+</a><a href="https://www.instagram.com/hopeworldwideint.uganda" target="_blank" class="social-item">
+<svg height="200px" width="200px" viewBox="0 0 24 24" fill="#000000" xmlns="http://www.w3.org/2000/svg">
+    <path d="M7 2C4.239 2 2 4.239 2 7v10c0 2.761 2.239 5 5 5h10c2.761 0 5-2.239 5-5V7c0-2.761-2.239-5-5-5H7zm10 2c1.657 0 3 1.343 3 3v10c0 1.657-1.343 3-3 3H7c-1.657 0-3-1.343-3-3V7c0-1.657 1.343-3 3-3h10zm-5 3.5A5.5 5.5 0 1 0 12 18.5 5.5 5.5 0 0 0 12 7.5zm0 2A3.5 3.5 0 1 1 8.5 13 3.504 3.504 0 0 1 12 9.5zM18 6.8a1.2 1.2 0 1 0 1.2 1.2A1.2 1.2 0 0 0 18 6.8z"/>
+</svg>
+<span class="sr-only">Instagram</span>
+</a>
+                        <a href="https://x.com/HOPEWORLDWIDEUG" class="social-item">
+                            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path
+                                    d="M13.795 10.533 20.68 2h-3.073l-5.255 6.517L7.69 2H1l7.806 10.91L1.47 22h3.074l5.705-7.07L15.31 22H22l-8.205-11.467Zm-2.38 2.95L9.97 11.464 4.36 3.627h2.31l4.528 6.317 1.443 2.02 6.018 8.409h-2.31l-4.934-6.89Z" />
+                            </svg>
+                            <span class="sr-only">Twitter</span>
+                        </a>
+                        <a href="https://www.tiktok.com/@hope.worldwide.ug?_r=1&_t=ZS-93iNWgrl6OH" class="social-item"
+                            aria-label="Titkok">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor">
+                                <path
+                                    d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z" />
+                            </svg> </a>
+
+                        <a href="https://wa.me/256782409528" class="social-item">
+                            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+                            </svg>
+                            <span class="sr-only">WhatsApp</span>
+                        </a>
+                        <a href="mailto:info@hopeworldwideuganda.org" class="social-item">
+                            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path
+                                    d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                            </svg>
+                            <span class="sr-only">Email</span>
+                        </a>
+                    </div>
+
                 </div>
             </div>
-            
-            <div class="footer-links-grid">
-                <div class="link-column">
-                    <h2>Our Work</h2>
-                    <ul>
-                        <li><a href="../outreach">Our outreach</a></li>
-                        <li><a href="../gallery">Gallery</a></li>
-                        <li><a href="../objectives">Objectives</a></li>
-                        <li><a href="../stories">Success Stories</a></li>
-                    </ul>
-                </div>
-                <div class="link-column">
-                    <h2>Get Involved</h2>
-                    <ul>
-                        <li><a href="../donate">Donate</a></li>
-                        <li><a href="../forms?type=volunteer">Volunteer</a></li>
-                        <li><a href="../forms?type=partner">Partner With Us</a></li>
-                        <li><a href="../forms?type=job">Careers</a></li>
-                        <li><a href="../partners">Partners</a></li>
-                    </ul>
-                </div>
-                <div class="link-column">
-                    <h2>Legal & Contact</h2>
-                    <ul>
-                        <li><a href="../faq">Frequently Asked Questions</a></li>
-                        <li><a href="../board">Our team</a></li>
-                        <li><a href="../cookies.html">Cookie Policy</a></li>
-                        <li><a href="../contact">Contact Support</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="partners-section">
-            <div class="partners-title">Our Partners</div>
-            <div class="marquee-track">
-                <div class="partner-item">
-                    <img src="../res/makerere.jpeg" alt="Makerere" class="partner-img">
-                    <span class="partner-name">Makerere University</span>
-                </div>
-                <div class="partner-item">
-                    <img src="../res/mengo.png" alt="Mengo" class="partner-img">
-                    <span class="partner-name">Mengo SS</span>
-                </div>
-                <div class="partner-item">
-                    <img src="../res/ucu.jpg" alt="UCU" class="partner-img">
-                    <span class="partner-name">UCU</span>
-                </div>
-                <div class="partner-item">
-                    <img src="../res/makerere.png" alt="Makerere College" class="partner-img">
-                    <span class="partner-name">Makerere College</span>
-                </div>
-                <div class="partner-item">
-                    <img src="../res/dana.jpg" alt="Dana" class="partner-img">
-                    <span class="partner-name">Dana Foundation</span>
-                </div>
-                <div class="partner-item">
-                    <img src="../res/uvri.jpg" alt="Uganda Virus" class="partner-img">
-                    <span class="partner-name">Uganda Virus Institute</span>
-                </div>
-                <div class="partner-item">
-                    <img src="../res/ministry.jpeg" alt="Ministry" class="partner-img">
-                    <span class="partner-name">Ministry of Health</span>
-                </div>
-
-            
-                <div class="partner-item">
-                    <img src="../res/makerere.jpeg" alt="Makerere" class="partner-img">
-                    <span class="partner-name">Makerere University</span>
-                </div>
-                <div class="partner-item">
-                    <img src="../res/mengo.png" alt="Mengo" class="partner-img">
-                    <span class="partner-name">Mengo SS</span>
-                </div>
-                <div class="partner-item">
-                    <img src="../res/ucu.jpg" alt="UCU" class="partner-img">
-                    <span class="partner-name">UCU</span>
-                </div>
-                <div class="partner-item">
-                    <img src="../res/makerere.png" alt="Makerere College" class="partner-img">
-                    <span class="partner-name">Makerere College</span>
-                </div>
-                <div class="partner-item">
-                    <img src="../res/dana.jpg" alt="Dana" class="partner-img">
-                    <span class="partner-name">Dana Foundation</span>
-                </div>
-                <div class="partner-item">
-                    <img src="../res/uvri.jpg" alt="Uganda Virus" class="partner-img">
-                    <span class="partner-name">Uganda Virus Institute</span>
-                </div>
-                <div class="partner-item">
-                    <img src="../res/ministry.jpeg" alt="Ministry" class="partner-img">
-                    <span class="partner-name">Ministry of Health</span>
-                </div>
-
-            </div><br>
-            <a href="../partners" style="text-align: center; display: block;" class="map-link">READ MORE &rarr;</a>
-        </div>
-
-        <hr class="footer-divider" style="margin-top: 0;" />
-
-        <div class="footer-bottom">
-            <div style="text-align: center; width: 100%;">
-                <span class="copyright">
-                    © 2026 Hope Worldwide. All Rights Reserved.
-                </span>
-                <div class="dev-credit">
-                    Developed by Amanda Technologies | <a href="https://amandatechnologies.com">Learn more</a>
-                </div>
-            </div>
-            
-<div class="social-links">
-    <a href="https://www.facebook.com/Hopewwug" class="social-item">
-        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M13.135 6H15V3h-1.865a4.147 4.147 0 0 0-4.142 4.142V9H7v3h2v9.938h3V12h2.021l.592-3H12V6.591A.6.6 0 0 1 12.592 6h.543Z" clip-rule="evenodd"/></svg>
-        <span class="sr-only">Facebook</span>
-    </a>
-    <a href="" class="social-item">
-<svg height="200px" width="200px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 382 382" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M347.445,0H34.555C15.471,0,0,15.471,0,34.555v312.889C0,366.529,15.471,382,34.555,382h312.889 C366.529,382,382,366.529,382,347.444V34.555C382,15.471,366.529,0,347.445,0z M118.207,329.844c0,5.554-4.502,10.056-10.056,10.056 H65.345c-5.554,0-10.056-4.502-10.056-10.056V150.403c0-5.554,4.502-10.056,10.056-10.056h42.806 c5.554,0,10.056,4.502,10.056,10.056V329.844z M86.748,123.432c-22.459,0-40.666-18.207-40.666-40.666S64.289,42.1,86.748,42.1 s40.666,18.207,40.666,40.666S109.208,123.432,86.748,123.432z M341.91,330.654c0,5.106-4.14,9.246-9.246,9.246H286.73 c-5.106,0-9.246-4.14-9.246-9.246v-84.168c0-12.556,3.683-55.021-32.813-55.021c-28.309,0-34.051,29.066-35.204,42.11v97.079 c0,5.106-4.139,9.246-9.246,9.246h-44.426c-5.106,0-9.246-4.14-9.246-9.246V149.593c0-5.106,4.14-9.246,9.246-9.246h44.426 c5.106,0,9.246,4.14,9.246,9.246v15.655c10.497-15.753,26.097-27.912,59.312-27.912c73.552,0,73.131,68.716,73.131,106.472 L341.91,330.654L341.91,330.654z"></path> </g></svg>        <span class="sr-only">linkedin</span>
-    </a>
-    <a href="https://x.com/HOPEWORLDWIDEUG" class="social-item">
-        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.795 10.533 20.68 2h-3.073l-5.255 6.517L7.69 2H1l7.806 10.91L1.47 22h3.074l5.705-7.07L15.31 22H22l-8.205-11.467Zm-2.38 2.95L9.97 11.464 4.36 3.627h2.31l4.528 6.317 1.443 2.02 6.018 8.409h-2.31l-4.934-6.89Z"/></svg>
-        <span class="sr-only">Twitter</span>
-    </a>
-            <a href="https://www.tiktok.com/@hope.worldwide.ug?_r=1&_t=ZS-93iNWgrl6OH" class="social-item" aria-label="Titkok">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor">
-  <path d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"/>
-</svg>        </a>
-
-    <a href="https://wa.me/256782409528" class="social-item">
-        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-        <span class="sr-only">WhatsApp</span>
-    </a>
-    <a href="mailto:info@hopewwug.org" class="social-item">
-        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-        <span class="sr-only">Email</span>
-    </a>
-</div>
-
-        </div>
-    </div>
-</footer>
+        </footer>
 
     </div>
 
 
 </body>
+
 </html>
