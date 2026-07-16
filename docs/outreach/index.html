@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+<link rel="manifest" href="../favicon/site.webmanifest"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hope Worldwide - Annual Work Report</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
     <style>
         /* --- GLOBAL VARIABLES --- */
         :root {
@@ -19,8 +24,12 @@
             --light-gray: #f4f4f4;
         }
 
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
         body {
             font-family: 'Poppins', sans-serif;
             background-color: var(--bg-offwhite);
@@ -29,25 +38,52 @@
             scroll-behavior: smooth;
         }
 
-        a { text-decoration: none; color: inherit; }
-        ul { list-style: none; }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
 
         /* --- HEADER & NAV (Kept from your original) --- */
         .site-header {
             background-color: var(--white);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
             position: sticky;
             top: 0;
             z-index: 1000;
         }
+
         .header-content {
-            display: flex; justify-content: space-between; align-items: center;
-            height: 70px; max-width: 1200px; margin: 0 auto; padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+            
+            margin: 0 auto;
+            padding: 0 20px;
         }
-        .brand-logo { height: 50px; }
-        .nav-list { display: flex; gap: 30px; }
-        .nav-list a { font-weight: 500; color: #555; font-size: 15px; }
-        .nav-list a:hover { color: var(--primary-green); }
+
+        .brand-logo {
+            height: 50px;
+        }
+
+        .nav-list {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-list a {
+            font-weight: 500;
+            color: #555;
+            font-size: 15px;
+        }
+
+        .nav-list a:hover {
+            color: var(--primary-green);
+        }
 
         /* --- HERO --- */
         .hero {
@@ -62,16 +98,28 @@
             color: white;
             padding: 0 20px;
         }
-        .hero h1 { font-size: 42px; font-weight: 800; margin-bottom: 10px; }
-        .hero p { font-size: 18px; max-width: 800px; font-weight: 300; opacity: 0.9; }
+
+        .hero h1 {
+            font-size: 42px;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 800px;
+            font-weight: 300;
+            opacity: 0.9;
+        }
 
         /* --- REPORT LAYOUT (Grid with Sticky Sidebar) --- */
         .report-container {
-            max-width: 1200px;
+            
             margin: 40px auto;
             padding: 0 20px;
             display: grid;
-            grid-template-columns: 280px 1fr; /* Sidebar | Content */
+            grid-template-columns: 280px 1fr;
+            /* Sidebar | Content */
             gap: 40px;
             position: relative;
         }
@@ -85,8 +133,9 @@
             border: 1px solid #eee;
             border-radius: 8px;
             padding: 20px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
         }
+
         .report-nav h4 {
             color: var(--primary-green);
             margin-bottom: 15px;
@@ -96,7 +145,11 @@
             border-bottom: 2px solid var(--accent-lime);
             padding-bottom: 10px;
         }
-        .report-nav ul li { margin-bottom: 0; }
+
+        .report-nav ul li {
+            margin-bottom: 0;
+        }
+
         .report-nav ul li a {
             display: block;
             padding: 10px 12px;
@@ -106,7 +159,9 @@
             transition: all 0.3s;
             border-left: 3px solid transparent;
         }
-        .report-nav ul li a:hover, .report-nav ul li a.active {
+
+        .report-nav ul li a:hover,
+        .report-nav ul li a.active {
             background: #f0f7f2;
             color: var(--primary-green);
             border-left: 3px solid var(--primary-green);
@@ -120,9 +175,11 @@
             margin-bottom: 30px;
             border-radius: 8px;
             border: 1px solid #eef2ef;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.02);
-            scroll-margin-top: 100px; /* Offset for sticky header */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+            scroll-margin-top: 100px;
+            /* Offset for sticky header */
         }
+
         .report-section h2 {
             color: var(--primary-green);
             font-size: 24px;
@@ -133,6 +190,7 @@
             border-bottom: 1px solid #eee;
             padding-bottom: 10px;
         }
+
         .report-section h3 {
             font-size: 18px;
             color: #444;
@@ -140,6 +198,7 @@
             margin-bottom: 15px;
             font-weight: 700;
         }
+
         .report-section p {
             margin-bottom: 15px;
             font-size: 15px;
@@ -153,17 +212,23 @@
             margin: 20px 0;
             font-size: 14px;
         }
-        .data-table th, .data-table td {
+
+        .data-table th,
+        .data-table td {
             border: 1px solid #ddd;
             padding: 12px;
             text-align: left;
         }
+
         .data-table th {
             background-color: var(--primary-green);
             color: white;
             font-weight: 600;
         }
-        .data-table tr:nth-child(even) { background-color: #f9f9f9; }
+
+        .data-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
 
         /* STATS GRID */
         .stats-grid {
@@ -172,6 +237,7 @@
             gap: 15px;
             margin: 20px 0;
         }
+
         .stat-card {
             background: #f9fdfa;
             border: 1px solid #e1e8e3;
@@ -179,12 +245,14 @@
             border-radius: 6px;
             text-align: center;
         }
+
         .stat-num {
             display: block;
             font-size: 24px;
             font-weight: 800;
             color: var(--primary-green);
         }
+
         .stat-label {
             font-size: 12px;
             color: #777;
@@ -200,8 +268,10 @@
             font-size: 15px;
             color: #555;
         }
+
         .custom-list li::before {
-            content: '\f00c'; /* FontAwesome Check */
+            content: '\f00c';
+            /* FontAwesome Check */
             font-family: 'Font Awesome 6 Free';
             font-weight: 900;
             position: absolute;
@@ -219,6 +289,7 @@
             font-style: italic;
             font-size: 14px;
         }
+
         .impact-author {
             display: block;
             margin-top: 8px;
@@ -228,7 +299,13 @@
         }
 
         /* ITEM TAGS (For supplies) */
-        .item-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+        .item-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
         .item-tag {
             background: #e8f5e9;
             color: var(--deep-green);
@@ -248,377 +325,409 @@
         }
 
         @media(max-width: 900px) {
-            .report-container { grid-template-columns: 1fr; }
-            .report-nav { position: relative; top: 0; margin-bottom: 20px; }
+            .report-container {
+                grid-template-columns: 1fr;
+            }
+
+            .report-nav {
+                position: relative;
+                top: 0;
+                margin-bottom: 20px;
+            }
         }
     </style>
 </head>
+
 <body>
 
     <header class="site-header">
         <div class="container header-content">
-            <div class="logo-container">
-                <img src="../res/logo.jpg" class="logo" onclick="../index.html"></i>
+            <div class="logo-container" onclick='window.location.href="/index.html"'>
+                <img src="../res/logo.jpg" class="logo"></i>
             </div>
             <nav class="main-nav">
-    <style>
-    
-        /* CSS confined to this nav */
-        .nav-list .fa-chevron-down {
-            display: none;
-        }
+                <style>
+                    /* CSS confined to this nav */
+                   .nav-list .fa-chevron-down {
+                            margin: 4px;
+                        }
+                        @media screen and (max-width: 700px) {
+                            .nav-list .fa-chevron-down {
+                                
+                        display: none;
+                    }}
 
-        /* Highlight style for the active button */
-        .nav-link.active {
-            color: #1b6c38;
-            border-bottom: 2px solid #1b6c38;
-        }
+                    /* Highlight style for the active button */
+                    .nav-link.active {
+                        color: #1b6c38;
+                        border-bottom: 2px solid #1b6c38;
+                    }
 
-        .nav-item .dropdown-menu {
-            display: none; /* Hidden by default */
-            position: fixed;
-            top: 60px;
-            right: 50%; /* Center horizontally */
-            transform: translateX(50%);
-            background: white;
-            border-radius: 15px;
-            width: 80vw;
-            padding: 20px;
-            color: #1b6c38;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
-            z-index: 1000;
-        }
+                    .nav-item .dropdown-menu {
+                        display: none;
+                        /* Hidden by default */
+                        position: fixed;
+                        top: 60px;
+                        right: 50%;
+                        /* Center horizontally */
+                        transform: translateX(50%);
+                        background: white;
+                        border-radius: 15px;
+                        width: 80vw;
+                        padding: 20px;
+                        color: #1b6c38;
+                        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+                        z-index: 1000;
+                    }
 
-        /* The Arrow */
-        .nav-item .dropdown-menu::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 0;
-            border-left: 10px solid transparent;
-            border-right: 10px solid transparent;
-            border-bottom: 10px solid #fff;
-            bottom: 100%;
-            left: var(--lft); /* Dynamic position */
-            transform: translateX(-50%);
-        }
+                    /* The Arrow */
+                    .nav-item .dropdown-menu::after {
+                        content: '';
+                        position: absolute;
+                        width: 0;
+                        height: 0;
+                        border-left: 10px solid transparent;
+                        border-right: 10px solid transparent;
+                        border-bottom: 10px solid #fff;
+                        bottom: 100%;
+                        left: var(--lft);
+                        /* Dynamic position */
+                        transform: translateX(-50%);
+                    }
 
-        /* Close Button Style */
-        .close-drop {
-            position: absolute;
-            top: 10px;
-            right: 15px;
-            font-size: 24px;
-            cursor: pointer;
-            color: #aaa;
-            line-height: 1;
-        }
-        .close-drop:hover {
-            color: #1b6c38;
-        }
+                    /* Close Button Style */
+                    .close-drop {
+                        position: absolute;
+                        top: 10px;
+                        right: 15px;
+                        font-size: 24px;
+                        cursor: pointer;
+                        color: #aaa;
+                        line-height: 1;
+                    }
 
-        .dropdown-menu h3 {
-            margin-top: 0;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 10px;
-            margin-bottom: 10px;
-        }
+                    .close-drop:hover {
+                        color: #1b6c38;
+                    }
 
-@media (min-width: 768px) {
-        .nav-item .dropdown-menu {
-          width: 50vw;
-        }
-                .nav-item .dropdown-menu::after{
-          display: none;
-        }
+                    .dropdown-menu h3 {
+                        margin-top: 0;
+                        border-bottom: 1px solid #eee;
+                        padding-bottom: 10px;
+                        margin-bottom: 10px;
+                    }
 
-}
+                    @media (min-width: 768px) {
+                        .nav-item .dropdown-menu {
+                            width: 50vw;
+                        }
 
-    </style>
+                        .nav-item .dropdown-menu::after {
+                            display: none;
+                        }
 
-    <ul class="nav-list">
-        
-        <li style="--lft:31%" class="nav-item">
-            <span onclick="toggleNav(this)" class="nav-link">Who<i class="fas fa-chevron-down"></i></span>
-            <ul class="dropdown-menu">
-                <span class="close-drop" onclick="closeAllNav()">&times;</span>
-                <h3>Who we are!</h3>
-                <li><a href="../about">About Us</a></li>
-                <li><a href="../about">Our History & Mission</a></li>
-                <li><a href="../board">Leadership Board</a></li>
-                <li><a href="../about#values">Core Values</a></li>
-                <li><a href="../about.html#governance">Legal & Registration</a></li>
-                <li><a href="../gallery">Gallery</a></li>
-            </ul>
-        </li>
+                    }
+                </style>
 
-        <li style="--lft:49%" class="nav-item">
-            <span onclick="toggleNav(this)" class="nav-link">What<i class="fas fa-chevron-down"></i></span>
-            <ul class="dropdown-menu">
-                <span class="close-drop" onclick="closeAllNav()">&times;</span>
-                <h3>What we do!</h3>
-                <li><a href="../objectives">Health & HIV/AIDS</a></li>
-                <li><a href="../objectives">Education & Schools</a></li>
-                <li><a href="../objectives">Water & Sanitation</a></li>
-                <li><a href="../objectives">Agriculture & Livelihoods</a></li>
-                <li><a href="../objectives">Human Rights & Legal</a></li>
-                <li><a href="../outreach">Outreach</a></li>
-            </ul>
-        </li>
+                <ul class="nav-list">
 
-        <li style="--lft:69%" class="nav-item">
-            <span onclick="toggleNav(this)" class="nav-link">Where<i class="fas fa-chevron-down"></i></span>
-            <ul class="dropdown-menu">
-                <span class="close-drop" onclick="closeAllNav()">&times;</span>
-                <h3>Where we work!</h3>
-                <li><a href="../stories">Central Region</a></li>
-                <li><a href="../stories">Eastern Region</a></li>
-                <li><a href="../stories">Northern Region</a></li>
-                <li><a href="../stories">Western Region</a></li>
-                <li><a href="../contact#office">Our Offices</a></li>
-            </ul>
-        </li>
+                    <li style="--lft:31%" class="nav-item">
+                        <span  onclick="toggleNav(this)" onmouseenter="toggleNav(this)"  class="nav-link">Who<i class="fas fa-chevron-down"></i></span>
+                        <ul class="dropdown-menu">
+                            <span class="close-drop" onclick="closeAllNav()">&times;</span>
+                            <h3>Who we are!</h3>
+                            <li><a href="../about">About Us</a></li>
+                            <li><a href="../about">Our History & Mission</a></li>
+                            <li><a href="../board">Leadership Board</a></li>
+                            <li><a href="../about#values">Core Values</a></li>
+                            <li><a href="../about#governance">Legal & Registration</a></li>
+                            <li><a href="../gallery">Gallery</a></li>
+                        </ul>
+                    </li>
 
-        <li style="--lft:87%" class="nav-item">
-            <span onclick="toggleNav(this)" class="nav-link">How<i class="fas fa-chevron-down"></i></span>
-            <ul class="dropdown-menu">
-                <span class="close-drop" onclick="closeAllNav()">&times;</span>
-                <h3>How to help!</h3>
-                <li><a href="../forms?type=partner">Partner With Us</a></li>
-                <li><a href="../forms?type=volunteer">Volunteer</a></li>
-                <li><a href="../donate">Donate</a></li>
-                                       <li><a href="../fundraising">Fundraising</a></li>
+                    <li style="--lft:49%" class="nav-item">
+                        <span  onclick="toggleNav(this)" onmouseenter="toggleNav(this)"  class="nav-link">What<i class="fas fa-chevron-down"></i></span>
+                        <ul class="dropdown-menu">
+                            <span class="close-drop" onclick="closeAllNav()">&times;</span>
+                            <h3>What we do!</h3>
+                            <li><a href="../objectives">Health & HIV/AIDS</a></li>
+                            <li><a href="../objectives">Education & Schools</a></li>
+                            <li><a href="../objectives">Water & Sanitation</a></li>
+                            <li><a href="../objectives">Agriculture & Livelihoods</a></li>
+                            <li><a href="../objectives">Human Rights & Legal</a></li>
+                            <li><a href="../outreach">Outreach</a></li>
+                        </ul>
+                    </li>
 
-                <li><a href="../forms?type=job">Careers</a></li>
-                <li><a href="../contact">Contact Us</a></li>
-            </ul>
-        </li>
+                    <li style="--lft:69%" class="nav-item">
+                        <span  onclick="toggleNav(this)" onmouseenter="toggleNav(this)"  class="nav-link">Where<i class="fas fa-chevron-down"></i></span>
+                        <ul class="dropdown-menu">
+                            <span class="close-drop" onclick="closeAllNav()">&times;</span>
+                            <h3>Where we work!</h3>
+                            <li><a href="../stories">Central Region</a></li>
+                            <li><a href="../stories">Eastern Region</a></li>
+                            <li><a href="../stories">Northern Region</a></li>
+                            <li><a href="../stories">Western Region</a></li>
+                            <li><a href="../contact#office">Our Offices</a></li>
+                        </ul>
+                    </li>
 
-    </ul>
+                    <li style="--lft:87%" class="nav-item">
+                        <span  onclick="toggleNav(this)" onmouseenter="toggleNav(this)"  class="nav-link">How<i class="fas fa-chevron-down"></i></span>
+                        <ul class="dropdown-menu">
+                            <span class="close-drop" onclick="closeAllNav()">&times;</span>
+                            <h3>How to help!</h3>
+                            <li><a href="../forms?type=partner">Partner With Us</a></li>
+                            <li><a href="../forms?type=volunteer">Volunteer</a></li>
+                            <li><a href="../donate">Donate</a></li>
+                            <li><a href="../fundraising">Fundraising</a></li>
 
-    <script>
-        function toggleNav(clickedBtn) {
-            // 1. Close all other dropdowns & remove highlights
-            const allMenus = document.querySelectorAll('.nav-item .dropdown-menu');
-            const allLinks = document.querySelectorAll('.nav-item .nav-link');
-            
-            // Check if the clicked one is already open
-            const targetMenu = clickedBtn.parentElement.querySelector('.dropdown-menu');
-            const isAlreadyOpen = targetMenu.style.display === 'block';
+                            <li><a href="../forms?type=job">Careers</a></li>
+                            <li><a href="../contact">Contact Us</a></li>
+                        </ul>
+                    </li>
 
-            // Reset everything
-            allMenus.forEach(menu => menu.style.display = 'none');
-            allLinks.forEach(link => link.classList.remove('active'));
+                </ul>
 
-            // 2. If it wasn't open, open it now and highlight the button
-            if (!isAlreadyOpen) {
-                targetMenu.style.display = 'block';
-                clickedBtn.classList.add('active');
-            }
-        }
+                <script>
+                    function toggleNav(clickedBtn) {
+                        // 1. Close all other dropdowns & remove highlights
+                        const allMenus = document.querySelectorAll('.nav-item .dropdown-menu');
+                        const allLinks = document.querySelectorAll('.nav-item .nav-link');
 
-        function closeAllNav() {
-            document.querySelectorAll('.nav-item .dropdown-menu').forEach(menu => menu.style.display = 'none');
-            document.querySelectorAll('.nav-item .nav-link').forEach(link => link.classList.remove('active'));
-        }
-    </script>
-</nav>
+                        // Check if the clicked one is already open
+                        const targetMenu = clickedBtn.parentElement.querySelector('.dropdown-menu');
+                        const isAlreadyOpen = targetMenu.style.display === 'block';
 
-<div id="mobile-toggle" class="hamburger-menu nav-item" style="position: relative;">
-    
-    <span onclick="toggleNav(this)" class="nav-link" style="font-size: 24px; cursor: pointer;">
-        <i class="fas fa-bars"></i>
-    </span>
+                        // Reset everything
+                        allMenus.forEach(menu => menu.style.display = 'none');
+                        allLinks.forEach(link => link.classList.remove('active'));
 
-    <div class="dropdown-menu mobile-dropdown">
-        <span class="close-drop" onclick="closeAllNav()" style="color: white;">&times;</span>
-        
-        <h3>Menu</h3>
-        
-        <ul class="mobile-links">
-            <li><a href="../about">Who We Are</a></li>
-            <li><a href="../objectives">What We Do</a></li>
-            <li><a href="../stories">Where We Work</a></li>
-            <li><a href="../partners">Partners</a></li>
+                        // 2. If it wasn't open, open it now and highlight the button
+                        if (!isAlreadyOpen) {
+                            targetMenu.style.display = 'block';
+                            clickedBtn.classList.add('active');
+                        }
+                    }
+
+                    function closeAllNav() {
+                        document.querySelectorAll('.nav-item .dropdown-menu').forEach(menu => menu.style.display = 'none');
+                        document.querySelectorAll('.nav-item .nav-link').forEach(link => link.classList.remove('active'));
+                    }
+                </script>
+            </nav>
+
+            <div id="mobile-toggle" class="hamburger-menu nav-item" style="position: relative;">
+
+                <span  onclick="toggleNav(this)" onmouseenter="toggleNav(this)"  class="nav-link" style="font-size: 24px; cursor: pointer;">
+                    <i class="fas fa-bars"></i>
+                </span>
+
+                <div class="dropdown-menu mobile-dropdown">
+                    <span class="close-drop" onclick="closeAllNav()" style="color: white;">&times;</span>
+
+                    <h3>Menu</h3>
+
+                    <ul class="mobile-links">
+                        <li><a href="../about">Who We Are</a></li>
+                        <li><a href="../objectives">What We Do</a></li>
+                        <li><a href="../stories">Where We Work</a></li>
+                        <li><a href="../partners">Partners</a></li>
                         <li><a href="../events">Events</a></li>
 
-            <li><a href="../contact">Contact Us</a></li>
-            <li><a href="../faq">Frequently Asked Questions</a></li>
-        </ul>
+                        <li><a href="../contact">Contact Us</a></li>
+                        <li><a href="../faq">Frequently Asked Questions</a></li>
+                    </ul>
 
-<div class="mobile-socials">
-    <a href="https://www.facebook.com/Hopewwug"><i class="fab fa-facebook-f"></i></a>
-    <a href="https://x.com/HOPEWORLDWIDEUG"><i class="fab fa-twitter"></i></a>
-    <a href=""><i class="fab fa-linkedin"></i></a>
-    <a href="https://wa.me/256782409528"><i class="fab fa-whatsapp"></i></a>
-    <a href=""><i class="fab fa-linkedin"></i></a>
-    <a href="https://www.tiktok.com/@hope.worldwide.ug?_r=1&_t=ZS-93iNWgrl6OH"><i class="fab fa-tiktok"></i></a>
-    <a href="mailto:info@hopewwug.org"><i class="fas fa-envelope"></i></a>
-</div>
-    </div>
+                    <div class="mobile-socials">
+                        <a href="https://www.facebook.com/Hopewwug"><i class="fab fa-facebook-f"></i></a>
+                         <a href="https://x.com/HOPEWORLDWIDEUG"><i class="fab fa-twitter"></i></a><a href="https://www.instagram.com/hopeworldwideint.uganda"><i class="fab fa-instagram"></i></a>
+                         
+                        <a href="https://wa.me/256782409528"><i class="fab fa-whatsapp"></i></a><a href="https://www.youtube.com/@hopeworldwideintenationalu529"><i class="fab fa-youtube"></i></a>
+                         
+                        <a href="https://www.tiktok.com/@hope.worldwide.ug?_r=1&_t=ZS-93iNWgrl6OH"><i
+                                class="fab fa-tiktok"></i></a>
+                        <a href="mailto:info@hopeworldwideuganda.org"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
 
-    <style>
-        /* Override default dropdown styles for this specific menu */
-        .mobile-dropdown {
-            background-color: #1b6c38 !important; /* Dark Green */
-            color: white !important;
-            right: 0 !important; /* Align to right edge */
-            left: auto !important;
-            transform: none !important;
-            width: 300px !important; /* Fixed width for mobile menu */
-            max-width: 90vw;
-        }
+                <style>
+                    /* Override default dropdown styles for this specific menu */
+                    .mobile-dropdown {
+                        background-color: #1b6c38 !important;
+                        /* Dark Green */
+                        color: white !important;
+                        right: 0 !important;
+                        /* Align to right edge */
+                        left: auto !important;
+                        transform: none !important;
+                        width: 300px !important;
+                        /* Fixed width for mobile menu */
+                        max-width: 90vw;
+                    }
 
-        /* Triangle Arrow Color Override */
-        .mobile-dropdown::after {
-            border-bottom-color: #1b6c38 !important; /* Dark Green Arrow */
-            left: auto !important;
-            right: 10px !important; /* Position arrow under the hamburger */
-            transform: none !important;
-        }
+                    /* Triangle Arrow Color Override */
+                    .mobile-dropdown::after {
+                        border-bottom-color: #1b6c38 !important;
+                        /* Dark Green Arrow */
+                        left: auto !important;
+                        right: 10px !important;
+                        /* Position arrow under the hamburger */
+                        transform: none !important;
+                    }
 
-        /* Link Styles */
-        .mobile-links {
-            list-style: none;
-            padding: 0;
-            margin-bottom: 20px;
-        }
+                    /* Link Styles */
+                    .mobile-links {
+                        list-style: none;
+                        padding: 0;
+                        margin-bottom: 20px;
+                    }
 
-        .mobile-links li {
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-        }
+                    .mobile-links li {
+                        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                    }
 
-        .mobile-links li a {
-            display: block;
-            padding: 12px 0;
-            color: white;
-            font-size: 16px;
-            font-weight: 500;
-            text-decoration: none;
-            transition: padding-left 0.3s;
-        }
+                    .mobile-links li a {
+                        display: block;
+                        padding: 12px 0;
+                        color: white;
+                        font-size: 16px;
+                        font-weight: 500;
+                        text-decoration: none;
+                        transition: padding-left 0.3s;
+                    }
 
-        .mobile-links li a:hover {
-            padding-left: 10px;
-            color: #f4c430; /* Yellow hover */
-        }
+                    .mobile-links li a:hover {
+                        padding-left: 10px;
+                        color: #f4c430;
+                        /* Yellow hover */
+                    }
 
-        /* Social Icons Styling */
-        .mobile-socials {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            padding-top: 15px;
-            border-top: 1px solid rgba(255,255,255,0.2);
-        }
+                    /* Social Icons Styling */
+                    .mobile-socials {
+                        display: flex;
+                        justify-content: center;
+                        gap: 20px;
+                        padding-top: 15px;
+                        border-top: 1px solid rgba(255, 255, 255, 0.2);
+                    }
 
-        .mobile-socials a {
-            color: #f4c430; /* Yellow Icons */
-            font-size: 20px;
-            transition: transform 0.3s;
-        }
+                    .mobile-socials a {
+                        color: #f4c430;
+                        /* Yellow Icons */
+                        font-size: 20px;
+                        transition: transform 0.3s;
+                    }
 
-        .mobile-socials a:hover {
-            transform: scale(1.2);
-            color: white;
-        }
-        
-        /* --- NEW HEADER CSS --- */
-        .catcher{
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100%;
-          background: #14522b;
-          color: white;
-          text-align: center;
-          font-size: 10px;
-          height: 16px;
-        }
-        .site-header {
-            background-color: #fff;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0px;
-            z-index: 1000;
-        }
+                    .mobile-socials a:hover {
+                        transform: scale(1.2);
+                        color: white;
+                    }
 
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 5px;
-            height: 50px; /* Adjust as needed */
-        }
-        .logo-container img {
-          width: 70px;
-        }
+                    /* --- NEW HEADER CSS --- */
+                    .catcher {
+                        position: fixed;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        background: #14522b;
+                        color: white;
+                        text-align: center;
+                        font-size: 10px;
+                        height: 16px;
+                    }
 
-        .main-nav {
-            display: flex;
-            justify-content: center;
-        }
+                    .site-header {
+                        background-color: #fff;
+                        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                        position: sticky;
+                        top: 0px;
+                        z-index: 1000;
+                    }
 
-        .nav-list {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            gap: 10px;
-        }
+                    .header-content {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding: 0 5px;
+                        height: 50px;
+                        /* Adjust as needed */
+                    }
 
-        .nav-list li a, .dropdown-toggle {
-            text-decoration: none;
-            color: #555;
-            font-weight: 300;
-            font-size: 15px;
-            transition: color 0.3s;
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 6px 0;
-            font-family: inherit;
-            display: flex;
-            align-items: center;
-        }
+                    .logo-container img {
+                        width: 70px;
+                    }
 
-        .nav-list li a:hover, .dropdown-toggle:hover, .dropdown-item.active .dropdown-toggle {
-            color: #1b6c38;
-        }
-        
-        .dropdown-toggle i {
-            margin-left: 5px;
-            font-size: 20px;
-            transition: transform 0.3s;
-        }
+                    .main-nav {
+                        display: flex;
+                        justify-content: center;
+                    }
 
-        .dropdown-item.active .dropdown-toggle i {
-            transform: rotate(180deg);
-        }
+                    .nav-list {
+                        list-style: none;
+                        margin: 0;
+                        padding: 0;
+                        display: flex;
+                        gap: 10px;
+                    }
+
+                    .nav-list li a,
+                    .dropdown-toggle {
+                        text-decoration: none;
+                        color: #555;
+                        font-weight: 300;
+                        font-size: 15px;
+                        transition: color 0.3s;
+                        background: none;
+                        border: none;
+                        cursor: pointer;
+                        padding: 6px 0;
+                        font-family: inherit;
+                        display: flex;
+                        align-items: center;
+                    }
+
+                    .nav-list li a:hover,
+                    .dropdown-toggle:hover,
+                    .dropdown-item.active .dropdown-toggle {
+                        color: #1b6c38;
+                    }
+
+                    .dropdown-toggle i {
+                        margin-left: 5px;
+                        font-size: 20px;
+                        transition: transform 0.3s;
+                    }
+
+                    .dropdown-item.active .dropdown-toggle i {
+                        transform: rotate(180deg);
+                    }
 
 
-        .hamburger-menu {
-            font-size: 24px;
-            color: #555;
-            cursor: pointer;
-        }
-        
-     
-        /* Responsive adjustments for header */
-        @media (max-width: 768px) {
-            .hamburger-menu {
-                display: block; /* Show hamburger on mobile */
-            }
-            .header-content {
-                padding: 0 15px;
-            }
-            .dropdown-menu{
-              width: 100vw;
-            }
-        }
+                    .hamburger-menu {
+                        font-size: 24px;
+                        color: #555;
+                        cursor: pointer;
+                    }
 
-    </style>
-</div>
+
+                    /* Responsive adjustments for header */
+                    @media (max-width: 768px) {
+                        .hamburger-menu {
+                            display: block;
+                            /* Show hamburger on mobile */
+                        }
+
+                        .header-content {
+                            padding: 0 15px;
+                        }
+
+                        .dropdown-menu {
+                            width: 100vw;
+                        }
+                    }
+                </style>
+            </div>
         </div>
     </header>
 
@@ -651,7 +760,9 @@
 
             <section id="bg" class="report-section">
                 <h2><i class="fas fa-info-circle"></i> 1.0 Organisational Background</h2>
-                <p>Hope Worldwide International Uganda is registered as an indigenous non-profit organization limited by guarantee under s.371(1) of the Companies Act. It is also registered under the NGO registration statute 1989.</p>
+                <p>Hope Worldwide International Uganda is registered as an indigenous non-profit organization limited by
+                    guarantee under s.371(1) of the Companies Act. It is also registered under the NGO registration
+                    statute 1989.</p>
                 <div class="stats-grid">
                     <div class="stat-card">
                         <span class="stat-label">File Number</span>
@@ -662,14 +773,15 @@
                         <span class="stat-num">2159</span>
                     </div>
                 </div>
-                <p><strong>Core Focus Areas:</strong> Agriculture, Education, Health, Legal & Human Rights, WASH, Poverty Alleviation, and Development.</p>
-               <img src="../res/logo.jpg" style="width:100%;max-width:800px">
+                <p><strong>Core Focus Areas:</strong> Agriculture, Education, Health, Legal & Human Rights, WASH,
+                    Poverty Alleviation, and Development.</p>
+                <img src="../res/logo.jpg" style="width:100%;max-width:800px">
 
             </section>
 
             <section id="achievements" class="report-section">
                 <h2><i class="fas fa-chart-pie"></i> 2.0 Summary of Achievements</h2>
-                
+
                 <div class="stats-grid">
                     <div class="stat-card">
                         <span class="stat-num">138</span>
@@ -687,22 +799,30 @@
 
                 <h3>Key Highlights</h3>
                 <ul class="custom-list">
-                    <li><strong>Outreach:</strong> 81 awareness sessions reaching 4,200 males and 3,000 females (ABC+, MMC, PMTCT).</li>
-                    <li><strong>WASH:</strong> 61 awareness sessions. 4,140 households visited. 19 boreholes cleaned/fenced. 261 tippy-taps constructed.</li>
-                    <li><strong>Mother Clubs:</strong> 30 clubs formed. <em>Mpongi Mother Club</em> established a fish pond.</li>
-                    <li><strong>PRA Sessions:</strong> 27 Participatory Rural Appraisal sessions in 7 districts reaching 865 persons.</li>
-                    <li><strong>Networking:</strong> 19 stakeholder meetings (District Health, Water Aid, UNICEF, USAID).</li>
+                    <li><strong>Outreach:</strong> 81 awareness sessions reaching 4,200 males and 3,000 females (ABC+,
+                        MMC, PMTCT).</li>
+                    <li><strong>WASH:</strong> 61 awareness sessions. 4,140 households visited. 19 boreholes
+                        cleaned/fenced. 261 tippy-taps constructed.</li>
+                    <li><strong>Mother Clubs:</strong> 30 clubs formed. <em>Mpongi Mother Club</em> established a fish
+                        pond.</li>
+                    <li><strong>PRA Sessions:</strong> 27 Participatory Rural Appraisal sessions in 7 districts reaching
+                        865 persons.</li>
+                    <li><strong>Networking:</strong> 19 stakeholder meetings (District Health, Water Aid, UNICEF,
+                        USAID).</li>
                     <li><strong>Monitoring:</strong> 624 sampled school visits.</li>
-                    <li><strong>IEC Materials:</strong> 2,731 materials on mosquito nets (LLIN) and 1,932 on immunization calendars distributed.</li>
+                    <li><strong>IEC Materials:</strong> 2,731 materials on mosquito nets (LLIN) and 1,932 on
+                        immunization calendars distributed.</li>
                     <li><strong>Capacity Building:</strong> 35 volunteers trained on Rights Based Approach (RBA).</li>
                 </ul>
             </section>
 
             <section id="gov" class="report-section">
                 <h2><i class="fas fa-gavel"></i> 3.0 Governance (Objective 1)</h2>
-                <p><strong>Objective:</strong> Strengthen governance and management capacity. A total of 363 meetings were held (cumulative) to discuss strategy (2020-2024), policies, and resource mobilization.</p>
-                
-                <p><strong>Policies Developed:</strong> Human Resource Policy, Financial Policy, Procurement Policy, 5-Year Strategy.</p>
+                <p><strong>Objective:</strong> Strengthen governance and management capacity. A total of 363 meetings
+                    were held (cumulative) to discuss strategy (2020-2024), policies, and resource mobilization.</p>
+
+                <p><strong>Policies Developed:</strong> Human Resource Policy, Financial Policy, Procurement Policy,
+                    5-Year Strategy.</p>
 
                 <h3>Meeting Breakdown</h3>
                 <table class="data-table">
@@ -756,13 +876,14 @@
                         </tr>
                     </tbody>
                 </table>
-                               <img src="../res/ss11.jpg" style="width:100%;max-width:800px">
+                <img src="../res/ss11.jpg" style="width:100%;max-width:800px">
 
             </section>
 
             <section id="health" class="report-section">
                 <h2><i class="fas fa-heartbeat"></i> 4.0 Integrated Health (Objective 2)</h2>
-                <p><strong>Target:</strong> 300,000 children (0-5 yrs), adolescents, and women. Focus on the first 1000 days of life.</p>
+                <p><strong>Target:</strong> 300,000 children (0-5 yrs), adolescents, and women. Focus on the first 1000
+                    days of life.</p>
 
                 <h3>Activity 2.1: Hygiene Education</h3>
                 <ul class="custom-list">
@@ -771,25 +892,30 @@
                     <li><strong>Skills:</strong> Making re-usable sanitary pads and local soap.</li>
                     <li><strong>Impact:</strong> Boys supporting girls during menstruation; reduced stigma.</li>
                 </ul>
-               <img src="../res/ss4.jpg" style="width:100%;max-width:800px">
+                <img src="../res/ss4.jpg" style="width:100%;max-width:800px">
 
                 <div class="impact-quote">
-                    "Boys no longer laugh at us... instead they support us during menstruation periods through pad making."
+                    "Boys no longer laugh at us... instead they support us during menstruation periods through pad
+                    making."
                     <span class="impact-author">- Kadondi Moreen, 14 years old, P.5 (Nankodo Islamic P/S)</span>
                 </div>
 
                 <h3>Activity 2.2: Participatory Monitoring</h3>
-                <p>involved Parents, SMCs, and Local Government. Water user committees are now knowledgeable on roles. <br>
-                <strong>Critical Challenge:</strong> High pupil-stance ratio (1:85 to 1:100) vs national standard (1:40).</p>
+                <p>involved Parents, SMCs, and Local Government. Water user committees are now knowledgeable on roles.
+                    <br>
+                    <strong>Critical Challenge:</strong> High pupil-stance ratio (1:85 to 1:100) vs national standard
+                    (1:40).
+                </p>
                 <img src="../res/gg1.jpg" width="100%">
             </section>
             <video style="border-radius:12px; margin-bottom:16px; width:100%" src="res/vid.mp4" controls></video>
             <section id="wash" class="report-section">
                 <h2><i class="fas fa-water"></i> 5.0 WASH Infrastructure</h2>
-                
+
                 <h3>Activity 2.3 & 2.6: Construction & Rehab</h3>
                 <img src="../res/gg5.jpg" width="100%">
-                <p><strong>New Construction:</strong> 4 VIP pit latrines (5 stances each) funded by Ministry of Education.</p>
+                <p><strong>New Construction:</strong> 4 VIP pit latrines (5 stances each) funded by Ministry of
+                    Education.</p>
                 <p><strong>Beneficiary Schools:</strong></p>
                 <div class="item-tags">
                     <span class="item-tag">Odepai P/S</span>
@@ -797,7 +923,7 @@
                     <span class="item-tag">Kataka P/S (Kibuku)</span>
                     <span class="item-tag">Molokochomo P/S (Kibuku)</span>
                 </div>
-                
+
                 <br>
                 <p><strong>Rehabilitation:</strong></p>
                 <ul class="custom-list">
@@ -807,19 +933,22 @@
                 </ul>
 
                 <div class="impact-quote">
-                    "Because of the borehole, my household no longer falls sick of diarrhea. I have even planted a banana plantation watered by the borehole."
+                    "Because of the borehole, my household no longer falls sick of diarrhea. I have even planted a
+                    banana plantation watered by the borehole."
                     <span class="impact-author">- Mr. Wojjo Wilberforce, Caretaker (St. John Boliso II Borehole)</span>
                 </div>
-                               <img src="../res/gg3.jpg" style="width:100%;max-width:800px">
+                <img src="../res/gg3.jpg" style="width:100%;max-width:800px">
 
 
                 <h3>Activity 2.5: Multi-Stakeholder Dialogue</h3>
-                <p>19 meetings held with 1,330 participants (429 Male, 901 Female). Resulted in by-laws: Fines for vandalism (UGX 150k-200k) and animal grazing (UGX 30k-50k).</p>
+                <p>19 meetings held with 1,330 participants (429 Male, 901 Female). Resulted in by-laws: Fines for
+                    vandalism (UGX 150k-200k) and animal grazing (UGX 30k-50k).</p>
                 <img src="../res/gg1.jpg" width="100%">
             </section>
             <section id="livelihood" class="report-section">
                 <h2><i class="fas fa-seedling"></i> 6.0 Agriculture & Livelihoods (Objective 4)</h2>
-                <p><strong>Objective:</strong> Improve food production for 140 households. Empower vulnerable households to adopt farming as a business.</p>
+                <p><strong>Objective:</strong> Improve food production for 140 households. Empower vulnerable households
+                    to adopt farming as a business.</p>
 
                 <h3>Production Stats</h3>
                 <table class="data-table">
@@ -843,11 +972,11 @@
                         </tr>
                     </tbody>
                 </table>
-                               <img src="../res/ag.jpg" style="width:100%;max-width:800px">
-                
+                <img src="../res/ag.jpg" style="width:100%;max-width:800px">
+
                 <h3>VSLA (Village Savings & Loans)</h3>
                 <p>62 farmer groups trained. 67% women participants.</p>
-            <div class="stats-grid">
+                <div class="stats-grid">
                     <div class="stat-card">
                         <span class="stat-num">465M+</span>
                         <span class="stat-label">UGX Mobilized ($132k)</span>
@@ -861,10 +990,11 @@
 
             <section id="humanitarian" class="report-section">
                 <h2><i class="fas fa-hands-helping"></i> 7.0 Humanitarian & Rights</h2>
-                               <img src="../res/ss2.jpg" style="width:100%;max-width:800px">
-                
+                <img src="../res/ss2.jpg" style="width:100%;max-width:800px">
+
                 <h3>Prison Outreach</h3>
-                <p>Supported 190 beneficiaries (80 men, 110 women) across 2 prison stations. 250 sick inmates visited.</p>
+                <p>Supported 190 beneficiaries (80 men, 110 women) across 2 prison stations. 250 sick inmates visited.
+                </p>
                 <p><strong>Supplies Distributed:</strong></p>
                 <div class="item-tags">
                     <span class="item-tag">Bar Soap</span>
@@ -881,18 +1011,20 @@
                 </div>
 
                 <h3 style="margin-top:20px;">Blood Donor Recruitment</h3>
-                <p>67 mobilization sessions held. Trained 110 inmates (50 male, 60 female) in counseling, theology, and leadership to reduce recidivism.</p>
-                               <img src="../res/ss3.jpg" style="width:100%;max-width:800px">
+                <p>67 mobilization sessions held. Trained 110 inmates (50 male, 60 female) in counseling, theology, and
+                    leadership to reduce recidivism.</p>
+                <img src="../res/ss3.jpg" style="width:100%;max-width:800px">
 
                 <h3>Advocacy (CVA)</h3>
-                <p>Utilized <strong>Citizen Voice and Action (CVA)</strong> approach to advance access to education. 6 Radio dialogues held on Child Rights and WASH.</p>
+                <p>Utilized <strong>Citizen Voice and Action (CVA)</strong> approach to advance access to education. 6
+                    Radio dialogues held on Child Rights and WASH.</p>
                 <img src="../res/ss10.jpg" width="100%">
-                
+
             </section>
 
             <section id="lessons" class="report-section">
                 <h2><i class="fas fa-clipboard-list"></i> 8.0 Lessons, Challenges & Way Forward</h2>
-                
+
                 <h3>Lessons Learnt</h3>
                 <ul class="custom-list">
                     <li>Partnership with Local Authorities is key for community entry.</li>
@@ -903,7 +1035,8 @@
                 <h3>Current Problems</h3>
                 <ul class="custom-list">
                     <li><strong>Transport:</strong> Lack of vehicles/motorcycles for volunteer field movement.</li>
-                    <li><strong>Sanitation:</strong> Severe pupil-stance ratio gap (1:100). Latrine emptying is a challenge.</li>
+                    <li><strong>Sanitation:</strong> Severe pupil-stance ratio gap (1:100). Latrine emptying is a
+                        challenge.</li>
                     <li><strong>Funding:</strong> Limited funds for some planned activities.</li>
                 </ul>
 
@@ -939,10 +1072,11 @@
                     // Adjusted logic below
                 }
                 if (a.getAttribute('href').includes(current)) {
-                     a.classList.add('active');
+                    a.classList.add('active');
                 }
             });
         };
     </script>
 </body>
+
 </html>

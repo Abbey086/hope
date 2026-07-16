@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+<link rel="manifest" href="../favicon/site.webmanifest"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hope Worldwide - Get Involved</title>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-        
-          <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script type="text/javascript">
-       (function(){
-          // Initialize EmailJS with your Public Key
-          // REPLACE 'YOUR_PUBLIC_KEY' WITH YOUR ACTUAL EMAILJS PUBLIC KEY
-          emailjs.init("TZOnqs4UaNbO2EbpX"); 
-       })();
+        (function () {
+            // Initialize EmailJS with your Public Key
+            // REPLACE 'YOUR_PUBLIC_KEY' WITH YOUR ACTUAL EMAILJS PUBLIC KEY
+            emailjs.init("TZOnqs4UaNbO2EbpX");
+        })();
 
     </script>
 
     <style>
         /* --- CSS STYLES --- */
-        
+
         /* General Reset */
         * {
             box-sizing: border-box;
@@ -39,9 +44,9 @@
 
         .container:not(.header-content) {
             width: 100%;
-            max-width: 650px;
+            
             background-color: #fff;
-            box-shadow: 0 0 25px rgba(0,0,0,0.08);
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.08);
             padding-bottom: 40px;
             display: flex;
             flex-direction: column;
@@ -66,7 +71,7 @@
             filter: brightness(0.8);
             transition: transform 10s ease;
         }
-        
+
         .hero:hover img {
             transform: scale(1.1);
         }
@@ -81,7 +86,7 @@
             color: white;
             font-size: 32px;
             font-weight: 800;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.4);
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
             transition: opacity 0.3s ease;
         }
 
@@ -232,7 +237,7 @@
             font-weight: 600;
             pointer-events: none;
         }
-        
+
         .upload-icon {
             font-size: 24px;
             color: #1b6c38;
@@ -244,7 +249,7 @@
             display: none;
             animation: fadeIn 0.4s ease-in-out;
         }
-        
+
         .dynamic-section.active {
             display: block;
         }
@@ -267,7 +272,7 @@
             background-color: #14522b;
             transform: translateY(-2px);
         }
-        
+
         .submit-btn:disabled {
             background-color: #a3c5a6;
             cursor: not-allowed;
@@ -276,14 +281,15 @@
 
         /* OTP MODAL STYLES */
         .otp-modal {
-            display: none; /* Hidden by default */
+            display: none;
+            /* Hidden by default */
             position: fixed;
             z-index: 1000;
             left: 0;
             top: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0,0,0,0.6);
+            background-color: rgba(0, 0, 0, 0.6);
             align-items: center;
             justify-content: center;
         }
@@ -295,7 +301,7 @@
             width: 90%;
             max-width: 400px;
             text-align: center;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
             animation: slideDown 0.3s ease;
         }
 
@@ -354,21 +360,37 @@
             border: 1px solid #aadd68;
             margin-top: 20px;
         }
-        .nao{
-          display: flex;
-          align-items: center;
-          gap: 8px;
-          margin-block: 6px;
-          justify-content: flex-start;
+
+        .nao {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-block: 6px;
+            justify-content: flex-start;
         }
+
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
-        
+
         @keyframes slideDown {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         /* Mobile Adjustments */
@@ -377,452 +399,490 @@
                 flex-direction: column;
                 gap: 18px;
             }
+
             .content-section {
                 padding: 25px 20px;
             }
         }
     </style>
 </head>
+
 <body>
 
     <div class="container">
-          <header class="site-header">
-        <div class="container header-content">
-            <div class="logo-container">
-                <img src="../res/logo.jpg" class="logo" onclick="../index.html"></i>
+        <header class="site-header">
+            <div class="container header-content">
+                <div class="logo-container" onclick='window.location.href="/index.html"'>
+                    <img src="../res/logo.jpg" class="logo"></i>
+                </div>
+                <nav class="main-nav">
+                    <style>
+                        /* CSS confined to this nav */
+                       .nav-list .fa-chevron-down {
+                            margin: 4px;
+                        }
+                        @media screen and (max-width: 700px) {
+                            .nav-list .fa-chevron-down {
+                               display: none;}
+                        }
+
+                        /* Highlight style for the active button */
+                        .nav-link.active {
+                            color: #1b6c38;
+                            border-bottom: 2px solid #1b6c38;
+                        }
+
+                        .nav-item .dropdown-menu {
+                            display: none;
+                            /* Hidden by default */
+                            position: fixed;
+                            top: 60px;
+                            right: 50%;
+                            /* Center horizontally */
+                            transform: translateX(50%);
+                            background: white;
+                            border-radius: 15px;
+                            width: 80vw;
+                            padding: 20px;
+                            color: #1b6c38;
+                            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+                            z-index: 1000;
+                        }
+
+                        /* The Arrow */
+                        .nav-item .dropdown-menu::after {
+                            content: '';
+                            position: absolute;
+                            width: 0;
+                            height: 0;
+                            border-left: 10px solid transparent;
+                            border-right: 10px solid transparent;
+                            border-bottom: 10px solid #fff;
+                            bottom: 100%;
+                            left: var(--lft);
+                            /* Dynamic position */
+                            transform: translateX(-50%);
+                        }
+
+                        /* Close Button Style */
+                        .close-drop {
+                            position: absolute;
+                            top: 10px;
+                            right: 15px;
+                            font-size: 24px;
+                            cursor: pointer;
+                            color: #aaa;
+                            line-height: 1;
+                        }
+
+                        .close-drop:hover {
+                            color: #1b6c38;
+                        }
+
+                        .dropdown-menu h3 {
+                            margin-top: 0;
+                            border-bottom: 1px solid #eee;
+                            padding-bottom: 10px;
+                            margin-bottom: 10px;
+                        }
+
+                        @media (min-width: 768px) {
+                            .nav-item .dropdown-menu {
+                                width: 50vw;
+                            }
+
+                            .nav-item .dropdown-menu::after {
+                                display: none;
+                            }
+
+                        }
+                    </style>
+
+                    <ul class="nav-list">
+
+                        <li style="--lft:31%" class="nav-item">
+                            <span  onclick="toggleNav(this)" onmouseenter="toggleNav(this)"  class="nav-link">Who<i
+                                    class="fas fa-chevron-down"></i></span>
+                            <ul class="dropdown-menu">
+                                <span class="close-drop" onclick="closeAllNav()">&times;</span>
+                                <h3>Who we are!</h3>
+                                <li><a href="../about">About Us</a></li>
+                                <li><a href="../about">Our History & Mission</a></li>
+                                <li><a href="../board">Leadership Board</a></li>
+                                <li><a href="../about#values">Core Values</a></li>
+                                <li><a href="../about#governance">Legal & Registration</a></li>
+                                <li><a href="../gallery">Gallery</a></li>
+                            </ul>
+                        </li>
+
+                        <li style="--lft:49%" class="nav-item">
+                            <span  onclick="toggleNav(this)" onmouseenter="toggleNav(this)"  class="nav-link">What<i
+                                    class="fas fa-chevron-down"></i></span>
+                            <ul class="dropdown-menu">
+                                <span class="close-drop" onclick="closeAllNav()">&times;</span>
+                                <h3>What we do!</h3>
+                                <li><a href="../objectives">Health & HIV/AIDS</a></li>
+                                <li><a href="../objectives">Education & Schools</a></li>
+                                <li><a href="../objectives">Water & Sanitation</a></li>
+                                <li><a href="../objectives">Agriculture & Livelihoods</a></li>
+                                <li><a href="../objectives">Human Rights & Legal</a></li>
+                                <li><a href="../outreach">Outreach</a></li>
+                            </ul>
+                        </li>
+
+                        <li style="--lft:69%" class="nav-item">
+                            <span  onclick="toggleNav(this)" onmouseenter="toggleNav(this)"  class="nav-link">Where<i
+                                    class="fas fa-chevron-down"></i></span>
+                            <ul class="dropdown-menu">
+                                <span class="close-drop" onclick="closeAllNav()">&times;</span>
+                                <h3>Where we work!</h3>
+                                <li><a href="../stories">Central Region</a></li>
+                                <li><a href="../stories">Eastern Region</a></li>
+                                <li><a href="../stories">Northern Region</a></li>
+                                <li><a href="../stories">Western Region</a></li>
+                                <li><a href="../contact#office">Our Offices</a></li>
+                            </ul>
+                        </li>
+
+                        <li style="--lft:87%" class="nav-item">
+                            <span  onclick="toggleNav(this)" onmouseenter="toggleNav(this)"  class="nav-link">How<i
+                                    class="fas fa-chevron-down"></i></span>
+                            <ul class="dropdown-menu">
+                                <span class="close-drop" onclick="closeAllNav()">&times;</span>
+                                <h3>How to help!</h3>
+                                <li><a href="../forms?type=partner">Partner With Us</a></li>
+                                <li><a href="../forms/?type=volunteer">Volunteer</a></li>
+                                <li><a href="../donate">Donate</a></li>
+                                <li><a href="../forms?type=job">Careers</a></li>
+                                <li><a href="../contact">Contact Us</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+
+                    <script>
+                        function toggleNav(clickedBtn) {
+                            // 1. Close all other dropdowns & remove highlights
+                            const allMenus = document.querySelectorAll('.nav-item .dropdown-menu');
+                            const allLinks = document.querySelectorAll('.nav-item .nav-link');
+
+                            // Check if the clicked one is already open
+                            const targetMenu = clickedBtn.parentElement.querySelector('.dropdown-menu');
+                            const isAlreadyOpen = targetMenu.style.display === 'block';
+
+                            // Reset everything
+                            allMenus.forEach(menu => menu.style.display = 'none');
+                            allLinks.forEach(link => link.classList.remove('active'));
+
+                            // 2. If it wasn't open, open it now and highlight the button
+                            if (!isAlreadyOpen) {
+                                targetMenu.style.display = 'block';
+                                clickedBtn.classList.add('active');
+                            }
+                        }
+
+                        function closeAllNav() {
+                            document.querySelectorAll('.nav-item .dropdown-menu').forEach(menu => menu.style.display = 'none');
+                            document.querySelectorAll('.nav-item .nav-link').forEach(link => link.classList.remove('active'));
+                        }
+                    </script>
+                </nav>
+
+                <div id="mobile-toggle" class="hamburger-menu nav-item" style="position: relative;">
+
+                    <span  onclick="toggleNav(this)" onmouseenter="toggleNav(this)"  class="nav-link" style="font-size: 24px; cursor: pointer;">
+                        <i class="fas fa-bars"></i>
+                    </span>
+
+                    <div class="dropdown-menu mobile-dropdown">
+                        <span class="close-drop" onclick="closeAllNav()" style="color: white;">&times;</span>
+
+                        <h3>Menu</h3>
+
+                        <ul class="mobile-links">
+                            <li><a href="../about">Who We Are</a></li>
+                            <li><a href="../objectives">What We Do</a></li>
+                            <li><a href="../stories">Where We Work</a></li>
+                            <li><a href="../partners">Partners</a></li>
+                            <li><a href="../contact">Contact Us</a></li>
+                            <li><a href="../faq">Frequently Asked Questions</a></li>
+                        </ul>
+
+                        <div class="mobile-socials">
+                            <a href="https://www.facebook.com/Hopewwug"><i class="fab fa-facebook-f"></i></a>
+                             <a href="https://x.com/HOPEWORLDWIDEUG"><i class="fab fa-twitter"></i></a><a href="https://www.instagram.com/hopeworldwideint.uganda"><i class="fab fa-instagram"></i></a>
+                             
+                            <a href="https://wa.me/256782409528"><i class="fab fa-whatsapp"></i></a><a href="https://www.youtube.com/@hopeworldwideintenationalu529"><i class="fab fa-youtube"></i></a>
+                             
+                            <a href="https://www.tiktok.com/@hope.worldwide.ug?_r=1&_t=ZS-93iNWgrl6OH"><i
+                                    class="fab fa-tiktok"></i></a>
+                            <a href="mailto:info@hopeworldwideuganda.org"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+
+                    <style>
+                        /* Override default dropdown styles for this specific menu */
+                        .mobile-dropdown {
+                            background-color: #1b6c38 !important;
+                            /* Dark Green */
+                            color: white !important;
+                            right: 0 !important;
+                            /* Align to right edge */
+                            left: auto !important;
+                            transform: none !important;
+                            width: 300px !important;
+                            /* Fixed width for mobile menu */
+                            max-width: 90vw;
+                        }
+
+                        /* Triangle Arrow Color Override */
+                        .mobile-dropdown::after {
+                            border-bottom-color: #1b6c38 !important;
+                            /* Dark Green Arrow */
+                            left: auto !important;
+                            right: 10px !important;
+                            /* Position arrow under the hamburger */
+                            transform: none !important;
+                        }
+
+                        /* Link Styles */
+                        .mobile-links {
+                            list-style: none;
+                            padding: 0;
+                            margin-bottom: 20px;
+                        }
+
+                        .mobile-links li {
+                            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                        }
+
+                        .mobile-links li a {
+                            display: block;
+                            padding: 12px 0;
+                            color: white;
+                            font-size: 16px;
+                            font-weight: 500;
+                            text-decoration: none;
+                            transition: padding-left 0.3s;
+                        }
+
+                        .mobile-links li a:hover {
+                            padding-left: 10px;
+                            color: #f4c430;
+                            /* Yellow hover */
+                        }
+
+                        /* Social Icons Styling */
+                        .mobile-socials {
+                            display: flex;
+                            justify-content: center;
+                            gap: 20px;
+                            padding-top: 15px;
+                            border-top: 1px solid rgba(255, 255, 255, 0.2);
+                        }
+
+                        .mobile-socials a {
+                            color: #f4c430;
+                            /* Yellow Icons */
+                            font-size: 20px;
+                            transition: transform 0.3s;
+                        }
+
+                        .mobile-socials a:hover {
+                            transform: scale(1.2);
+                            color: white;
+                        }
+
+                        /* --- NEW HEADER CSS --- */
+                        .catcher {
+                            position: fixed;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            background: #14522b;
+                            color: white;
+                            text-align: center;
+                            font-size: 10px;
+                            height: 16px;
+                        }
+
+                        .site-header {
+                            background-color: #fff;
+                            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                            position: sticky;
+                            top: 0px;
+                            z-index: 1000;
+                        }
+
+                        .header-content {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            padding: 0 5px;
+                            height: 50px;
+                            /* Adjust as needed */
+                        }
+
+                        .logo-container img {
+                            width: 110px;
+                        }
+
+                        .main-nav {
+                            display: flex;
+                            justify-content: center;
+                        }
+
+                        .nav-list {
+                            list-style: none;
+                            margin: 0;
+                            padding: 0;
+                            display: flex;
+                            gap: 10px;
+                        }
+
+                        .nav-list li a,
+                        .dropdown-toggle {
+                            text-decoration: none;
+                            color: #555;
+                            font-weight: 300;
+                            font-size: 15px;
+                            transition: color 0.3s;
+                            background: none;
+                            border: none;
+                            cursor: pointer;
+                            padding: 6px 0;
+                            font-family: inherit;
+                            display: flex;
+                            align-items: center;
+                        }
+
+                        .nav-list li a:hover,
+                        .dropdown-toggle:hover,
+                        .dropdown-item.active .dropdown-toggle {
+                            color: #1b6c38;
+                        }
+
+                        .dropdown-toggle i {
+                            margin-left: 5px;
+                            font-size: 20px;
+                            transition: transform 0.3s;
+                        }
+
+                        .dropdown-item.active .dropdown-toggle i {
+                            transform: rotate(180deg);
+                        }
+
+
+                        .hamburger-menu {
+                            font-size: 24px;
+                            color: #555;
+                            cursor: pointer;
+                        }
+
+
+                        /* Responsive adjustments for header */
+                        @media (max-width: 768px) {
+                            .hamburger-menu {
+                                display: block;
+                                /* Show hamburger on mobile */
+                            }
+
+                            .header-content {
+                                padding: 0 15px;
+                            }
+
+                            .dropdown-menu {
+                                width: 100vw;
+                            }
+                        }
+
+                        .email {
+                            background: var(--light-green);
+                            padding: 5px;
+                            border-radius: 9px;
+                            border: var(--medium-green) 3px dotted;
+                        }
+
+                        .email a {
+                            font-size: 1.7rem;
+                            color: var(--deep-green);
+                            display: block;
+                        }
+
+                        .email span {
+                            color: #666;
+                            font-size: .8rem;
+                        }
+                    </style>
+                </div>
             </div>
-            <nav class="main-nav">
-    <style>
-    
-        /* CSS confined to this nav */
-        .nav-list .fa-chevron-down {
-            display: none;
-        }
-
-        /* Highlight style for the active button */
-        .nav-link.active {
-            color: #1b6c38;
-            border-bottom: 2px solid #1b6c38;
-        }
-
-        .nav-item .dropdown-menu {
-            display: none; /* Hidden by default */
-            position: fixed;
-            top: 60px;
-            right: 50%; /* Center horizontally */
-            transform: translateX(50%);
-            background: white;
-            border-radius: 15px;
-            width: 80vw;
-            padding: 20px;
-            color: #1b6c38;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
-            z-index: 1000;
-        }
-
-        /* The Arrow */
-        .nav-item .dropdown-menu::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 0;
-            border-left: 10px solid transparent;
-            border-right: 10px solid transparent;
-            border-bottom: 10px solid #fff;
-            bottom: 100%;
-            left: var(--lft); /* Dynamic position */
-            transform: translateX(-50%);
-        }
-
-        /* Close Button Style */
-        .close-drop {
-            position: absolute;
-            top: 10px;
-            right: 15px;
-            font-size: 24px;
-            cursor: pointer;
-            color: #aaa;
-            line-height: 1;
-        }
-        .close-drop:hover {
-            color: #1b6c38;
-        }
-
-        .dropdown-menu h3 {
-            margin-top: 0;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 10px;
-            margin-bottom: 10px;
-        }
-
-@media (min-width: 768px) {
-        .nav-item .dropdown-menu {
-          width: 50vw;
-        }
-                .nav-item .dropdown-menu::after{
-          display: none;
-        }
-
-}
-
-    </style>
-
-    <ul class="nav-list">
-        
-        <li style="--lft:31%" class="nav-item">
-            <span onclick="toggleNav(this)" class="nav-link">Who<i class="fas fa-chevron-down"></i></span>
-            <ul class="dropdown-menu">
-                <span class="close-drop" onclick="closeAllNav()">&times;</span>
-                <h3>Who we are!</h3>
-                <li><a href="../about">About Us</a></li>
-                <li><a href="../about">Our History & Mission</a></li>
-                <li><a href="../board">Leadership Board</a></li>
-                <li><a href="../about#values">Core Values</a></li>
-                <li><a href="../about.html#governance">Legal & Registration</a></li>
-                <li><a href="../gallery">Gallery</a></li>
-            </ul>
-        </li>
-
-        <li style="--lft:49%" class="nav-item">
-            <span onclick="toggleNav(this)" class="nav-link">What<i class="fas fa-chevron-down"></i></span>
-            <ul class="dropdown-menu">
-                <span class="close-drop" onclick="closeAllNav()">&times;</span>
-                <h3>What we do!</h3>
-                <li><a href="../objectives">Health & HIV/AIDS</a></li>
-                <li><a href="../objectives">Education & Schools</a></li>
-                <li><a href="../objectives">Water & Sanitation</a></li>
-                <li><a href="../objectives">Agriculture & Livelihoods</a></li>
-                <li><a href="../objectives">Human Rights & Legal</a></li>
-                <li><a href="../outreach">Outreach</a></li>
-            </ul>
-        </li>
-
-        <li style="--lft:69%" class="nav-item">
-            <span onclick="toggleNav(this)" class="nav-link">Where<i class="fas fa-chevron-down"></i></span>
-            <ul class="dropdown-menu">
-                <span class="close-drop" onclick="closeAllNav()">&times;</span>
-                <h3>Where we work!</h3>
-                <li><a href="../stories">Central Region</a></li>
-                <li><a href="../stories">Eastern Region</a></li>
-                <li><a href="../stories">Northern Region</a></li>
-                <li><a href="../stories">Western Region</a></li>
-                <li><a href="../contact#office">Our Offices</a></li>
-            </ul>
-        </li>
-
-        <li style="--lft:87%" class="nav-item">
-            <span onclick="toggleNav(this)" class="nav-link">How<i class="fas fa-chevron-down"></i></span>
-            <ul class="dropdown-menu">
-                <span class="close-drop" onclick="closeAllNav()">&times;</span>
-                <h3>How to help!</h3>
-                <li><a href="../forms?type=partner">Partner With Us</a></li>
-                <li><a href="../forms?type=volunteer">Volunteer</a></li>
-                <li><a href="../donate">Donate</a></li>
-                <li><a href="../forms?type=job">Careers</a></li>
-                <li><a href="../contact">Contact Us</a></li>
-            </ul>
-        </li>
-
-    </ul>
-
-    <script>
-        function toggleNav(clickedBtn) {
-            // 1. Close all other dropdowns & remove highlights
-            const allMenus = document.querySelectorAll('.nav-item .dropdown-menu');
-            const allLinks = document.querySelectorAll('.nav-item .nav-link');
-            
-            // Check if the clicked one is already open
-            const targetMenu = clickedBtn.parentElement.querySelector('.dropdown-menu');
-            const isAlreadyOpen = targetMenu.style.display === 'block';
-
-            // Reset everything
-            allMenus.forEach(menu => menu.style.display = 'none');
-            allLinks.forEach(link => link.classList.remove('active'));
-
-            // 2. If it wasn't open, open it now and highlight the button
-            if (!isAlreadyOpen) {
-                targetMenu.style.display = 'block';
-                clickedBtn.classList.add('active');
-            }
-        }
-
-        function closeAllNav() {
-            document.querySelectorAll('.nav-item .dropdown-menu').forEach(menu => menu.style.display = 'none');
-            document.querySelectorAll('.nav-item .nav-link').forEach(link => link.classList.remove('active'));
-        }
-    </script>
-</nav>
-
-<div id="mobile-toggle" class="hamburger-menu nav-item" style="position: relative;">
-    
-    <span onclick="toggleNav(this)" class="nav-link" style="font-size: 24px; cursor: pointer;">
-        <i class="fas fa-bars"></i>
-    </span>
-
-    <div class="dropdown-menu mobile-dropdown">
-        <span class="close-drop" onclick="closeAllNav()" style="color: white;">&times;</span>
-        
-        <h3>Menu</h3>
-        
-        <ul class="mobile-links">
-            <li><a href="../about">Who We Are</a></li>
-            <li><a href="../objectives">What We Do</a></li>
-            <li><a href="../stories">Where We Work</a></li>
-            <li><a href="../partners">Partners</a></li>
-            <li><a href="../contact">Contact Us</a></li>
-            <li><a href="../faq">Frequently Asked Questions</a></li>
-        </ul>
-
-<div class="mobile-socials">
-    <a href="https://www.facebook.com/Hopewwug"><i class="fab fa-facebook-f"></i></a>
-    <a href="https://x.com/HOPEWORLDWIDEUG"><i class="fab fa-twitter"></i></a>
-    <a href=""><i class="fab fa-linkedin"></i></a>
-    <a href="https://wa.me/256782409528"><i class="fab fa-whatsapp"></i></a>
-    <a href=""><i class="fab fa-linkedin"></i></a>
-    <a href="https://www.tiktok.com/@hope.worldwide.ug?_r=1&_t=ZS-93iNWgrl6OH"><i class="fab fa-tiktok"></i></a>
-    <a href="mailto:info@hopewwug.org"><i class="fas fa-envelope"></i></a>
-</div>
-    </div>
-
-    <style>
-        /* Override default dropdown styles for this specific menu */
-        .mobile-dropdown {
-            background-color: #1b6c38 !important; /* Dark Green */
-            color: white !important;
-            right: 0 !important; /* Align to right edge */
-            left: auto !important;
-            transform: none !important;
-            width: 300px !important; /* Fixed width for mobile menu */
-            max-width: 90vw;
-        }
-
-        /* Triangle Arrow Color Override */
-        .mobile-dropdown::after {
-            border-bottom-color: #1b6c38 !important; /* Dark Green Arrow */
-            left: auto !important;
-            right: 10px !important; /* Position arrow under the hamburger */
-            transform: none !important;
-        }
-
-        /* Link Styles */
-        .mobile-links {
-            list-style: none;
-            padding: 0;
-            margin-bottom: 20px;
-        }
-
-        .mobile-links li {
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-        }
-
-        .mobile-links li a {
-            display: block;
-            padding: 12px 0;
-            color: white;
-            font-size: 16px;
-            font-weight: 500;
-            text-decoration: none;
-            transition: padding-left 0.3s;
-        }
-
-        .mobile-links li a:hover {
-            padding-left: 10px;
-            color: #f4c430; /* Yellow hover */
-        }
-
-        /* Social Icons Styling */
-        .mobile-socials {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            padding-top: 15px;
-            border-top: 1px solid rgba(255,255,255,0.2);
-        }
-
-        .mobile-socials a {
-            color: #f4c430; /* Yellow Icons */
-            font-size: 20px;
-            transition: transform 0.3s;
-        }
-
-        .mobile-socials a:hover {
-            transform: scale(1.2);
-            color: white;
-        }
-        
-        /* --- NEW HEADER CSS --- */
-        .catcher{
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100%;
-          background: #14522b;
-          color: white;
-          text-align: center;
-          font-size: 10px;
-          height: 16px;
-        }
-        .site-header {
-            background-color: #fff;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0px;
-            z-index: 1000;
-        }
-
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 5px;
-            height: 50px; /* Adjust as needed */
-        }
-        .logo-container img {
-          width: 70px;
-        }
-
-        .main-nav {
-            display: flex;
-            justify-content: center;
-        }
-
-        .nav-list {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            gap: 10px;
-        }
-
-        .nav-list li a, .dropdown-toggle {
-            text-decoration: none;
-            color: #555;
-            font-weight: 300;
-            font-size: 15px;
-            transition: color 0.3s;
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 6px 0;
-            font-family: inherit;
-            display: flex;
-            align-items: center;
-        }
-
-        .nav-list li a:hover, .dropdown-toggle:hover, .dropdown-item.active .dropdown-toggle {
-            color: #1b6c38;
-        }
-        
-        .dropdown-toggle i {
-            margin-left: 5px;
-            font-size: 20px;
-            transition: transform 0.3s;
-        }
-
-        .dropdown-item.active .dropdown-toggle i {
-            transform: rotate(180deg);
-        }
-
-
-        .hamburger-menu {
-            font-size: 24px;
-            color: #555;
-            cursor: pointer;
-        }
-        
-     
-        /* Responsive adjustments for header */
-        @media (max-width: 768px) {
-            .hamburger-menu {
-                display: block; /* Show hamburger on mobile */
-            }
-            .header-content {
-                padding: 0 15px;
-            }
-            .dropdown-menu{
-              width: 100vw;
-            }
-        }
-        .email{
-          background: var(--light-green);
-          padding: 5px;
-          border-radius: 9px;
-          border: var(--medium-green) 3px dotted;
-        }
-        .email a{
-          font-size: 1.7rem;
-          color: var(--deep-green);
-          display: block;
-        }
-        .email span{
-          color: #666;
-          font-size: .8rem;
-        }
-    </style>
-</div>
-        </div>
-    </header>
+        </header>
 
         <div class="hero">
-            <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?q=80&w=1000&auto=format&fit=crop" id="hero-img" alt="Hero">
+            <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?q=80&w=1000&auto=format&fit=crop"
+                id="hero-img" alt="Hero">
             <div class="hero-text" id="hero-title">Join Our Mission</div>
         </div>
 
         <div class="tab-container">
             <button class="tab-btn active" onclick="switchForm('partner')" id="btn-partner">Partnership</button>
             <button class="tab-btn" onclick="switchForm('volunteer')" id="btn-volunteer">Volunteer</button>
+            <button class="tab-btn" onclick="switchForm('internship')" id="btn-internship">Internship</button>
             <button class="tab-btn" onclick="switchForm('job')" id="btn-job">Career</button>
         </div>
 
         <section class="content-section">
-            
+
             <h2 class="title-green" id="form-title">Partnership Proposal</h2>
             <div class="dash"></div>
-            <p class="email" >
-              <a id="form-email-a" href="mailto: partnership@hopewwug.org">Use Email</a>
-              <span id="form-email">partnership@hopewwug.org</span>
+            <p class="email">
+                <a id="form-email-a" href="mailto: partnership@hopeworldwideuganda.org">Use Email</a>
+                <span id="form-email">partnership@hopeworldwideuganda.org</span>
             </p>
             <p class="intro" id="form-desc">
-                We believe in the power of collaboration. Fill out the details below to propose a partnership with Hope Worldwide.
+                We believe in the power of collaboration. Fill out the details below to propose a partnership with Hope
+                Worldwide.
             </p>
 
             <form class="contact-form" id="mainForm">
-                
+
                 <input type="hidden" id="form-type" name="type" value="partner">
 
                 <div class="form-row">
                     <div class="form-group">
                         <label for="firstname">First Name</label>
-                        <input type="text" id="firstname" class="form-control" placeholder="First Name" required>
+                        <input type="text" id="firstname" name="firstname" class="form-control" placeholder="First Name" required>
                     </div>
                     <div class="form-group">
                         <label for="lastname">Last Name</label>
-                        <input type="text" id="lastname" class="form-control" placeholder="Last Name" required>
+                        <input type="text" id="lastname" name="lastname" class="form-control" placeholder="Last Name" required>
                     </div>
                     <div class="form-group">
                         <label for="email">Email Address</label>
-                        <input type="email" id="email" class="form-control" placeholder="you@email.com" required>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="you@email.com" required>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" class="form-control" placeholder="Phone Number">
+                    <input type="tel" id="phone" name="phone" class="form-control" placeholder="Phone Number">
                 </div>
 
                 <div id="section-partner" class="dynamic-section active">
                     <div class="form-group">
                         <label for="org-name">Organization Name</label>
-                        <input type="text" id="org-name" class="form-control" placeholder="Company / NGO Name">
+                        <input type="text" id="org-name" name="org_name" class="form-control" placeholder="Company / NGO Name">
                         <p class="nao">
-                          <input onchange="document.querySelector('#org-name').disabled = this.checked" type="checkbox" id="nao">
-                          <label for="nao">Not an Organization!</label></p>
+                            <input onchange="document.querySelector('#org-name').disabled = this.checked"
+                                type="checkbox" id="nao" name="nao">
+                            <label for="nao">Not an Organization!</label>
+                        </p>
                     </div>
-                    
+
                     <div class="form-row" style="margin-top: 18px;">
                         <div class="form-group">
                             <label for="partner-type">Partnership Type</label>
-                            <select id="partner-type" class="form-control">
+                            <select id="partner-type" name="partner_type" class="form-control">
                                 <option>Corporate CSR</option>
                                 <option>Program Funding</option>
                                 <option>Technical Support</option>
@@ -833,7 +893,8 @@
 
                     <div class="form-group" style="margin-top: 18px;">
                         <label for="proposal">Proposal Details</label>
-                        <textarea id="proposal" class="form-control" placeholder="Tell us about your proposal..."></textarea>
+                        <textarea id="proposal" name="proposal" class="form-control"
+                            placeholder="Tell us about your proposal..."></textarea>
                     </div>
                 </div>
 
@@ -841,11 +902,11 @@
                     <div class="form-row">
                         <div class="form-group">
                             <label for="location">Preferred Location</label>
-                            <select id="location" class="form-control"></select>
+                            <select id="location" name="location" class="form-control"></select>
                         </div>
                         <div class="form-group">
                             <label for="availability">Availability</label>
-                            <select id="availability" class="form-control">
+                            <select id="availability" name="availability" class="form-control">
                                 <option>Full Time</option>
                                 <option>Part Time</option>
                                 <option>Weekends Only</option>
@@ -855,102 +916,181 @@
 
                     <div class="form-group" style="margin-top: 18px;">
                         <label for="skills">Skills & Experience</label>
-                        <textarea id="skills" class="form-control" placeholder="Medical, Teaching, Engineering, etc..."></textarea>
+                        <textarea id="skills" name="skills" class="form-control"
+                            placeholder="Medical, Teaching, Engineering, etc..."></textarea>
                     </div>
                 </div>
 
-<div id="section-job" class="dynamic-section">
-    <div class="form-group">
-        <label for="linkedin">LinkedIn Profile / Portfolio</label>
-        <input type="url" id="linkedin" class="form-control" placeholder="https://linkedin.com/in/...">
-    </div>
+                <div id="section-internship" class="dynamic-section">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="intern-dept">Preferred Department</label>
+                            <select id="intern-dept" name="intern_dept" class="form-control">
+                                <option>Health & Medical</option>
+                                <option>Education</option>
+                                <option>IT & Technical</option>
+                                <option>Administration</option>
+                                <option>Marketing & Comms</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="intern-uni">University / Institution</label>
+                            <input type="text" id="intern-uni" name="intern_uni" class="form-control" placeholder="Your University Name">
+                        </div>
+                    </div>
 
-    <div class="cv-section" style="margin-top: 25px; padding-top: 15px; border-top: 1px solid #eee;">
-        <h5 style="margin-bottom: 15px; color: #555;">Professional Summary</h5>
-        <div class="form-group">
-            <label for="cv-bio">Bio / Career Objective</label>
-            <textarea id="cv-bio" class="form-control" rows="3" placeholder="Briefly describe your professional background and goals..."></textarea>
-        </div>
-    </div>
+                    <div class="form-row" style="margin-top: 18px;">
+                        <div class="form-group">
+                            <label for="intern-year">Current Year of Study</label>
+                            <select id="intern-year" name="intern_year" class="form-control">
+                                <option>1st Year</option>
+                                <option>2nd Year</option>
+                                <option>3rd Year</option>
+                                <option>4th Year or Above</option>
+                                <option>Recent Graduate</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="intern-major">Area of Study / Major</label>
+                            <input type="text" id="intern-major" name="intern_major" class="form-control" placeholder="e.g. Public Health">
+                        </div>
+                    </div>
 
-    <div class="cv-section" style="margin-top: 25px;">
-        <h5 style="margin-bottom: 15px; color: #555;">Most Recent Work Experience</h5>
-        
-        <div class="form-row">
-            <div class="form-group">
-                <label for="job-title">Job Title</label>
-                <input type="text" id="job-title" class="form-control" placeholder="e.g. Senior Project Manager">
-            </div>
-            <div class="form-group">
-                <label for="company-name">Company Name</label>
-                <input type="text" id="company-name" class="form-control" placeholder="e.g. Acme Corp">
-            </div>
-        </div>
+                    <div class="form-row" style="margin-top: 18px;">
+                        <div class="form-group">
+                            <label for="intern-start">Preferred Start Date</label>
+                            <input type="month" id="intern-start" name="intern_start" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="intern-end">Preferred End Date</label>
+                            <input type="month" id="intern-end" name="intern_end" class="form-control">
+                        </div>
+                    </div>
 
-        <div class="form-row">
-            <div class="form-group">
-                <label for="job-start">Start Date</label>
-                <input type="month" id="job-start" class="form-control">
-            </div>
-            <div class="form-group">
-                <label for="job-end">End Date</label>
-                <input type="month" id="job-end" class="form-control">
-                <div style="margin-top: 5px; font-size: 0.85em;">
-                    <input type="checkbox" id="current-job" onchange="document.querySelector('#job-end').disabled = this.checked">
-                    <label for="current-job" style="display:inline; font-weight:normal;">I currently work here</label>
+                    <div class="form-group" style="margin-top: 25px;">
+                        <label for="intern-motivation">Why do you want to intern with Hope Worldwide?</label>
+                        <textarea id="intern-motivation" name="intern_motivation" class="form-control" rows="3"
+                            placeholder="Tell us about your motivation..."></textarea>
+                    </div>
+
+                    <div class="form-group" style="margin-top: 18px;">
+                        <label for="intern-projects">Relevant Coursework or Projects</label>
+                        <textarea id="intern-projects" name="intern_projects" class="form-control" rows="3"
+                            placeholder="Highlight any relevant academic or personal projects..."></textarea>
+                    </div>
+
+                    <div class="form-group" style="margin-top: 30px; border-top: 1px dashed #ccc; padding-top: 20px;">
+                        <label>Resume / CV (Optional)</label>
+                        <div class="file-upload-wrapper">
+                            <div class="upload-icon">📄</div>
+                            <span class="upload-text" id="intern-file-label">Attach Resume PDF</span>
+                            <input type="file" id="intern-resume" name="resume" accept=".pdf,.doc,.docx"
+                                onchange="document.getElementById('intern-file-label').innerText = this.files[0]?.name || 'Attach Resume PDF'; document.getElementById('intern-file-label').style.color = '#1b6c38';">
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
 
-        <div class="form-group" style="margin-top: 10px;">
-            <label for="job-desc">Key Responsibilities & Achievements</label>
-            <textarea id="job-desc" class="form-control" rows="4" placeholder="• Managed a team of 10...&#10;• Increased sales by 20%..."></textarea>
-        </div>
-    </div>
+                <div id="section-job" class="dynamic-section">
+                    <div class="form-group">
+                        <label for="linkedin">LinkedIn Profile / Portfolio</label>
+                        <input type="url" id="linkedin" name="linkedin" class="form-control" placeholder="https://linkedin.com/in/...">
+                    </div>
 
-    <div class="cv-section" style="margin-top: 25px;">
-        <h5 style="margin-bottom: 15px; color: #555;">Education</h5>
-        
-        <div class="form-row">
-            <div class="form-group">
-                <label for="edu-degree">Degree / Qualification</label>
-                <input type="text" id="edu-degree" class="form-control" placeholder="e.g. BSc Computer Science">
-            </div>
-            <div class="form-group">
-                <label for="edu-school">University / Institution</label>
-                <input type="text" id="edu-school" class="form-control" placeholder="University Name">
-            </div>
-        </div>
-        
-        <div class="form-row">
-             <div class="form-group">
-                <label for="edu-year">Graduation Year</label>
-                <input type="number" id="edu-year" class="form-control" placeholder="YYYY" min="1970" max="2030">
-            </div>
-        </div>
-    </div>
+                    <div class="cv-section" style="margin-top: 25px; padding-top: 15px; border-top: 1px solid #eee;">
+                        <h5 style="margin-bottom: 15px; color: #555;">Professional Summary</h5>
+                        <div class="form-group">
+                            <label for="cv-bio">Bio / Career Objective</label>
+                            <textarea id="cv-bio" name="cv_bio" class="form-control" rows="3"
+                                placeholder="Briefly describe your professional background and goals..."></textarea>
+                        </div>
+                    </div>
 
-    <div class="form-group" style="margin-top: 25px;">
-        <label for="job-skills">Technical Skills & Tools</label>
-        <input type="text" id="job-skills" class="form-control" placeholder="e.g. Python, Project Management, Figma (Separate with commas)">
-    </div>
+                    <div class="cv-section" style="margin-top: 25px;">
+                        <h5 style="margin-bottom: 15px; color: #555;">Most Recent Work Experience</h5>
 
-    <div class="form-group" style="margin-top: 30px; border-top: 1px dashed #ccc; padding-top: 20px;">
-        <label>Have a formatted PDF instead? (Optional)</label>
-        <div class="file-upload-wrapper">
-            <div class="upload-icon">📄</div>
-            <span class="upload-text" id="file-label">Attach Resume PDF (Overrides above fields)</span>
-            <input type="file" id="resume" accept=".pdf,.doc,.docx" onchange="updateFileName(this)">
-        </div>
-    </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="job-title">Job Title</label>
+                                <input type="text" id="job-title" name="job_title" class="form-control"
+                                    placeholder="e.g. Senior Project Manager">
+                            </div>
+                            <div class="form-group">
+                                <label for="company-name">Company Name</label>
+                                <input type="text" id="company-name" name="company_name" class="form-control" placeholder="e.g. Acme Corp">
+                            </div>
+                        </div>
 
-    <div class="form-group" style="margin-top: 18px;">
-        <label for="cover-letter">Cover Letter</label>
-        <textarea id="cover-letter" class="form-control" placeholder="Why do you want to work with us?"></textarea>
-    </div>
-</div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="job-start">Start Date</label>
+                                <input type="month" id="job-start" name="job_start" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="job-end">End Date</label>
+                                <input type="month" id="job-end" name="job_end" class="form-control">
+                                <div style="margin-top: 5px; font-size: 0.85em;">
+                                    <input type="checkbox" id="current-job" name="current_job"
+                                        onchange="document.querySelector('#job-end').disabled = this.checked">
+                                    <label for="current-job" style="display:inline; font-weight:normal;">I currently
+                                        work here</label>
+                                </div>
+                            </div>
+                        </div>
 
-                <button type="button" class="submit-btn" id="submit-btn" onclick="initiateOTP()">Send Proposal</button>
+                        <div class="form-group" style="margin-top: 10px;">
+                            <label for="job-desc">Key Responsibilities & Achievements</label>
+                            <textarea id="job-desc" name="job_desc" class="form-control" rows="4"
+                                placeholder="• Managed a team of 10...&#10;• Increased sales by 20%..."></textarea>
+                        </div>
+                    </div>
+
+                    <div class="cv-section" style="margin-top: 25px;">
+                        <h5 style="margin-bottom: 15px; color: #555;">Education</h5>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="edu-degree">Degree / Qualification</label>
+                                <input type="text" id="edu-degree" name="edu_degree" class="form-control"
+                                    placeholder="e.g. BSc Computer Science">
+                            </div>
+                            <div class="form-group">
+                                <label for="edu-school">University / Institution</label>
+                                <input type="text" id="edu-school" name="edu_school" class="form-control" placeholder="University Name">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="edu-year">Graduation Year</label>
+                                <input type="number" id="edu-year" name="edu_year" class="form-control" placeholder="YYYY" min="1970"
+                                    max="2030">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group" style="margin-top: 25px;">
+                        <label for="job-skills">Technical Skills & Tools</label>
+                        <input type="text" id="job-skills" name="job_skills" class="form-control"
+                            placeholder="e.g. Python, Project Management, Figma (Separate with commas)">
+                    </div>
+
+                    <div class="form-group" style="margin-top: 30px; border-top: 1px dashed #ccc; padding-top: 20px;">
+                        <label>Have a formatted PDF instead? (Optional)</label>
+                        <div class="file-upload-wrapper">
+                            <div class="upload-icon">📄</div>
+                            <span class="upload-text" id="file-label">Attach Resume PDF (Overrides above fields)</span>
+                            <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" onchange="updateFileName(this)">
+                        </div>
+                    </div>
+
+                    <div class="form-group" style="margin-top: 18px;">
+                        <label for="cover-letter">Cover Letter</label>
+                        <textarea id="cover-letter" name="cover_letter" class="form-control"
+                            placeholder="Why do you want to work with us?"></textarea>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn" id="submit-btn">Send Proposal</button>
 
                 <div class="success-message" id="successMsg">
                     Submitted Successfully! We will contact you soon.
@@ -961,601 +1101,656 @@
         <div id="otpModal" class="otp-modal">
             <div class="otp-content">
                 <h3>Verify Your Email</h3>
-                <p>We've sent a code to <span id="modalEmail" style="font-weight:bold;"></span>. Please enter it below to confirm your submission.</p>
+                <p>We've sent a code to <span id="modalEmail" style="font-weight:bold;"></span>. Please enter it below
+                    to confirm your submission.</p>
                 <input type="number" id="otpInput" class="otp-input" placeholder="000000">
                 <p id="otpError" style="color:red; font-size:12px; display:none;">Incorrect code. Try again.</p>
                 <button class="verify-btn" onclick="verifyOTP()">Verify & Submit</button>
                 <button class="cancel-btn" onclick="closeOTP()">Cancel</button>
             </div>
         </div>
-<footer class="site-footer">
-    <style>
-    :root {
-    --deep-green: hsl(143, 64.2%, 24.1%);
-    --medium-green: hsl(143, 64.2%, 35%); /* Slightly lighter for gradients/cards */
-    --light-green: hsl(142, 76.6%, 73.1%);
-    --accent-yellow: #ffce00;
-    --text-dark: #333;
-    --text-light: #666;
-    --white: #fff;
-    --max-width: 1200px;
-}
-    .btn {
-    display: inline-block;
-    padding: 9px 12px;
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    cursor: pointer;
-    border-radius: 3px;
-    border: none;
-}
+        <footer class="site-footer">
+            <style>
+                :root {
+                    --deep-green: hsl(143, 64.2%, 24.1%);
+                    --medium-green: hsl(143, 64.2%, 35%);
+                    /* Slightly lighter for gradients/cards */
+                    --light-green: hsl(142, 76.6%, 73.1%);
+                    --accent-yellow: #ffce00;
+                    --text-dark: #333;
+                    --text-light: #666;
+                    --white: #fff;
+                    --max-width: 1200px;
+                }
 
-.btn-yellow {
-    background-color: var(--accent-yellow);
-    color: var(--deep-green);
-}
-.btn-yellow:hover {
-    background-color: #e6b800;
-}
+                .btn {
+                    display: inline-block;
+                    padding: 9px 12px;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    font-size: 0.9rem;
+                    cursor: pointer;
+                    border-radius: 3px;
+                    border: none;
+                }
 
-.btn-green {
-    background-color: var(--deep-green);
-    color: var(--white);
-}
+                .btn-yellow {
+                    background-color: var(--accent-yellow);
+                    color: var(--deep-green);
+                }
 
-.btn-outline {
-    border: 2px solid var(--deep-green);
-    color: var(--deep-green);
-    padding: 10px 20px;
-    border-radius: 30px;
-}
+                .btn-yellow:hover {
+                    background-color: #e6b800;
+                }
 
-.btn-white-outline {
-    border: 2px solid var(--white);
-    color: var(--white);
-    border-radius: 30px;
-    padding: 8px 20px;
-    font-size: 0.8rem;
-    margin-top: 15px;
-}
+                .btn-green {
+                    background-color: var(--deep-green);
+                    color: var(--white);
+                }
 
-.btn-yellow-center {
-    background-color: var(--accent-yellow);
-    color: var(--deep-green);
-    border-radius: 30px;
-    margin-bottom: 20px;
-    position: relative;
-    z-index: 2;
-}
+                .btn-outline {
+                    border: 2px solid var(--deep-green);
+                    color: var(--deep-green);
+                    padding: 10px 20px;
+                    border-radius: 30px;
+                }
 
-.btn-outline-green {
-    border: 2px solid var(--deep-green);
-    color: var(--deep-green);
-    border-radius: 30px;
-}
+                .btn-white-outline {
+                    border: 2px solid var(--white);
+                    color: var(--white);
+                    border-radius: 30px;
+                    padding: 8px 20px;
+                    font-size: 0.8rem;
+                    margin-top: 15px;
+                }
 
-        .site-footer {
-            background-color:white; /* Subtle matching background */
-            padding: 40px 20px;
-            border-top: 3px solid #aadd68; /* Lime accent top border */
-            width: 100%;
-        }
+                .btn-yellow-center {
+                    background-color: var(--accent-yellow);
+                    color: var(--deep-green);
+                    border-radius: 30px;
+                    margin-bottom: 20px;
+                    position: relative;
+                    z-index: 2;
+                }
 
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            width: 100%;
-        }
+                .btn-outline-green {
+                    border: 2px solid var(--deep-green);
+                    color: var(--deep-green);
+                    border-radius: 30px;
+                }
 
-        /* --- TOP SECTION (Brand + Links) --- */
-        .footer-top {
-            display: flex;
-            flex-direction: column;
-            gap: 40px;
-        }
+                .site-footer {
+                    background-color: white;
+                    /* Subtle matching background */
+                    padding: 40px 20px;
+                    border-top: 3px solid #aadd68;
+                    /* Lime accent top border */
+                    width: 100%;
+                }
 
-        /* Brand Area */
-        .footer-brand {
-            margin-bottom: 20px;
-        }
+                .footer-content {
+                    
+                    margin: 0 auto;
+                    width: 100%;
+                }
 
-        .brand-link {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-            color: #1b6c38; /* Deep Green */
-        }
+                /* --- TOP SECTION (Brand + Links) --- */
+                .footer-top {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 40px;
+                }
 
-        .brand-logo {
-            height: 62px;
-            margin-right: 12px;
-        }
+                /* Brand Area */
+                .footer-brand {
+                    margin-bottom: 20px;
+                }
 
-        .brand-name {
-            font-size: 24px;
-            font-weight: 700;
-        }
+                .brand-link {
+                    display: flex;
+                    align-items: center;
+                    text-decoration: none;
+                    color: #1b6c38;
+                    /* Deep Green */
+                }
 
-        /* Links Grid */
-        .footer-links-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr); /* Mobile: 2 cols */
-            gap: 30px;
-            width: 100%;
-        }
+                .brand-logo {
+                    height: 62px;
+                    margin-right: 12px;
+                }
 
-        .link-column h2 {
-            font-size: 13px;
-            font-weight: 700;
-            text-transform: uppercase;
-            color: #1b6c38; /* Deep Green Headings */
-            margin-bottom: 20px;
-            letter-spacing: 0.5px;
-        }
+                .brand-name {
+                    font-size: 24px;
+                    font-weight: 700;
+                }
 
-        .link-column ul {
-            list-style: none;
-            padding: 0;
-        }
+                /* Links Grid */
+                .footer-links-grid {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    /* Mobile: 2 cols */
+                    gap: 30px;
+                    width: 100%;
+                }
 
-        .link-column li:before{
-          display: none;
-        }
-        .link-column li {
-            margin-bottom: 12px;
-        }
+                .link-column h2 {
+                    font-size: 13px;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    color: #1b6c38;
+                    /* Deep Green Headings */
+                    margin-bottom: 20px;
+                    letter-spacing: 0.5px;
+                }
 
-        .link-column a {
-            color: #555;
-            text-decoration: none;
-            font-size: 15px;
-            font-weight: 500;
-            transition: color 0.2s;
-        }
+                .link-column ul {
+                    list-style: none;
+                    padding: 0;
+                }
 
-        .link-column a:hover {
-            color: #1b6c38;
-            text-decoration: underline;
-        }
+                .link-column li:before {
+                    display: none;
+                }
 
-        /* --- DIVIDER --- */
-        .footer-divider {
-            border: 0;
-            height: 1px;
-            background-color: #dbe4de;
-            margin: 30px 0;
-        }
+                .link-column li {
+                    margin-bottom: 12px;
+                }
 
-        /* --- BOTTOM SECTION (Copyright + Socials) --- */
-        .footer-bottom {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-        }
+                .link-column a {
+                    color: #555;
+                    text-decoration: none;
+                    font-size: 15px;
+                    font-weight: 500;
+                    transition: color 0.2s;
+                }
 
-        .copyright {
-            font-size: 14px;
-            color: #666;
-            text-align: center;
-        }
+                .link-column a:hover {
+                    color: #1b6c38;
+                    text-decoration: underline;
+                }
 
-        .copyright a {
-            color: #666;
-            text-decoration: none;
-        }
+                /* --- DIVIDER --- */
+                .footer-divider {
+                    border: 0;
+                    height: 1px;
+                    background-color: #dbe4de;
+                    margin: 30px 0;
+                }
 
-        .copyright a:hover {
-            text-decoration: underline;
-        }
+                /* --- BOTTOM SECTION (Copyright + Socials) --- */
+                .footer-bottom {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 20px;
+                }
 
-        /* Social Icons */
-        .social-links {
-            display: flex;
-            gap: 20px;
-        }
+                .copyright {
+                    font-size: 14px;
+                    color: #666;
+                    text-align: center;
+                }
 
-        .social-item {
-            color: #555;
-            transition: color 0.3s, transform 0.2s;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+                .copyright a {
+                    color: #666;
+                    text-decoration: none;
+                }
 
-        .social-item:hover {
-            color: #1b6c38; /* Green on hover */
-            transform: translateY(-2px);
-        }
+                .copyright a:hover {
+                    text-decoration: underline;
+                }
 
-        .social-item svg {
-            width: 20px;
-            height: 20px;
-            fill: currentColor;
-        }
+                /* Social Icons */
+                .social-links {
+                    display: flex;
+                    gap: 20px;
+                }
 
-        .sr-only {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            white-space: nowrap;
-            border-width: 0;
-        }
+                .social-item {
+                    color: #555;
+                    transition: color 0.3s, transform 0.2s;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
 
-        /* --- MEDIA QUERIES --- */
-        
-        /* Tablet & Desktop */
-        @media (min-width: 768px) {
-            .footer-top {
-                flex-direction: row;
-                justify-content: space-between;
-            }
+                .social-item:hover {
+                    color: #1b6c38;
+                    /* Green on hover */
+                    transform: translateY(-2px);
+                }
 
-            .footer-links-grid {
-                grid-template-columns: repeat(3, 1fr); /* 3 cols on desktop */
-                width: auto;
-                gap: 60px;
-            }
+                .social-item svg {
+                    width: 20px;
+                    height: 20px;
+                    fill: currentColor;
+                }
 
-            .footer-bottom {
-                flex-direction: row;
-                justify-content: space-between;
-            }
+                .sr-only {
+                    position: absolute;
+                    width: 1px;
+                    height: 1px;
+                    padding: 0;
+                    margin: -1px;
+                    overflow: hidden;
+                    clip: rect(0, 0, 0, 0);
+                    white-space: nowrap;
+                    border-width: 0;
+                }
 
-            .copyright {
-                text-align: left;
-            }
-        }
-        footer {
-    background: #f9f9f9;
-    padding-top: 60px;
-    border-top: 5px solid var(--accent-yellow);
-}
+                /* --- MEDIA QUERIES --- */
 
-.footer-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
-    padding-bottom: 50px;
-}
+                /* Tablet & Desktop */
+                @media (min-width: 768px) {
+                    .footer-top {
+                        flex-direction: row;
+                        justify-content: space-between;
+                    }
 
-.footer-left h3 {
-    color: var(--deep-green);
-    margin-bottom: 15px;
-}
+                    .footer-links-grid {
+                        grid-template-columns: repeat(3, 1fr);
+                        /* 3 cols on desktop */
+                        width: auto;
+                        gap: 60px;
+                    }
 
-.newsletter-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin: 20px 0;
-    max-width: 400px;
-}
+                    .footer-bottom {
+                        flex-direction: row;
+                        justify-content: space-between;
+                    }
 
-.newsletter-form input {
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-}
+                    .copyright {
+                        text-align: left;
+                    }
+                }
 
-.footer-links-columns {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin-top: 30px;
-}
+                footer {
+                    background: #f9f9f9;
+                    padding-top: 60px;
+                    border-top: 5px solid var(--accent-yellow);
+                }
 
-.footer-links-columns h4 {
-    color: var(--deep-green);
-    margin-bottom: 15px;
-}
+                .footer-grid {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 50px;
+                    padding-bottom: 50px;
+                }
 
-.footer-links-columns li {
-    margin-bottom: 8px;
-    font-size: 0.9rem;
-}
+                .footer-left h3 {
+                    color: var(--deep-green);
+                    margin-bottom: 15px;
+                }
 
-.footer-right {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
+                .newsletter-form {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    margin: 20px 0;
+                    max-width: 400px;
+                }
 
-.yellow-box {
-    background: var(--accent-yellow);
-    padding: 40px;
-    text-align: center;
-}
-.yellow-box h3 {
-    color: var(--deep-green);
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-}
-.small-text {
-    font-size: 0.8rem;
-    margin-top: 15px;
-}
+                .newsletter-form input {
+                    padding: 10px;
+                    border: 1px solid #ddd;
+                    border-radius: 4px;
+                }
 
-.partners h4 {
-    font-size: 0.8rem;
-    color: var(--deep-green);
-    margin-bottom: 15px;
-}
+                .footer-links-columns {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    margin-top: 30px;
+                }
 
-.partner-logos {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
-}
+                .footer-links-columns h4 {
+                    color: var(--deep-green);
+                    margin-bottom: 15px;
+                }
 
-.partner-logos span {
-    border: 1px solid #ccc;
-    padding: 5px 10px;
-    font-size: 0.7rem;
-    color: #999;
-}
+                .footer-links-columns li {
+                    margin-bottom: 8px;
+                    font-size: 0.9rem;
+                }
 
-.social-icons a {
-    color: var(--deep-green);
-    font-size: 1.2rem;
-    margin-right: 15px;
-}
+                .footer-right {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 30px;
+                }
 
-.copyright {
-    text-align: center;
-    padding: 20px 0;
-    font-size: 0.8rem;
-    border-top: 1px solid #eee;
-}
+                .yellow-box {
+                    background: var(--accent-yellow);
+                    padding: 40px;
+                    text-align: center;
+                }
 
-        /* --- MARQUEE CSS (Embedded for functionality) --- */
-        .partners-section {
-            border-top: 1px solid #e1e8e3; /* Subtle separator */
-            border-bottom: 1px solid #e1e8e3;
-            padding: 20px 0;
-            margin-top: 30px;
-            background-color: #f9fdfa; /* Very faint green tint */
-            overflow: hidden;
-        }
+                .yellow-box h3 {
+                    color: var(--deep-green);
+                    font-size: 1.5rem;
+                    margin-bottom: 20px;
+                }
 
-        .partners-title {
-            text-align: center;
-            color: #1b6c38;
-            font-size: 13px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 15px;
-        }
+                .small-text {
+                    font-size: 0.8rem;
+                    margin-top: 15px;
+                }
 
-        .marquee-track {
-            display: flex;
-            align-items: center;
-            gap: 50px;
-            /* Simple scrolling animation */
-            animation: scroll 25s linear infinite;
-            width: max-content; 
-        }
+                .partners h4 {
+                    font-size: 0.8rem;
+                    color: var(--deep-green);
+                    margin-bottom: 15px;
+                }
 
-        .marquee-track:hover {
-            animation-play-state: paused;
-        }
+                .partner-logos {
+                    display: flex;
+                    gap: 10px;
+                    flex-wrap: wrap;
+                    margin-bottom: 20px;
+                }
 
-        .partner-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            opacity: 0.8;
-            transition: opacity 0.3s;
-        }
+                .partner-logos span {
+                    border: 1px solid #ccc;
+                    padding: 5px 10px;
+                    font-size: 0.7rem;
+                    color: #999;
+                }
 
-        .partner-item:hover {
-            opacity: 1;
-        }
+                .social-icons a {
+                    color: var(--deep-green);
+                    font-size: 1.2rem;
+                    margin-right: 15px;
+                }
 
-        .partner-img {
-            height: 45px; /* Fixed height for consistency */
-            width: auto;
-            object-fit: contain;
-            mix-blend-mode: multiply; /* Helps logos blend with background */
-        }
+                .copyright {
+                    text-align: center;
+                    padding: 20px 0;
+                    font-size: 0.8rem;
+                    border-top: 1px solid #eee;
+                }
 
-        .partner-name {
-            font-size: 14px;
-            font-weight: 600;
-            color: #555;
-        }
+                /* --- MARQUEE CSS (Embedded for functionality) --- */
+                .partners-section {
+                    border-top: 1px solid #e1e8e3;
+                    /* Subtle separator */
+                    border-bottom: 1px solid #e1e8e3;
+                    padding: 20px 0;
+                    margin-top: 30px;
+                    background-color: #f9fdfa;
+                    /* Very faint green tint */
+                    overflow: hidden;
+                }
 
-        @keyframes scroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); } /* Scrolls half way if content is duplicated */
-        }
-        
-        /* Developer Credit Style */
-        .dev-credit {
-            font-size: 13px;
-            color: #888;
-            margin-top: 5px;
-        }
-        .dev-credit a {
-            color: #1b6c38;
-            text-decoration: none;
-            font-weight: 600;
-        }
-        .dev-credit a:hover {
-            text-decoration: underline;
-        }
-    </style>
+                .partners-title {
+                    text-align: center;
+                    color: #1b6c38;
+                    font-size: 13px;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    margin-bottom: 15px;
+                }
 
-    <div class="footer-content">
-        
-        <div class="footer-top">
-            <div class="footer-brand">
-                <a href="../index.html" class="brand-link">
-                    <img src="../res/logo.jpg" class="brand-logo" alt="Hope Worldwide Logo" />
-                </a>
-                <div>
-                    <br>
-                    <h3>Subscribe to our newsletter</h3>
-                    <form class="newsletter-form">
-                        <input type="text" placeholder="Name">
-                        <input type="email" placeholder="Email Address">
-                        <button type="button" class="btn btn-green">SUBSCRIBE</button>
-                    </form>
+                .marquee-track {
+                    display: flex;
+                    align-items: center;
+                    gap: 50px;
+                    /* Simple scrolling animation */
+                    animation: scroll 25s linear infinite;
+                    width: max-content;
+                }
+
+                .marquee-track:hover {
+                    animation-play-state: paused;
+                }
+
+                .partner-item {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    opacity: 0.8;
+                    transition: opacity 0.3s;
+                }
+
+                .partner-item:hover {
+                    opacity: 1;
+                }
+
+                .partner-img {
+                    height: 45px;
+                    /* Fixed height for consistency */
+                    width: auto;
+                    object-fit: contain;
+                    mix-blend-mode: multiply;
+                    /* Helps logos blend with background */
+                }
+
+                .partner-name {
+                    font-size: 14px;
+                    font-weight: 600;
+                    color: #555;
+                }
+
+                @keyframes scroll {
+                    0% {
+                        transform: translateX(0);
+                    }
+
+                    100% {
+                        transform: translateX(-50%);
+                    }
+
+                    /* Scrolls half way if content is duplicated */
+                }
+
+                /* Developer Credit Style */
+                .dev-credit {
+                    font-size: 13px;
+                    color: #888;
+                    margin-top: 5px;
+                }
+
+                .dev-credit a {
+                    color: #1b6c38;
+                    text-decoration: none;
+                    font-weight: 600;
+                }
+
+                .dev-credit a:hover {
+                    text-decoration: underline;
+                }
+            </style>
+
+            <div class="footer-content">
+
+                <div class="footer-top">
+                    <div class="footer-brand">
+                        <a href="../index.html" class="brand-link">
+                            <img src="../res/logo.jpg" class="brand-logo" alt="Hope Worldwide Logo" />
+                        </a>
+                        <div>
+                            <br>
+                            <h3>Subscribe to our newsletter</h3>
+                            <form class="newsletter-form">
+                                <input type="text" placeholder="Name">
+                                <input type="email" placeholder="Email Address">
+                                <button type="button" class="btn btn-green">SUBSCRIBE</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="footer-links-grid">
+                        <div class="link-column">
+                            <h2>Our Work</h2>
+                            <ul>
+                                <li><a href="../outreach">Our outreach</a></li>
+                                <li><a href="../gallery">Gallery</a></li>
+                                <li><a href="../objectives">Objectives</a></li>
+                                <li><a href="../stories">Success Stories</a></li>
+                            </ul>
+                        </div>
+                        <div class="link-column">
+                            <h2>Get Involved</h2>
+                            <ul>
+                                <li><a href="../donate">Donate</a></li>
+                                <li><a href="../forms?type=volunteer">Volunteer</a></li>
+                                <li><a href="../forms?type=partner">Partner With Us</a></li>
+                                <li><a href="../forms?type=job">Careers</a></li>
+                                <li><a href="../partners">Partners</a></li>
+                            </ul>
+                        </div>
+                        <div class="link-column">
+                            <h2>Legal & Contact</h2>
+                            <ul>
+                                <li><a href="../faq">Frequently Asked Questions</a></li>
+                                <li><a href="../board">Our team</a></li>
+                                <li><a href="../cookies.html">Cookie Policy</a></li>
+                                <li><a href="../contact">Contact Support</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="partners-section">
+                    <div class="partners-title">Our Partners</div>
+                    <div class="marquee-track">
+                        <div class="partner-item">
+                            <img src="../res/makerere.jpeg" alt="Makerere" class="partner-img">
+                            <span class="partner-name">Makerere University</span>
+                        </div>
+                        <div class="partner-item">
+                            <img src="../res/mengo.png" alt="Mengo" class="partner-img">
+                            <span class="partner-name">Mengo SS</span>
+                        </div>
+             <div class="partner-item">
+                            <img src="../res/ucu.jpg" alt="UCU" class="partner-img">
+                            <span class="partner-name">UCU</span>
+                        </div>                    <div class="partner-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Born_This_Way_Foundation_logo_%282020%29.svg/250px-Born_This_Way_Foundation_logo_%282020%29.svg.png" alt="Born This Way Foundation" class="partner-img">
+                     </div>
+                        <div class="partner-item">
+                            <img src="../res/makerere.png" alt="Makerere College" class="partner-img">
+                            <span class="partner-name">Makerere College</span>
+                        </div>
+                        <div class="partner-item">
+                            <img src="../res/dana.jpg" alt="Dana" class="partner-img">
+                            <span class="partner-name">Dana Foundation</span>
+                        </div>
+                        <div class="partner-item">
+                            <img src="../res/uvri.jpg" alt="Uganda Virus" class="partner-img">
+                            <span class="partner-name">Uganda Virus Institute</span>
+                        </div>
+                        <div class="partner-item">
+                            <img src="../res/ministry.jpeg" alt="Ministry" class="partner-img">
+                            <span class="partner-name">Ministry of Health</span>
+                        </div>
+
+
+                        <div class="partner-item">
+                            <img src="../res/makerere.jpeg" alt="Makerere" class="partner-img">
+                            <span class="partner-name">Makerere University</span>
+                        </div>
+                        <div class="partner-item">
+                            <img src="../res/mengo.png" alt="Mengo" class="partner-img">
+                            <span class="partner-name">Mengo SS</span>
+                        </div>
+             <div class="partner-item">
+                            <img src="../res/ucu.jpg" alt="UCU" class="partner-img">
+                            <span class="partner-name">UCU</span>
+                        </div>                    <div class="partner-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Born_This_Way_Foundation_logo_%282020%29.svg/250px-Born_This_Way_Foundation_logo_%282020%29.svg.png" alt="Born This Way Foundation" class="partner-img">
+                     </div>
+                        <div class="partner-item">
+                            <img src="../res/makerere.png" alt="Makerere College" class="partner-img">
+                            <span class="partner-name">Makerere College</span>
+                        </div>
+                        <div class="partner-item">
+                            <img src="../res/dana.jpg" alt="Dana" class="partner-img">
+                            <span class="partner-name">Dana Foundation</span>
+                        </div>
+                        <div class="partner-item">
+                            <img src="../res/uvri.jpg" alt="Uganda Virus" class="partner-img">
+                            <span class="partner-name">Uganda Virus Institute</span>
+                        </div>
+                        <div class="partner-item">
+                            <img src="../res/ministry.jpeg" alt="Ministry" class="partner-img">
+                            <span class="partner-name">Ministry of Health</span>
+                        </div>
+
+                    </div><br>
+                    <a href="../partners" style="text-align: center; display: block;" class="map-link">READ MORE
+                        &rarr;</a>
+                </div>
+
+                <hr class="footer-divider" style="margin-top: 0;" />
+
+                <div class="footer-bottom">
+                    <div style="text-align: center; width: 100%;">
+                        <span class="copyright">
+                            © 2026 Hope Worldwide. All Rights Reserved.
+                        </span>
+                        <div class="dev-credit">
+                            Developed by Amanda Technologies | <a href="mailto:amandatechnologies@gmail.com">Contact
+                                them</a>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/Hopewwug" class="social-item">
+                            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path fill-rule="evenodd"
+                                    d="M13.135 6H15V3h-1.865a4.147 4.147 0 0 0-4.142 4.142V9H7v3h2v9.938h3V12h2.021l.592-3H12V6.591A.6.6 0 0 1 12.592 6h.543Z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span class="sr-only">Facebook</span>
+                        </a>
+                                                <a href="https://www.youtube.com/@hopeworldwideintenationalu529" class="social-item" target="_blank" rel="noopener noreferrer">
+    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.377.55a3.016 3.016 0 0 0-2.122 2.136C0 8.07 0 12 0 12s0 3.93.498 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.55 9.377.55 9.377.55s7.505 0 9.377-.55a3.016 3.016 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+    </svg>
+    <span class="sr-only">YouTube</span>
+</a><a href="https://www.instagram.com/hopeworldwideint.uganda" target="_blank" class="social-item">
+<svg height="200px" width="200px" viewBox="0 0 24 24" fill="#000000" xmlns="http://www.w3.org/2000/svg">
+    <path d="M7 2C4.239 2 2 4.239 2 7v10c0 2.761 2.239 5 5 5h10c2.761 0 5-2.239 5-5V7c0-2.761-2.239-5-5-5H7zm10 2c1.657 0 3 1.343 3 3v10c0 1.657-1.343 3-3 3H7c-1.657 0-3-1.343-3-3V7c0-1.657 1.343-3 3-3h10zm-5 3.5A5.5 5.5 0 1 0 12 18.5 5.5 5.5 0 0 0 12 7.5zm0 2A3.5 3.5 0 1 1 8.5 13 3.504 3.504 0 0 1 12 9.5zM18 6.8a1.2 1.2 0 1 0 1.2 1.2A1.2 1.2 0 0 0 18 6.8z"/>
+</svg>
+<span class="sr-only">Instagram</span>
+</a>
+                        <a href="https://x.com/HOPEWORLDWIDEUG" class="social-item">
+                            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path
+                                    d="M13.795 10.533 20.68 2h-3.073l-5.255 6.517L7.69 2H1l7.806 10.91L1.47 22h3.074l5.705-7.07L15.31 22H22l-8.205-11.467Zm-2.38 2.95L9.97 11.464 4.36 3.627h2.31l4.528 6.317 1.443 2.02 6.018 8.409h-2.31l-4.934-6.89Z" />
+                            </svg>
+                            <span class="sr-only">Twitter</span>
+                        </a>
+                        <a href="https://www.tiktok.com/@hope.worldwide.ug?_r=1&_t=ZS-93iNWgrl6OH" class="social-item"
+                            aria-label="Titkok">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor">
+                                <path
+                                    d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z" />
+                            </svg> </a>
+
+                        <a href="https://wa.me/256782409528" class="social-item">
+                            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+                            </svg>
+                            <span class="sr-only">WhatsApp</span>
+                        </a>
+                        <a href="mailto:info@hopeworldwideuganda.org" class="social-item">
+                            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path
+                                    d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                            </svg>
+                            <span class="sr-only">Email</span>
+                        </a>
+                    </div>
+
                 </div>
             </div>
-            
-            <div class="footer-links-grid">
-                <div class="link-column">
-                    <h2>Our Work</h2>
-                    <ul>
-                        <li><a href="../outreach">Our outreach</a></li>
-                        <li><a href="../gallery">Gallery</a></li>
-                        <li><a href="../objectives">Objectives</a></li>
-                        <li><a href="../stories">Success Stories</a></li>
-                    </ul>
-                </div>
-                <div class="link-column">
-                    <h2>Get Involved</h2>
-                    <ul>
-                        <li><a href="../donate">Donate</a></li>
-                        <li><a href="../forms?type=volunteer">Volunteer</a></li>
-                        <li><a href="../forms?type=partner">Partner With Us</a></li>
-                        <li><a href="../forms?type=job">Careers</a></li>
-                        <li><a href="../partners">Partners</a></li>
-                    </ul>
-                </div>
-                <div class="link-column">
-                    <h2>Legal & Contact</h2>
-                    <ul>
-                        <li><a href="../faq">Frequently Asked Questions</a></li>
-                        <li><a href="../board">Our team</a></li>
-                        <li><a href="../cookies.html">Cookie Policy</a></li>
-                        <li><a href="../contact">Contact Support</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="partners-section">
-            <div class="partners-title">Our Partners</div>
-            <div class="marquee-track">
-                <div class="partner-item">
-                    <img src="../res/makerere.jpeg" alt="Makerere" class="partner-img">
-                    <span class="partner-name">Makerere University</span>
-                </div>
-                <div class="partner-item">
-                    <img src="../res/mengo.png" alt="Mengo" class="partner-img">
-                    <span class="partner-name">Mengo SS</span>
-                </div>
-                <div class="partner-item">
-                    <img src="../res/ucu.jpg" alt="UCU" class="partner-img">
-                    <span class="partner-name">UCU</span>
-                </div>
-                <div class="partner-item">
-                    <img src="../res/makerere.png" alt="Makerere College" class="partner-img">
-                    <span class="partner-name">Makerere College</span>
-                </div>
-                <div class="partner-item">
-                    <img src="../res/dana.jpg" alt="Dana" class="partner-img">
-                    <span class="partner-name">Dana Foundation</span>
-                </div>
-                <div class="partner-item">
-                    <img src="../res/uvri.jpg" alt="Uganda Virus" class="partner-img">
-                    <span class="partner-name">Uganda Virus Institute</span>
-                </div>
-                <div class="partner-item">
-                    <img src="../res/ministry.jpeg" alt="Ministry" class="partner-img">
-                    <span class="partner-name">Ministry of Health</span>
-                </div>
-
-            
-                <div class="partner-item">
-                    <img src="../res/makerere.jpeg" alt="Makerere" class="partner-img">
-                    <span class="partner-name">Makerere University</span>
-                </div>
-                <div class="partner-item">
-                    <img src="../res/mengo.png" alt="Mengo" class="partner-img">
-                    <span class="partner-name">Mengo SS</span>
-                </div>
-                <div class="partner-item">
-                    <img src="../res/ucu.jpg" alt="UCU" class="partner-img">
-                    <span class="partner-name">UCU</span>
-                </div>
-                <div class="partner-item">
-                    <img src="../res/makerere.png" alt="Makerere College" class="partner-img">
-                    <span class="partner-name">Makerere College</span>
-                </div>
-                <div class="partner-item">
-                    <img src="../res/dana.jpg" alt="Dana" class="partner-img">
-                    <span class="partner-name">Dana Foundation</span>
-                </div>
-                <div class="partner-item">
-                    <img src="../res/uvri.jpg" alt="Uganda Virus" class="partner-img">
-                    <span class="partner-name">Uganda Virus Institute</span>
-                </div>
-                <div class="partner-item">
-                    <img src="../res/ministry.jpeg" alt="Ministry" class="partner-img">
-                    <span class="partner-name">Ministry of Health</span>
-                </div>
-
-            </div><br>
-            <a href="../partners" style="text-align: center; display: block;" class="map-link">READ MORE &rarr;</a>
-        </div>
-
-        <hr class="footer-divider" style="margin-top: 0;" />
-
-        <div class="footer-bottom">
-            <div style="text-align: center; width: 100%;">
-                <span class="copyright">
-                    © 2026 Hope Worldwide. All Rights Reserved.
-                </span>
-                <div class="dev-credit">
-                    Developed by Amanda Technologies | <a href="mailto:amandatechnologies@gmail.com">Contact them</a>
-                </div>
-            </div>
-            
-<div class="social-links">
-    <a href="https://www.facebook.com/Hopewwug" class="social-item">
-        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M13.135 6H15V3h-1.865a4.147 4.147 0 0 0-4.142 4.142V9H7v3h2v9.938h3V12h2.021l.592-3H12V6.591A.6.6 0 0 1 12.592 6h.543Z" clip-rule="evenodd"/></svg>
-        <span class="sr-only">Facebook</span>
-    </a>
-    <a href="https://x.com/HOPEWORLDWIDEUG" class="social-item">
-        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.795 10.533 20.68 2h-3.073l-5.255 6.517L7.69 2H1l7.806 10.91L1.47 22h3.074l5.705-7.07L15.31 22H22l-8.205-11.467Zm-2.38 2.95L9.97 11.464 4.36 3.627h2.31l4.528 6.317 1.443 2.02 6.018 8.409h-2.31l-4.934-6.89Z"/></svg>
-        <span class="sr-only">Twitter</span>
-    </a>
-            <a href="https://www.tiktok.com/@hope.worldwide.ug?_r=1&_t=ZS-93iNWgrl6OH" class="social-item" aria-label="Titkok">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor">
-  <path d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"/>
-</svg>        </a>
-
-    <a href="https://wa.me/256782409528" class="social-item">
-        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-        <span class="sr-only">WhatsApp</span>
-    </a>
-    <a href="mailto:info@hopewwug.org" class="social-item">
-        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-        <span class="sr-only">Email</span>
-    </a>
-</div>
-
-        </div>
-    </div>
-</footer>
+        </footer>
 
     </div>
 
     <script>
-        // CONFIG VARIABLES
-        const serviceID = "service_tpjdtif";
-        const templateID = "template_r918gvs";
-        
-        let generatedOTP = null; // Stores the OTP for verification
         // Data configuration for the different forms
         const formConfig = {
             partner: {
@@ -1563,21 +1758,28 @@
                 desc: "We believe in the power of collaboration. Fill out the details below to propose a partnership with Hope Worldwide.",
                 btnText: "Send Proposal",
                 hero: "Partner With Us",
-                email: "partpartnership@hopewwug.org"
+                email: "partnership@hopeworldwideuganda.org"
             },
             volunteer: {
                 title: "Volunteer Application",
                 desc: "Your time and skills can save lives. Tell us how you would like to contribute to our mission in Uganda.",
                 btnText: "Apply to Volunteer",
                 hero: "Become a Volunteer",
-                email:"volunteer@hopewwug.org"
+                email: "volunteer@hopeworldwideuganda.org"
+            },
+            internship: {
+                title: "Internship Application",
+                desc: "Gain valuable experience and contribute to impactful projects. Apply for an internship with Hope Worldwide.",
+                btnText: "Apply for Internship",
+                hero: "Start Your Journey",
+                email: "internships@hopeworldwideuganda.org"
             },
             job: {
                 title: "Job Application",
                 desc: "Join our professional team. We are always looking for dedicated individuals to help drive our impact forward.",
                 btnText: "Submit Application",
                 hero: "Join the Team",
-                email: "hr@hopewwug.org"
+                email: "hr@hopeworldwideuganda.org"
             }
         };
 
@@ -1609,96 +1811,85 @@
             }
         }
 
-        // --- OTP LOGIC ---
+        // --- SUBMISSION LOGIC ---
+let formData;
 
-        function initiateOTP() {
-            const email = document.getElementById('email').value;
-            const name = document.getElementById('fullname').value;
-            
-            if (!email || !email.includes('@')) {
-                alert("Please enter a valid email address first.");
-                return;
-            }
-            
-            if(!name) {
-                alert("Please enter your name.");
-                return;
-            }
+document.getElementById("mainForm").addEventListener("submit", async function(e){
 
-            // 1. Generate Random 6-digit code
-            generatedOTP = Math.floor(100000 + Math.random() * 900000);
+e.preventDefault();
 
-            // 2. Change Button State
-            const btn = document.getElementById('submit-btn');
-            const originalText = btn.innerText;
-            btn.innerText = "Sending Code...";
-            btn.disabled = true;
+formData = new FormData(this);
 
-            // 3. Send Email via EmailJS
-            const templateParams = {
-                passcode: generatedOTP,
-                email: email,
-                to_name: name
-            };
+let email = document.getElementById("email").value;
 
-            emailjs.send(serviceID, templateID, templateParams)
-                .then(function(response) {
-                    console.log('SUCCESS!', response.status, response.text);
-                    // 4. Show Modal
-                    document.getElementById('modalEmail').innerText = email;
-                    document.getElementById('otpModal').style.display = 'flex';
-                    btn.innerText = originalText;
-                    btn.disabled = false;
-                }, function(error) {
-                    console.log('FAILED...', error);
-                    alert("Failed to send verification code. Please try again.");
-                    btn.innerText = originalText;
-                    btn.disabled = false;
-                });
-        }
+let res = await fetch("/api/send_otp.php",{
+method:"POST",
+body:new URLSearchParams({email})
+});
 
-        function verifyOTP() {
-            const userOTP = document.getElementById('otpInput').value;
-            const errorMsg = document.getElementById('otpError');
+let data = await res.json();
 
-            if (userOTP == generatedOTP) {
-                // SUCCESS
-                errorMsg.style.display = 'none';
-                document.getElementById('otpModal').style.display = 'none';
-                finalSubmission();
-            } else {
-                // FAILURE
-                errorMsg.style.display = 'block';
-            }
-        }
+if(data.status==="success"){
+document.getElementById("modalEmail").innerText=email;
+document.getElementById("otpModal").style.display="flex";
+}
+});
 
-        function closeOTP() {
-            document.getElementById('otpModal').style.display = 'none';
-        }
-
-        function finalSubmission() {
-            // Actual form processing goes here
-            // For now, we show the success message
-            const btn = document.getElementById('submit-btn');
-            btn.innerText = "Verified!";
+        function finalSuccess(btn) {
+            btn.innerText = "Received!";
             btn.style.backgroundColor = "#aadd68";
-            
+
             setTimeout(() => {
                 document.getElementById('mainForm').reset();
                 document.getElementById('file-label').innerText = "Click or Drag to Upload PDF/DOCX";
                 const successMsg = document.getElementById('successMsg');
                 successMsg.style.display = "block";
-                
+
                 // Reset button style
                 btn.innerText = formConfig[document.getElementById('form-type').value].btnText;
                 btn.style.backgroundColor = "#1b6c38";
-                
+                btn.disabled = false;
+
                 setTimeout(() => { successMsg.style.display = "none"; }, 4000);
             }, 1000);
         }
+async function verifyOTP(){
 
+let otp = document.getElementById("otpInput").value;
+
+let res = await fetch("/api/verify_otp.php",{
+method:"POST",
+body:new URLSearchParams({otp})
+});
+
+let data = await res.json();
+
+if(data.status==="verified"){
+
+let res2 = await fetch("/api/save_application.php",{
+method:"POST",
+body:formData
+});
+
+let result = await res2.json();
+
+if(result.status==="success"){
+
+document.getElementById("otpModal").style.display="none";
+document.getElementById("successMsg").style.display="block";
+
+document.getElementById("mainForm").reset();
+
+}else{
+alert("Submission failed");
+}
+
+}else{
+document.getElementById("otpError").style.display="block";
+}
+}
         // Initialize on Page Load
-        document.addEventListener("DOMContentLoaded", function() {
+        document.addEventListener("DOMContentLoaded", function () {
             const params = new URLSearchParams(window.location.search);
             const type = params.get('type');
             if (type && formConfig[type]) {
@@ -1707,65 +1898,66 @@
                 switchForm('partner');
             }
         });
-// Function to fetch data and populate the select element
-async function loadAndPopulateDistricts(jsonUrl, selectId) {
-  try {
-    // 1. Fetch the JSON file
-    const response = await fetch(jsonUrl);
-    if (!response.ok) throw new Error("Failed to load JSON file");
-    
-    const districtsData = await response.json();
-    const selectElement = document.getElementById(selectId);
+        // Function to fetch data and populate the select element
+        async function loadAndPopulateDistricts(jsonUrl, selectId) {
+            try {
+                // 1. Fetch the JSON file
+                const response = await fetch(jsonUrl);
+                if (!response.ok) throw new Error("Failed to load JSON file");
 
-    // Clear current options
-    selectElement.innerHTML = '<option value="">Select a District</option>';
+                const districtsData = await response.json();
+                const selectElement = document.getElementById(selectId);
 
-    // 2. Group districts by region_name
-    const groupedByRegion = districtsData.reduce((acc, district) => {
-      const region = district.region_name;
-      if (!acc[region]) {
-        acc[region] = [];
-      }
-      acc[region].push(district);
-      return acc;
-    }, {});
+                // Clear current options
+                selectElement.innerHTML = '<option value="">Select a District</option>';
 
-    // 3. Get region names and sort them alphabetically
-    const sortedRegions = Object.keys(groupedByRegion).sort();
+                // 2. Group districts by region_name
+                const groupedByRegion = districtsData.reduce((acc, district) => {
+                    const region = district.region_name;
+                    if (!acc[region]) {
+                        acc[region] = [];
+                    }
+                    acc[region].push(district);
+                    return acc;
+                }, {});
 
-    // 4. Build the Select Options
-    sortedRegions.forEach(region => {
-      // Create <optgroup> for the region
-      const optGroup = document.createElement('optgroup');
-      optGroup.label = region;
+                // 3. Get region names and sort them alphabetically
+                const sortedRegions = Object.keys(groupedByRegion).sort();
 
-      // Sort districts within this region alphabetically
-      const sortedDistricts = groupedByRegion[region].sort((a, b) => 
-        a.district_name.localeCompare(b.district_name)
-      );
+                // 4. Build the Select Options
+                sortedRegions.forEach(region => {
+                    // Create <optgroup> for the region
+                    const optGroup = document.createElement('optgroup');
+                    optGroup.label = region;
 
-      // Create <option> for each district
-      sortedDistricts.forEach(district => {
-        const option = document.createElement('option');
-        option.value = district.district_code;
-        option.textContent = district.district_name;
-        optGroup.appendChild(option);
-      });
+                    // Sort districts within this region alphabetically
+                    const sortedDistricts = groupedByRegion[region].sort((a, b) =>
+                        a.district_name.localeCompare(b.district_name)
+                    );
 
-      // Append the group to the select element
-      selectElement.appendChild(optGroup);
-    });
+                    // Create <option> for each district
+                    sortedDistricts.forEach(district => {
+                        const option = document.createElement('option');
+                        option.value = district.district_code;
+                        option.textContent = district.district_name;
+                        optGroup.appendChild(option);
+                    });
 
-  } catch (error) {
-    console.error("Error populating districts:", error);
-  }
-}
+                    // Append the group to the select element
+                    selectElement.appendChild(optGroup);
+                });
 
-// Usage: Replace 'districts.json' with your actual file path
-// Ensure you have <select id="districtSelect"></select> in your HTML
-loadAndPopulateDistricts('ug.json', 'location');
+            } catch (error) {
+                console.error("Error populating districts:", error);
+            }
+        }
+
+        // Usage: Replace 'districts.json' with your actual file path
+        // Ensure you have <select id="districtSelect"></select> in your HTML
+        loadAndPopulateDistricts('ug.json', 'location');
 
     </script>
 
 </body>
+
 </html>
